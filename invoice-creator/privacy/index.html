@@ -19,25 +19,61 @@ th{background:#f5eee7}
 p,li{color:#ddd0c4}h1,h2,h3{color:#f7efe8}code{background:#2b221b}
 th{background:#2b221b}th,td,hr{border-color:#3a2e25}.meta,.back{color:#a8998b}
 a{color:#f3882e}a:hover{color:#f9ad79}}</style></head><body><div class="wrap"><a class="back" href="/">← KLM Labs</a><h1>Invoice Creator Privacy Policy</h1>
-<p><strong>Effective date:</strong> 2026-08-22</p>
+<p><strong>Effective date:</strong> 2026-08-27</p>
+<p><strong>Previous version:</strong> 2026-08-22</p>
 <p><strong>Contact:</strong> <a href="mailto:klm.labs.inc@gmail.com">klm.labs.inc@gmail.com</a></p>
-<p>Invoice Creator is made by KLM Labs. It creates invoices and estimates on a device and lets the user share a PDF when they choose. This policy describes the current data practices of the shipped v1 binary; it must be updated before a release changes those practices.</p>
-<h2>What we collect</h2>
-<p>For the currently shipped binary, we do not collect personal data, usage data, diagnostics, payment information, or any other data from the app. Its <code>updates.url</code> configuration value is unconfigured, so the included <code>expo-updates</code> package does not perform an over-the-air update check. In that configuration, the app has no account system, backend, app-initiated network request, analytics, advertising, or third-party service that receives app data.</p>
-<p>The information a user enters in the app can include business details, client names and contact details, invoice and estimate content, dates, notes, and totals. A user may also choose a logo image for the business profile. This information is not collected by us.</p>
-<h2>Where data lives</h2>
-<p>App data is stored locally on the user&#x27;s device in the app&#x27;s local database. The app is designed to work offline. We cannot view, retrieve, or delete this local data because it is not sent to us.</p>
+<p><strong>Published policy URL:</strong> https://klm-labs.github.io/invoice-creator/privacy/</p>
+<p><strong>Support URL:</strong> https://klm-labs.github.io/invoice-creator/support/</p>
+<p>Invoice Creator is made by KLM Labs. It creates invoices and estimates on a device and lets the user share a PDF when they choose.</p>
+<p><strong>What changed on 2026-08-27.</strong> Earlier versions of this policy said that no data left the device. That is no longer true. This release adds optional product analytics, which includes an approximate location derived from your internet connection and a masked recording of the app's screens. Those are described in full below, and can be turned off inside the app.</p>
+<h2>The short version</h2>
+<ul>
+<li><strong>Your business and client data stays on your device.</strong> Names, addresses, contact details, invoice contents, amounts and your logo are stored locally and are never sent to us.</li>
+<li><strong>We do collect anonymous usage data</strong>, unless you turn it off in Settings → Analytics.</li>
+<li>That usage data includes <strong>which screens you visit</strong>, <strong>an approximate location</strong> (country, city, postal area) worked out from your internet connection, and a <strong>masked screen recording</strong> in which text and images are hidden.</li>
+<li>There is <strong>no account</strong>, so none of this is linked to your name or email.</li>
+<li>We do not sell data, show adverts, or track you across other apps.</li>
+</ul>
+<h2>What stays on your device</h2>
+<p>The information you enter in the app — business details, client names and contact details, invoice and estimate content, dates, notes, totals, and any logo image you choose — is stored locally in the app's own database. The app is designed to work offline. We cannot view, retrieve, or delete this information, because it never reaches us.</p>
+<p>This is unchanged, and it is the point of the app.</p>
+<h2>Product analytics</h2>
+<p>The app includes product analytics so we can see which features are used and where people get stuck.</p>
+<p><strong>It is optional.</strong> Go to <strong>Settings → Analytics</strong> and turn the toggle off. It is on by default. Your choice is stored on your device and survives restarting the app. Turning it off stops new data being collected and sent.</p>
+<p><strong>Who processes it.</strong> <a href="https://posthog.com/privacy">PostHog, Inc.</a> processes this data on our behalf, on servers in the United States. They are our data processor and do not use it for their own purposes.</p>
+<h3>What analytics collects</h3>
+<p><strong>Events describing what you did, not what you wrote.</strong> For example: the app was opened, onboarding was completed, an invoice was previewed, a save failed. Screen names are recorded as templates such as <code>/invoice/[id]</code> — never the actual invoice identifier.</p>
+<p>Event details are restricted, by design, to counts, fixed categories and yes/no values. <strong>No client name, business name, address, email address, phone number, invoice or estimate number, document text, note, logo, PDF, currency, tax rate, or money amount is ever included in an event.</strong></p>
+<p><strong>Technical information about the app:</strong> app version, build number, platform (iOS or Android), and which kind of build it is.</p>
+<p><strong>An anonymous identifier</strong> for your device and session, generated by PostHog. Because the app has no account or login, it is not linked to your name, email address, or any other identity.</p>
+<p><strong>An approximate location.</strong> PostHog works out a country, city and postal area from the internet address your device connects from, at the moment an event arrives. <strong>The app does not ask for location permission and never reads your device's GPS.</strong> This is the same approximation any website can make from a connection. We use it to understand which countries and regions our users are in.</p>
+<p><strong>A masked recording of the app's screens.</strong> So we can see where people tap, what they struggle with, and where they give up, the app records the screens you visit while using it.</p>
+<p>These recordings are masked before they leave your device:</p>
+<table><thead><tr><th>What is masked</th><th>Result</th></tr></thead><tbody>
+<tr><td>All text on screen</td><td>Client names, addresses, invoice numbers and amounts appear as blocks, not readable words. This covers text the app displays, not only text you type</td></tr>
+<tr><td>All images</td><td>Your business logo appears as a placeholder</td></tr>
+<tr><td>System pickers</td><td>The photo picker's contents are hidden</td></tr>
+</tbody></table>
+<p>Console output is not recorded. Recordings are kept for <strong>30 days</strong> and then deleted automatically.</p>
+<p>Masking is a technical measure applied on the device. We enable every masking option the recording software provides, and we treat any change to that as a change to this policy.</p>
+<h3>What analytics never collects</h3>
+<p>We do not collect your name, your clients' names, addresses, email addresses, phone numbers, invoice or estimate numbers, document contents, notes, logo images, PDF contents, currencies, tax rates, or any money amount. We do not collect your precise location. We do not collect contacts, photos, calendar, messages, or files.</p>
+<p>We do not sell or rent data, do not use it for advertising, do not share it with data brokers, and do not track you across other apps or websites.</p>
 <h2>Expo Updates configuration</h2>
-<p>The <code>expo-updates</code> package is included for possible over-the-air (OTA) fixes. The live branch is determined by one named configuration value: if <code>updates.url</code> remains unconfigured, no Expo update check occurs and the no-collection statements in this policy and the store forms apply. If <code>updates.url</code> is configured before a release, the app will check with Expo, Inc.&#x27;s servers at launch for an applicable OTA update. That HTTPS check carries technical metadata only, such as the runtime-version fingerprint, update channel, and platform. It does not carry invoice data, client data, business or document data, logo images, or other personal data. Before shipping that branch, we will revise this policy and add the applicable Diagnostics / Device-ID, not-linked-to-identity, functionality disclosure in each store form.</p>
+<p>The <code>expo-updates</code> package is included for possible over-the-air fixes. If <code>updates.url</code> remains unconfigured, no Expo update check occurs. If it is configured before a release, the app will check Expo, Inc.'s servers at launch for an applicable update. That check carries technical metadata only — the runtime-version fingerprint, update channel, and platform. It does not carry invoice data, client data, business or document data, logo images, or other personal data.</p>
 <h2>Photo-library access</h2>
-<p>The app lets a user optionally choose one image as a business logo, which appears on the business profile and on generated PDFs. The image is read on the device and stored locally with the business profile; it is never uploaded. Choosing a logo is optional — a user can decline photo-library access, or clear a chosen logo, and continue using every feature of the app. If the image cannot be read, the app says so and saves the profile without a logo.</p>
+<p>The app lets you optionally choose one image as a business logo, which appears on your business profile and on generated PDFs. The image is read on the device and stored locally with the business profile; <strong>it is never uploaded</strong>. Choosing a logo is optional — you can decline photo-library access, or clear a chosen logo, and continue using every feature. If the image cannot be read, the app says so and saves the profile without a logo.</p>
 <h2>Sharing PDFs</h2>
-<p>The app can generate a PDF on the device and open the operating system&#x27;s share sheet. It does not send email, messages, or PDFs itself. A PDF leaves the device only if the user chooses a destination in that share sheet, such as a mail, messaging, or storage app. Once shared, the chosen destination and recipient handle the PDF under their own privacy practices.</p>
-<h2>Third parties, analytics, and advertising</h2>
-<p>In the current <code>updates.url</code>-unconfigured configuration, Invoice Creator does not use third-party analytics SDKs, advertising SDKs, tracking, cloud sync, payment processing, or another third-party service that receives app data. The possible Expo Updates branch is described above and must be disclosed before it is enabled for a release.</p>
-<h2>Children&#x27;s data</h2>
-<p>Invoice Creator is not directed to children. In the current <code>updates.url</code>-unconfigured release configuration, we do not collect children&#x27;s personal information. If you believe a child has used the app, the data remains only on that device and can be removed by uninstalling the app.</p>
-<h2>Data deletion</h2>
-<p>To remove Invoice Creator&#x27;s local data from a device, uninstall the app. This removes the app and its locally stored data from that device. Device backups, if enabled by the device owner, are controlled by the operating system and its backup settings, not by Invoice Creator. We hold no copy to delete.</p>
+<p>The app generates a PDF on the device and opens your operating system's share sheet. It does not send email, messages, or PDFs itself. A PDF leaves your device only if you choose a destination in that share sheet. Once shared, that destination and recipient handle the PDF under their own privacy practices.</p>
+<h2>Children's data</h2>
+<p>Invoice Creator is a business tool and is not directed to children. We do not knowingly collect children's personal information. If you believe a child has used the app, its local data can be removed by uninstalling the app, and you can contact us to ask that any analytics data be deleted.</p>
+<h2>Your choices and your rights</h2>
+<ul>
+<li><strong>Turn analytics off</strong> at any time: Settings → Analytics. This is the simplest and most complete control.</li>
+<li><strong>Delete your local data</strong> by uninstalling the app. This removes the app's database from that device. Device backups, if enabled by the device owner, are controlled by the operating system, not by us.</li>
+<li><strong>Ask us to delete analytics data.</strong> Email <a href="mailto:klm.labs.inc@gmail.com">klm.labs.inc@gmail.com</a>. Because analytics data carries no account and no name, please include the approximate dates you used the app and the device platform so we can locate it. We will confirm when it has been deleted.</li>
+<li><strong>Ask what we hold.</strong> Email the same address and we will tell you.</li>
+</ul>
+<p>Depending on where you live, you may have additional rights over personal data, including access, correction, deletion, and objecting to processing. Contact us and we will honour them.</p>
 <h2>Changes to this policy</h2>
-<p>If the app&#x27;s data practices change, this policy and the store privacy disclosures will be updated before that version is released. Questions about this policy can be sent to <a href="mailto:klm.labs.inc@gmail.com.">klm.labs.inc@gmail.com.</a></p></div></body></html>
+<p>If the app's data practices change, this policy and the store privacy disclosures will be updated before that version is released. The effective date at the top of this page reflects the most recent change. Questions can be sent to <a href="mailto:klm.labs.inc@gmail.com">klm.labs.inc@gmail.com</a>.</p></div></body></html>
