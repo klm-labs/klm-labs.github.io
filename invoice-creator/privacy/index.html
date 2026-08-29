@@ -19,8 +19,8 @@ th{background:#f5eee7}
 p,li{color:#ddd0c4}h1,h2,h3{color:#f7efe8}code{background:#2b221b}
 th{background:#2b221b}th,td,hr{border-color:#3a2e25}.meta,.back{color:#a8998b}
 a{color:#f3882e}a:hover{color:#f9ad79}}</style></head><body><div class="wrap"><a class="back" href="/">← KLM Labs</a><h1>Invoice Creator Privacy Policy</h1>
-<p><strong>Effective date:</strong> 2026-08-27</p>
-<p><strong>Previous version:</strong> 2026-08-22</p>
+<p><strong>Effective date:</strong> 2026-08-29</p>
+<p><strong>Previous version:</strong> 2026-08-27</p>
 <p><strong>Contact:</strong> <a href="mailto:klm.labs.inc@gmail.com">klm.labs.inc@gmail.com</a></p>
 <p><strong>Published policy URL:</strong> https://klm-labs.github.io/invoice-creator/privacy/</p>
 <p><strong>Support URL:</strong> https://klm-labs.github.io/invoice-creator/support/</p>
@@ -60,7 +60,9 @@ a{color:#f3882e}a:hover{color:#f9ad79}}</style></head><body><div class="wrap"><a
 <p>We do not collect your name, your clients' names, addresses, email addresses, phone numbers, invoice or estimate numbers, document contents, notes, logo images, PDF contents, currencies, tax rates, or any money amount. We do not collect your precise location. We do not collect contacts, photos, calendar, messages, or files.</p>
 <p>We do not sell or rent data, do not use it for advertising, do not share it with data brokers, and do not track you across other apps or websites.</p>
 <h2>Expo Updates configuration</h2>
-<p>The <code>expo-updates</code> package is included for possible over-the-air fixes. If <code>updates.url</code> remains unconfigured, no Expo update check occurs. If it is configured before a release, the app will check Expo, Inc.'s servers at launch for an applicable update. That check carries technical metadata only — the runtime-version fingerprint, update channel, and platform. It does not carry invoice data, client data, business or document data, logo images, or other personal data.</p>
+<p>The app uses <code>expo-updates</code> to deliver small fixes without waiting for a store update. <strong>This is enabled as of version 1.0.0.</strong> Each time you open the app, it asks Expo, Inc.’s servers whether a newer version of the app’s code is available.</p>
+<p>That request carries technical information only: the runtime-version fingerprint, the update channel, the platform, and a randomly generated installation identifier (<code>EAS-Client-ID</code>) that lets Expo serve updates consistently to the same install. The identifier is created on your device, is not derived from your hardware and is not tied to any account, so it does not identify you. As with any internet request, Expo’s servers also see your device’s IP address. What Expo does with that is governed by its own privacy policy: <a href="https://expo.dev/privacy">https://expo.dev/privacy</a>.</p>
+<p>The check never carries invoice data, client data, business or document data, logo images, PDF contents, or any money amount. Uninstalling and reinstalling the app generates a new identifier.</p>
 <h2>Photo-library access</h2>
 <p>The app lets you optionally choose one image as a business logo, which appears on your business profile and on generated PDFs. The image is read on the device and stored locally with the business profile; <strong>it is never uploaded</strong>. Choosing a logo is optional — you can decline photo-library access, or clear a chosen logo, and continue using every feature. If the image cannot be read, the app says so and saves the profile without a logo.</p>
 <h2>Sharing PDFs</h2>
