@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /README.md
+Disallow: /CLAUDE.md
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /data/
+Disallow: /content/
+Disallow: /templates/
 Sitemap: https://klm-labs.github.io/sitemap.xml

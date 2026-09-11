@@ -112,30 +112,43 @@ The registered URLs must continue returning HTTP 200:
 - `/invoice-creator/terms/`
 - `/invoice-creator/support/`
 
-With the local server running, `node scripts/render.mjs` saves full-page PNGs at
-390 × 844 and 1440 × 900 viewport sizes. It uses the existing Playwright and Chrome
-installation on this machine without installing anything into the app repo.
-For other machines set `PLAYWRIGHT_PATH` (absolute module path), `CHROME_PATH`,
-`RENDER_DIR` and optionally `SITE_URL`. To run WCAG A/AA checks, supply `AXE_PATH`
-pointing to an installed `axe-core/axe.min.js` outside the app repository.
+With the local server running, the browser check saves full-page PNGs at
+390 × 844 and 1440 × 900 viewport sizes. Supply these three required environment
+variables as absolute paths; there are no machine-specific defaults:
 
-The default render directory is:
-`/tmp/claude-1000/-work-apps-invoice-creator/a964fd69-16b0-4f6b-8143-84afddaa9c96/scratchpad/site/renders/`.
+- `PLAYWRIGHT_PATH`: an existing, loadable Playwright module directory.
+- `CHROME_PATH`: an existing Chrome or Chromium executable.
+- `RENDER_DIR`: a writable artifact directory; created if it does not exist.
+
+```sh
+PLAYWRIGHT_PATH=/absolute/path/to/node_modules/playwright \
+CHROME_PATH=/absolute/path/to/chrome \
+RENDER_DIR=/absolute/path/to/render-artifacts \
+node scripts/render.mjs
+```
+
+Missing variables, invalid module/browser paths and unusable output directories
+produce explicit errors. The script installs nothing. Use existing tooling or
+install it outside the read-only app repository. `SITE_URL` optionally overrides
+`http://127.0.0.1:8765`, for example `SITE_URL=https://klm-labs.github.io` for live
+checks. To run WCAG A/AA checks, supply `AXE_PATH` pointing to an installed
+`axe-core/axe.min.js` outside the app repository.
+
 Files are `{studio,app,privacy,terms,support}-{390x844,1440x900}.png` plus
 `checks.json`. These are verification artifacts, not published assets.
 
 Inspect the images. The checks cover local link targets and anchors, canonical and
 social metadata, page overflow, missing images, external runtime requests, console
-errors, store-link/coming-soon behavior, reduced-motion carousel controls and the
-no-JavaScript content. `check.py` also catches the FB-066 analytics-control regression.
+errors, failed requests, computed text sizes (at least 12 px everywhere and 16 px
+for mobile body copy), store-link/coming-soon behavior, reduced-motion carousel
+controls and the no-JavaScript content. Runtime requests must not load the source
+paths excluded in `robots.txt`: `README.md`, `CLAUDE.md`, `docs/`, `scripts/`,
+`data/`, `content/` and `templates/`. These exclusions guide crawlers; the files
+remain publicly served by Pages. `check.py` also catches the FB-066
+analytics-control regression.
 
 Commit source and generated output to `main`, then push to `origin main`.
-For this publishing task each commit ends with:
-
-```text
-Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_0151ZyTqYZ3RQqKPA5GwLn4N
-```
+Include any commit trailers requested for the publishing task.
 
 Poll `gh api repos/klm-labs/klm-labs.github.io/pages/builds/latest` no faster than
 every 20 seconds, for up to ten minutes. Confirm `status: built` and `commit`

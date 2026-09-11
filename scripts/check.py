@@ -69,7 +69,9 @@ def main():
     assert 'Update checks operate independently of analytics.' in privacy
     terms = ' '.join(docs[ROOT / 'invoice-creator/terms/index.html'].words)
     assert not re.search(r'opt[ -]out', terms, re.I)
-    print(f'PASS: {len(paths)} pages, {links} internal references, metadata and FB-066 wording.')
+    assert 'Invoice Creator is free to use and sells nothing inside the app.' in terms
+    assert not re.search(r'Some features require a purchase|subscription renews|free trial|Restore purchases', terms, re.I), 'FB-078 purchase wording regressed'
+    print(f'PASS: {len(paths)} pages, {links} internal references, metadata and FB-066/FB-078 wording.')
 
 
 if __name__ == '__main__':

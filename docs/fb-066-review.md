@@ -126,3 +126,152 @@ c4a57a950c9cbe39390998ec07c8cc5e392b2b2bbe8c9165f3fda24f58b274e3  app.config.ts
 7120b197ccb4d9bd6060eb24e739dc8f3a1791c4b59d6b7a0c30d038b2351aa5  docs/store/play-data-safety-answers.md
 f39d73828262f0a76700e8fb403b4305a760cc47a81d58568531af4d4ea28aea  docs/store/apple-privacy-answers.md
 ```
+
+## 2026-09-11 — independent-check follow-up
+
+The earlier notes describe publication `0306cf1`. This section supersedes the
+purchase-preservation note and expands the technical-data inventory. App source
+was rechecked at `b8fcde72fa04491b2283b44ae18756167f56261d`, without edits.
+Installed versions: `posthog-react-native` 4.63.5, `@posthog/core` 1.48.8,
+`expo-updates` 57.0.16, and `expo-file-system` 57.0.5. All app paths below are
+relative to `/work/apps/invoice-creator`. SDK citations refer to installed files,
+not a different release's documentation. The two React Native SDK files are
+minified onto line 1; function names below identify the relevant code on that line.
+
+### FB-078: free app
+
+Replaced only the purchases/renewals/trials/restoration/refunds section with:
+“Invoice Creator is free to use and sells nothing inside the app. If paid features
+are added in the future, these terms will be updated before those features launch.”
+The effective date is now 2026-09-11, with a one-line change note. All other terms
+text is preserved. The advance-update commitment is the publisher's instruction.
+
+Evidence: `docs/product-spec.md:354–358` specifies free v1 with no paywall;
+`package.json:7–68` contains no billing library. Enumerating all production routes
+under `app/` found no purchase screen. Searching those routes for purchase,
+paywall, billing, RevenueCat, restoration and subscription calls found only the
+unrelated AppState listener named `subscription` at `app/_layout.tsx:195–200`.
+Unused purchase/paywall event names in `lib/analytics.ts:84–89` do not implement
+purchases or prove that those events are emitted.
+
+### FB-066: automatic analytics fields
+
+The policy's plain-language list now covers the following complete automatic
+event inventory for this app configuration, including its existing identifier
+paragraph. Conditional feature fields are explicitly qualified.
+
+| Policy claim / actual fields | Installed code evidence |
+| --- | --- |
+| App version, build number, build environment, platform: `app_version`, `build_number`, `environment`, `platform` | `lib/analytics.ts:120–128`, registered at `:196`. These are app-supplied super properties. |
+| Device category: `$device_type`, reported as `Mobile` on these native platforms | `node_modules/posthog-react-native/dist/native-deps.js:1`, `getDeviceType` and `getAppProperties`. |
+| Screen width and height: `$screen_width`, `$screen_height` | `node_modules/posthog-react-native/dist/posthog-rn.js:1`, `getCommonEventProperties`, reads React Native `Dimensions.get('screen')`. |
+| Analytics library name/version: `$lib`, `$lib_version` | `node_modules/@posthog/core/dist/posthog-core-stateless.js:211–215`; React Native `getLibraryId`/`getLibraryVersion` in `dist/posthog-rn.js:1`. |
+| Event time and random event ID: envelope `timestamp`, `uuid` | `node_modules/@posthog/core/dist/posthog-core-stateless.js:662–667`, `prepareMessage`. |
+| Random device/activity identity and session ID: envelope `distinct_id`, property `$session_id` | `node_modules/@posthog/core/dist/posthog-core.js:127–173`; event envelope in `posthog-core-stateless.js:249–260`. |
+| No identified login/person-profile processing: `$is_identified`, `$process_person_profile` | `node_modules/@posthog/core/dist/posthog-core.js:228–237`, `:813–832`; default `identified_only` at `:46`. App construction/capture at `lib/analytics.ts:155–196,209–215`; no app calls to identify, group, create a person profile, or set person properties. |
+| Available feature-configuration names/values and active list: `$feature/<name>`, `$active_feature_flags` | `node_modules/@posthog/core/dist/posthog-core.js:117–125,660–661`. Remote flag loading is allowed by the default at `:44` and initialization at `:422`; this does not imply the app has a feature-configuration screen. |
+
+Optional dependencies were checked with `require.resolve` from the installed
+PostHog package, not just the app's direct-dependency list. Each SDK optional
+loader catches missing-module errors (`dist/optional/Optional*.js:1`).
+
+| Optional module | Installed / consequence in this app |
+| --- | --- |
+| `expo-device` | Absent. No manufacturer, model, OS name/version or emulator flag from it. |
+| `react-native-device-info` | Absent. No fallback for device details or app identity. |
+| `expo-application` | Absent. No SDK `$app_name`, `$app_namespace`, `$app_version` or `$app_build`; the separate app-version/build super properties above are still sent. |
+| `expo-localization` | Absent. No device locale or timezone from it. |
+| `react-native-localize` | Absent. No fallback for device locale or timezone. |
+| `expo-file-system` and its `legacy` export | Present. Used for local queue/identifier persistence; do not add event properties. |
+| `@react-native-async-storage/async-storage` | Absent. The filesystem supplies persistence instead. |
+
+All property branches and storage fallbacks are in
+`node_modules/posthog-react-native/dist/native-deps.js:1`, `getAppProperties` and
+`buildOptimisticAsyncStorage`. App config supplies no custom property override
+(`lib/analytics.ts:155–191`). Absent-module properties have not been added to the
+policy. Device locale/timezone absence does not remove server-derived location.
+
+### FB-066: Expo request headers
+
+In this table, **Android downloader** means
+`node_modules/expo-updates/android/src/main/java/expo/modules/updates/loader/FileDownloader.kt`;
+**iOS downloader** means
+`node_modules/expo-updates/ios/EXUpdates/AppLoader/FileDownloader.swift`.
+
+| Policy claim / actual headers | Installed code evidence |
+| --- | --- |
+| Platform, runtime fingerprint and build channel: `Expo-Platform`, `Expo-Runtime-Version`, `expo-channel-name` | Android downloader `:894–905,919–922`; iOS downloader `:454–461,470–471`; `app.config.ts:49–50`; configured release channels in `eas.json:22,34`. |
+| Random installation ID: `EAS-Client-ID` | Android downloader `:900`; iOS downloader `:459`. Generation/persistence: `node_modules/expo-eas-client/android/src/main/java/expo/modules/easclient/EASClientID.kt:20–30` and `node_modules/expo-eas-client/ios/EASClient/EASClientID.swift:9–12,25–32`. No hardware/account value enters generation. |
+| Current and embedded update IDs, when available: `Expo-Current-Update-ID`, `Expo-Embedded-Update-ID` | Android downloader `:946–951`; iOS downloader `:365–371`. These identify software updates, not individual people. |
+| Protocol/API versions (`1`), native environment (`BARE`), accepted formats and JSON errors: `Expo-Protocol-Version`, `Expo-API-Version`, `Expo-Updates-Environment`, `Accept`, `Expo-JSON-Error` | Android downloader `:894–899`; iOS downloader `:454–460`. |
+| Recent failed update IDs and saved fatal-error details, conditional: `Expo-Recent-Failed-Update-IDs`, `Expo-Fatal-Error` | Android downloader `:908–916,953–959`; iOS downloader `:373–379,463–467`. Both truncate fatal-error headers to 1,024 characters. Android serializes the exception in `launcher/NoDatabaseLauncher.kt:32–36`; iOS serializes fatal app errors/exceptions in `node_modules/expo-updates/ios/EXUpdates/ErrorRecovery.swift:370–384`. |
+| Server-provided headers echoed on later checks, when present | Android downloader `:939–940`; iOS downloader `:347–350`. |
+| Download requests also identify the requested update and can request patches: `Expo-Requested-Update-ID`, `A-IM: bsdiff` | Android downloader `:770–805,965–982`; iOS downloader `:137–143,391–409,537–545` (`headersForPatch`). |
+
+`Expo-Extra-Params` is conditional on stored client parameters (Android downloader
+`:942–944`, iOS `:354–360`); no production app code calls `setExtraParamAsync`, so
+no custom parameters are claimed. `expo-expect-signature` requires a configured
+signing certificate (Android `:925–926`, iOS `:474–475`); this app has none in
+`app.config.ts:49–50`. The policy does not claim these optional headers are sent.
+Request headers are separate from generic HTTP transport headers supplied by the
+operating system. No app invoice/client fields are added to the update request.
+
+### FB-066: verified IP storage
+
+On 2026-09-11, a read-only `GET /api/projects/{id}/` returned HTTP 200 with
+**`anonymize_ips: false`**. The project was matched to the app's configured
+analytics key by an in-memory equality check. Credentials and the unfiltered
+response were neither printed nor saved; no PostHog setting was changed.
+
+Published sentence: **“PostHog stores your IP address with analytics events.”**
+The existing approximate-location explanation is retained. PostHog's
+[IP capture documentation](https://posthog.com/docs/privacy/data-collection#ip-data-capture)
+describes the project setting. The
+[setting's implementation, line 12](https://github.com/PostHog/posthog/blob/e82b17403425a1533b5be614f50a289ecc736b4c/frontend/src/scenes/settings/environment/IPCapture.tsx#L12)
+maps `anonymize_ips` to discarding client IP data; the
+[ingestion step, lines 41–43](https://github.com/PostHog/posthog/blob/e82b17403425a1533b5be614f50a289ecc736b4c/nodejs/src/ingestion/common/steps/event-processing/prepare-event-step.ts#L41)
+removes `$ip` only when that flag is true. The app does not override the SDK's
+GeoIP-enabled default (`node_modules/@posthog/core/dist/posthog-core.js:36–40`;
+`lib/analytics.ts:155–191`). Because discarding is false, no claim about the order
+of location derivation versus IP discarding is needed or made.
+
+### Publication corrections and app-owner reconciliation
+
+Privacy remains effective 2026-09-11; its revision note now includes automatic
+metadata, IP storage and update headers. The new bullets/sentence above are the
+exact additions to reconcile into the app's `docs/store/privacy-policy.md`, which
+currently matches the earlier site revision. The Play/Apple declaration drafts
+still omit this expanded technical inventory and mark console reconciliation
+pending; this site task does not establish that store consoles were updated.
+
+Source files were never loaded at runtime: before changing `robots.txt`, all five
+routes at both target sizes requested only route HTML, `assets/` files and app
+icons/screenshots. The generator now disallows the seven requested source paths
+without changing Pages or `.nojekyll`. Browser checks enforce this separation.
+
+Browser tooling now requires `PLAYWRIGHT_PATH`, `CHROME_PATH` and `RENDER_DIR`,
+with explicit missing/invalid-path errors and documented usage. The README's
+session URL is removed. Text previously measured at 8–11 px now has a 12 px
+minimum, and mobile body copy has a 16 px minimum, including policy tables/code,
+availability copy, feature descriptions and screenshot captions. Checks inspect
+rendered text-node computed styles rather than inferring sizes from CSS.
+
+Follow-up validation passed: five generated pages and 109 internal references;
+all ten final renders at 390 × 844 and 1440 × 900 had HTTP 200, no console errors,
+failed requests, broken images, source-directory requests or horizontal overflow.
+Minimum computed text size was 12 px on every page, with mobile body copy at
+least 16 px. All pages were visually inspected at both sizes. A further font
+sweep covered 16 widths from 280 to 2560 px, including each responsive breakpoint;
+resource navigation also fits at 280 px. Missing/invalid values for all three
+required renderer variables produced clear errors. A second build was byte
+identical; the remaining terms compared exactly equal after excluding the
+authorized changes. All six privacy-control phrase checks returned zero hits.
+
+Installed SDK file SHA-256 values:
+
+```text
+621431506b4890a09b0de9f6cf7768f5a1adb8ab13a274cb07bbff8620700957  node_modules/posthog-react-native/dist/native-deps.js
+293ea36cf8acae3134de15d418b8e55160131cb56a455c35a8c1eb9c0f0ceda4  node_modules/posthog-react-native/dist/posthog-rn.js
+da122d1efe52189daab98b3df97861600928c0651e92fdc9b495167290208bd7  node_modules/@posthog/core/dist/posthog-core.js
+65e97540bad48206dcd7c033090a52802c8dd8888c1fa83d2ac33565af2d2cbf  node_modules/@posthog/core/dist/posthog-core-stateless.js
+```

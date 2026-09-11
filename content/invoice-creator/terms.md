@@ -1,8 +1,10 @@
 # Invoice Creator Terms of Use
 
-**Effective date:** 2026-08-23
+**Effective date:** 2026-09-11
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
+
+**What changed.** Corrected the purchase section to reflect that the app is free and has no in-app purchases.
 
 Invoice Creator is made by KLM Labs. These terms describe the agreement between you and KLM Labs when you use the app. Please also read the [Privacy Policy](/invoice-creator/privacy/), which explains that your invoice and client data stays on your device.
 
@@ -16,21 +18,9 @@ You get a personal, non-exclusive, non-transferable licence to use Invoice Creat
 
 You may not resell, rent or redistribute the app itself, attempt to defeat its purchase or licensing checks, or use it to create documents that are fraudulent or unlawful.
 
-## Purchases, renewal and cancellation
+## Free to use
 
-Some features require a purchase. All purchases are made and processed by the Apple App Store or Google Play, not by KLM Labs directly. We never see or handle your card details.
-
-- **The price, currency and billing period shown in the app are the store's own** for your account's region, and are what you will be charged.
-
-- **A subscription renews automatically** at the price shown until you cancel. Cancel at any time in your App Store or Google Play account settings; cancelling stops the next renewal and does not shorten the period you have already paid for.
-
-- **A one-time purchase does not renew.**
-
-- **Where a free trial is offered**, its length is shown before you buy, and eligibility is determined by the store against your Apple or Google account. Unless you cancel before it ends, it converts to a paid period at the price shown.
-
-- **Restoring a purchase:** use *Restore purchases* on the app's purchase screen. Because the entitlement is tied to your store account rather than to the device, it restores on a new phone or after a reinstall.
-
-**Refunds are handled by the store, not by us.** Apple and Google each run their own refund process and set their own policies; we cannot issue, approve or reverse a refund on their behalf. Request one through [Apple](https://reportaproblem.apple.com/) or [Google Play](https://support.google.com/googleplay/answer/2479637). If something has gone wrong, please also [email us](mailto:klm.labs.inc@gmail.com) — we would rather fix it.
+Invoice Creator is free to use and sells nothing inside the app. If paid features are added in the future, these terms will be updated before those features launch.
 
 ## Your data is yours, and it lives on your device
 
