@@ -1,0 +1,55 @@
+{
+  "slug": "invoice-creator",
+  "name": "Invoice Creator",
+  "developer": "KLM Labs",
+  "category": "Business",
+  "schema_category": "BusinessApplication",
+  "bundle_id": "com.klmlabs.invoicecreator",
+  "pitch": "Job done. Invoice sent.",
+  "description": "Create professional invoices and estimates from your phone. Work offline, save your clients, and share a PDF when you’re ready. No account needed.",
+  "audience": "Made for contractors, tradespeople & freelancers.",
+  "icon": "/invoice-creator/icon.png",
+  "favicon": "/invoice-creator/favicon.png",
+  "social_image": "/invoice-creator/social.png",
+  "platforms": ["Android", "iOS"],
+  "stores": {
+    "app_store": { "url": null, "live": false },
+    "google_play": { "url": "https://play.google.com/store/apps/details?id=com.klmlabs.invoicecreator", "live": true }
+  },
+  "availability": "Android is in closed testing. Public downloads open at launch. App Store release coming soon.",
+  "facts": [
+    { "label": "Made for", "value": "Independent work" },
+    { "label": "Category", "value": "Business" },
+    { "label": "Invoicing", "value": "Works offline" },
+    { "label": "Account", "value": "No sign-up" }
+  ],
+  "screenshots": [
+    { "file": "01-invoices.webp", "title": "Know what you’re owed", "caption": "Unpaid invoices, at a glance.", "alt": "Invoice list showing a $1,350 balance and a sent invoice for Marina Bay Cafe.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/19-home-with-invoice.png" },
+    { "file": "02-create-invoice.webp", "title": "Put the job on paper", "caption": "Line items. Live totals. Done.", "alt": "Invoice editor with a deck repair line item, quantity, unit price and a running total.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/13-invoice-editor.png" },
+    { "file": "03-client-history.webp", "title": "Keep clients close", "caption": "Their details and history, together.", "alt": "Client details for Marina Bay Cafe with contact fields, outstanding balance and invoice history.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/22-client-editor-history.png" },
+    { "file": "04-invoice-defaults.webp", "title": "Make it your own", "caption": "Your currency, tax and terms.", "alt": "Invoice defaults with currency, tax fields and payment terms including Net 14.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/25-settings-defaults.png" },
+    { "file": "05-settings.webp", "title": "Set up. Get to work.", "caption": "Business details, in one place.", "alt": "Settings with business details, logo, invoice defaults and invoice numbering.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/23-settings.png" }
+  ],
+  "about": [
+    "You’ve finished the work. Getting the invoice out should be the easy part. Invoice Creator turns the details of a job into a clear, professional invoice or estimate, right from your phone.",
+    "Set up your business once, save your clients, and add the work you’ve done. Create and edit offline, then share a PDF through the app you choose. Your business details and documents stay on your device.",
+    "Built for people who bill by the job: contractors, electricians, plumbers, cleaners, photographers and independent freelancers. A focused tool for documents and follow-up."
+  ],
+  "features": [
+    { "icon": "document", "title": "From estimate to invoice", "text": "Quote the job, then convert the estimate to an invoice when it’s approved. Duplicate a document for repeat work." },
+    { "icon": "share", "title": "A PDF with your name on it", "text": "Add your business details and logo. Share a professional PDF by email, messaging or storage through your phone’s share sheet." },
+    { "icon": "clients", "title": "Less typing, next time", "text": "Save client details and set your usual currency, tax rate and payment terms. Running totals update as you edit." },
+    { "icon": "check", "title": "Keep track of the follow-up", "text": "Mark invoices sent or paid yourself, see what you’re owed, and spot overdue invoices at a glance." }
+  ],
+  "release": { "version": "1.0.0", "label": "First release · in testing", "text": "Invoices and estimates, saved clients, PDF sharing, and a clear view of what you’re owed. Works offline, with no account or sign-up." },
+  "safety_intro": "Your documents stay on your device. Some technical and usage data leaves the app, as explained below.",
+  "safety": [
+    { "icon": "device", "title": "Business data stays local", "text": "Client details, invoices, estimates and your logo are stored on your phone. PDFs are shared only when you choose a destination." },
+    { "icon": "activity", "title": "Automatic analytics in configured builds", "text": "Native builds with a bundled analytics key collect usage events, device and session identifiers, approximate location, and masked screen recordings. There is no analytics setting. Web and key-free builds send no PostHog data." },
+    { "icon": "refresh", "title": "Technical data for app updates", "text": "Native release builds contact Expo for updates, independently of analytics. Requests include an installation identifier and app metadata; Expo also sees the connection’s IP address." },
+    { "icon": "shield", "title": "No ads or cross-app tracking", "text": "No advertising, data sales or tracking across other apps. Contact KLM Labs to ask about data or request deletion." }
+  ],
+  "contact": "klm.labs.inc@gmail.com",
+  "policy_date": "2026-09-11",
+  "source_review": { "date": "2026-09-11", "app_commit": "b8fcde72fa04491b2283b44ae18756167f56261d" }
+}

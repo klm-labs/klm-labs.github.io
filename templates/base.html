@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta name="theme-color" content="#fbfaf7">
+  <link rel="canonical" href="$canonical">
+  <link rel="icon" href="$favicon" type="image/png">
+  <link rel="apple-touch-icon" href="$icon">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KLM Labs">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:url" content="$canonical">
+  <meta property="og:image" content="$social_image">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="$social_alt">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="$title">
+  <meta name="twitter:description" content="$description">
+  <meta name="twitter:image" content="$social_image">
+  <meta name="twitter:image:alt" content="$social_alt">
+  <link rel="preload" href="/assets/fonts/archivo-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css?v=$css_version">
+  <script src="/assets/site.js?v=$js_version" defer></script>
+$structured_data
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="/" aria-label="KLM Labs home"><span class="studio-mark" aria-hidden="true">klm</span><span>KLM Labs<span class="wordmark-note">Independent app studio</span></span></a>
+      <nav aria-label="Studio"><a href="/#apps">Our apps</a><a href="mailto:klm.labs.inc@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  $content
+  <footer class="site-footer container">
+    <div class="footer-top"><a class="footer-brand" href="/">KLM Labs<span>Small apps. Thoughtfully made.</span></a><nav aria-label="Footer">$footer_links<a href="mailto:klm.labs.inc@gmail.com">Contact <span aria-hidden="true">↗</span></a></nav></div>
+    <div class="footer-bottom"><span>© 2026 KLM Labs</span><span>Google Play is a trademark of Google LLC. App Store and Apple are trademarks of Apple Inc.</span></div>
+  </footer>
+</body>
+</html>
