@@ -154,6 +154,8 @@ unrelated AppState listener named `subscription` at `app/_layout.tsx:195–200`.
 Unused purchase/paywall event names in `lib/analytics.ts:84–89` do not implement
 purchases or prove that those events are emitted.
 
+2026-09-11 — FB-078 remnant follow-up: removed the nonexistent purchase/licensing-check phrase and already-bought paid-feature sentence from Invoice Creator's terms, extended the change note, and retained the effective date and liability cap. The terms prose is app-specific Markdown; only the document layout is shared. The listing, app data, privacy, support, studio page and generated HTML contain no other false purchase claims; invoice prices/payment statuses, conditional future paid features, licences and statutory remedies remain accurate.
+
 ### FB-066: automatic analytics fields
 
 The policy's plain-language list now covers the following complete automatic

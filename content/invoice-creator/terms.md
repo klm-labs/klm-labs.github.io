@@ -4,7 +4,7 @@
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-**What changed.** Corrected the purchase section to reflect that the app is free and has no in-app purchases.
+**What changed.** Corrected the purchase section to reflect that the app is free and has no in-app purchases; removed remaining purchase-check and paid-feature wording.
 
 Invoice Creator is made by KLM Labs. These terms describe the agreement between you and KLM Labs when you use the app. Please also read the [Privacy Policy](/invoice-creator/privacy/), which explains that your invoice and client data stays on your device.
 
@@ -16,7 +16,7 @@ Where Invoice Creator is downloaded from the Apple App Store, it is licensed to 
 
 You get a personal, non-exclusive, non-transferable licence to use Invoice Creator on devices you own or control, for your own business or personal invoicing. You may use the invoices, estimates and PDFs you create for any lawful purpose, including commercially — they are your documents, not ours.
 
-You may not resell, rent or redistribute the app itself, attempt to defeat its purchase or licensing checks, or use it to create documents that are fraudulent or unlawful.
+You may not resell, rent or redistribute the app itself, or use it to create documents that are fraudulent or unlawful.
 
 ## Free to use
 
@@ -30,7 +30,7 @@ You are responsible for the accuracy of what you put on an invoice, including ta
 
 ## Availability and changes
 
-We may update the app, change or remove features, or stop distributing it. Where a change materially affects a paid feature you have already bought, we will make a reasonable effort to tell you in advance through the app or the store listing.
+We may update the app, change or remove features, or stop distributing it.
 
 We may update these terms. The effective date above shows when they last changed, and continuing to use the app after a change means you accept the updated terms.
 
