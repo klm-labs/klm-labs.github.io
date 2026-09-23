@@ -42,14 +42,15 @@
     { "icon": "check", "title": "Keep track of the follow-up", "text": "Mark invoices sent or paid yourself, see what you’re owed, and spot overdue invoices at a glance." }
   ],
   "release": { "version": "1.0.0", "label": "First release · in testing", "text": "Invoices and estimates, saved clients, PDF sharing, and a clear view of what you’re owed. Works offline, with no account or sign-up." },
-  "safety_intro": "Your documents stay on your device. Some technical and usage data leaves the app, as explained below.",
+  "safety_intro": "Your documents stay on your device. Some technical, usage and subscription data leaves the app, as explained below.",
   "safety": [
     { "icon": "device", "title": "Business data stays local", "text": "Client details, invoices, estimates and your logo are stored on your phone. PDFs are shared only when you choose a destination." },
     { "icon": "activity", "title": "Automatic analytics in configured builds", "text": "Native builds with a bundled analytics key collect usage events, device and session identifiers, approximate location, and masked screen recordings. There is no analytics setting. Web and key-free builds send no PostHog data." },
     { "icon": "refresh", "title": "Technical data for app updates", "text": "Native release builds contact Expo for updates, independently of analytics. Requests include an installation identifier and app metadata; Expo also sees the connection’s IP address." },
+    { "icon": "check", "title": "Subscriptions through Apple or Google", "text": "Yearly and monthly plans are bought and cancelled in the App Store or Google Play, which handle payment. RevenueCat checks and restores subscriptions using a random app user ID and the store’s purchase records. KLM Labs never sees card details." },
     { "icon": "shield", "title": "No ads or cross-app tracking", "text": "No advertising, data sales or tracking across other apps. Contact KLM Labs to ask about data or request deletion." }
   ],
   "contact": "klm.labs.inc@gmail.com",
-  "policy_date": "2026-09-11",
-  "source_review": { "date": "2026-09-11", "app_commit": "b8fcde72fa04491b2283b44ae18756167f56261d" }
+  "policy_date": "2026-09-23",
+  "source_review": { "date": "2026-09-23", "app_commit": "dc66d6c0da6721398f2309a9b89e7d681a2ebd6a" }
 }

@@ -8,7 +8,7 @@ Invoice Creator is an offline tool for creating professional invoice and estimat
 
 ### Do I need an account or an internet connection?
 
-No. Creating and saving invoices works offline, with no account, cloud sync, or login. When a connection is available, native builds can check for app updates and builds with a bundled analytics key collect analytics automatically. See the [privacy policy](/invoice-creator/privacy/) for details.
+No account. Creating and saving invoices works offline, with no cloud sync or login. Subscribing, restoring purchases and the first subscription check need a connection; after that, the app uses the store's saved answer when you are offline. When a connection is available, native builds check for app updates, builds configured for subscriptions check your subscription through RevenueCat, and builds with a bundled analytics key collect analytics automatically, with no setting to turn it off. See the [privacy policy](/invoice-creator/privacy/) for what is collected.
 
 ### What can I put on an invoice or estimate?
 
@@ -28,11 +28,42 @@ No. Sharing does not change a document's status. Use **Mark sent** when you deci
 
 ### Where is my data stored, and how do I delete it?
 
-Your business details, clients, documents, and a selected logo stay on your device. To remove the app's local data from a device, uninstall Invoice Creator. There is no account or server copy of your documents. Uninstalling does not delete analytics or update-service records; see the [privacy policy](/invoice-creator/privacy/) to request information or deletion.
+Your business details, clients, documents, and a selected logo stay on your device. To remove the app's local data from a device, uninstall Invoice Creator. There is no account or server copy of your documents. Uninstalling does not delete analytics, update-service or subscription records, and does not cancel a subscription; see the [privacy policy](/invoice-creator/privacy/) to request information or deletion.
 
 ### Will I be able to choose a business-logo photo?
 
 Yes. Choose an image from your device's photo library in Business profile or during first-run setup. If photo access is denied or the image is unavailable, Invoice Creator shows a retry message and saves your other business details without a logo.
+
+## Subscriptions
+
+### Do I need a subscription?
+
+Yes. After first-run setup, Invoice Creator needs an active Invoice Creator Pro subscription or free trial. Choose a yearly plan, which includes a 7-day free trial for eligible new subscribers, or a monthly plan. The price and any trial are shown in the app before you confirm. Subscriptions renew automatically until you cancel. The full terms are in the [terms of use](/invoice-creator/terms/).
+
+### How do I cancel?
+
+Cancel in your store account; the app cannot cancel for you.
+
+- **iPhone or iPad:** open Settings, tap your name, then Subscriptions, choose Invoice Creator and tap Cancel Subscription. To avoid a charge, cancel at least 24 hours before a free trial or the current period ends.
+- **Android:** open the Google Play Store, go to Payments & subscriptions, then Subscriptions, choose Invoice Creator and tap Cancel subscription.
+
+Deleting the app does not cancel a subscription. After cancelling, you keep access until the end of the period you have already paid for.
+
+### I reinstalled the app or got a new phone. How do I get my subscription back?
+
+Sign in to the same Apple Account or Google Play account that bought it, open Invoice Creator and tap **Restore purchases** on the subscribe screen. An App Store subscription works only on iPhone and iPad, and a Google Play subscription only on Android. Reinstalling does not bring back invoices from the old installation, because they were stored only on that device.
+
+### How do I get a refund?
+
+Apple and Google handle all payments, so refunds go through them. For the App Store, request a refund at [reportaproblem.apple.com](https://reportaproblem.apple.com). For Google Play, see [Google Play's refund policies](https://support.google.com/googleplay/answer/2479637), or email us and we will review what we can do through Google Play.
+
+### What happens to my invoices if my subscription ends?
+
+They stay on your device. The next time the app starts, it shows the subscribe screen, and your invoices, estimates and clients stay locked until you subscribe again or restore an active subscription. Uninstalling the app deletes them.
+
+### The app says “Couldn’t check your subscription”.
+
+The app checks your subscription each time it starts. Offline, it uses the store's saved answer; if it has none yet, connect to the internet and tap **Try again**. If you are already subscribed, tap **Restore purchases**.
 
 ## Report a bug or request help
 

@@ -1,18 +1,21 @@
 # Invoice Creator Privacy Policy
 
-**Effective date:** 2026-09-11
+**Effective date:** 2026-09-23
 
 **Contact:** klm.labs.inc@gmail.com
 
 Invoice Creator is made by KLM Labs. It creates invoices and estimates on a device and lets the user share a PDF when they choose.
 
-**What changes in this revision.** Analytics collection is automatic in native builds that include a bundled analytics key. There is no analytics setting in the app. Collection includes approximate location derived from the internet connection and masked screen recordings, as described below. This revision also details automatic analytics metadata, IP-address storage, and the technical headers sent for app updates.
+**What changes in this revision.** Invoice Creator now offers subscriptions. Purchases are made through the App Store or Google Play, and RevenueCat, Inc. processes subscription records for KLM Labs so the app can check, unlock and restore your subscription. This revision adds a section describing that processing, the subscription events recorded by analytics, and how to ask for subscription records to be deleted.
+
+**Previous revision (2026-09-11).** Analytics collection is automatic in native builds that include a bundled analytics key. There is no analytics setting in the app. Collection includes approximate location derived from the internet connection and masked screen recordings, as described below. That revision also detailed automatic analytics metadata, IP-address storage, and the technical headers sent for app updates.
 
 ## The short version
 
 - **Your business and client data stays on your device.** Names, addresses, contact details, invoice contents, amounts and your logo are stored locally and are never sent to us.
 - **Builds configured for analytics collect usage data under a random device identifier**. Builds without an analytics key do not send PostHog data; update checks below still occur.
 - That usage data includes **which screens you visit**, **an approximate location** (country, city, postal area) worked out from your internet connection, and a **masked screen recording** in which text and images are hidden.
+- **Subscriptions are paid through Apple or Google.** We never see your card or bank details. RevenueCat receives your purchase records and a random app user ID so the app can check and restore your subscription.
 - There is **no account**, so none of this is linked to your name or email.
 - We do not sell data, show adverts, or track you across other apps.
 
@@ -33,6 +36,8 @@ The app includes product analytics so we can see which features are used and whe
 ### What analytics collects
 
 **Events describing what you did, not what you wrote.** For example: the app was opened, onboarding was completed, an invoice was previewed, a save failed. Screen names are recorded as templates such as `/invoice/[id]` — never the actual invoice identifier.
+
+**Subscription events.** When the subscribe screen is shown, where it was opened from, whether plans could be loaded, which plan (yearly or monthly) a purchase was started for, whether it included a free trial, whether a purchase or restore completed, was cancelled or failed, with a generic reason such as a network or store error, and whether a restore found an active subscription. These events never include a price, an amount, or store receipt details.
 
 Event details are restricted, by design, to counts, fixed categories and yes/no values. **No client name, business name, address, email address, phone number, invoice or estimate number, document text, note, logo, PDF, currency, tax rate, or money amount is ever included in an event.**
 
@@ -68,6 +73,28 @@ We do not collect your name, your clients' names, addresses, email addresses, ph
 
 We do not sell or rent data, do not use it for advertising, do not share it with data brokers, and do not track you across other apps or websites.
 
+## Subscriptions and purchases
+
+After first-run setup, the app needs an active subscription or free trial. This section applies to builds configured for subscriptions, which includes the versions published on the App Store and Google Play; builds without a subscription key make no requests to RevenueCat.
+
+**Payment is handled by Apple or Google.** You buy, pay for, manage and cancel subscriptions with your Apple Account or Google Play account. Apple and Google process the payment under their own privacy policies. KLM Labs never receives or stores your card or bank details, and the app sends no name or email address to RevenueCat.
+
+**Who processes subscription records.** [RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes subscription records for KLM Labs as a service provider. The app contacts RevenueCat when it starts, to check your subscription; when it shows the plans; and when you subscribe or restore purchases.
+
+**What RevenueCat receives:**
+
+- **A random app user ID** created by RevenueCat's software when the app first uses it. It is not your name, email or store account, and it is used to keep your purchase records together.
+- **Your purchase records for this app** from the App Store or Google Play: the store's receipt or purchase token, and from it the plan bought, its price and currency, and purchase, trial, renewal, cancellation, billing-problem and expiry dates.
+- **Technical information sent with each request:** app version and build, app identifier, operating-system version, device model (and, on Android, device brand), preferred languages, store country, the version of RevenueCat's software, and whether the purchase is a test purchase.
+- **On iPhone and iPad, the identifier for vendor**, a random identifier that iOS gives to apps from the same developer on one device.
+- As with any internet request, **your IP address** is visible to RevenueCat's servers.
+
+**Why.** To confirm purchases with Apple or Google and prevent fraud; to unlock the app while your subscription or trial is active; to restore your subscription after reinstalling or on a new device; and to give KLM Labs subscription reports, such as how many trials started, renewed or were cancelled, and the resulting revenue.
+
+**What it never receives.** No invoice, estimate, client or business data, logo, PDF, or money amount from your documents is sent to RevenueCat. RevenueCat does not use this data to show you adverts or to track you across other apps.
+
+**Keeping and deleting subscription records.** RevenueCat keeps subscription records under its agreement with KLM Labs and its own privacy policy. You can ask us to delete the RevenueCat record for your purchases; tell us the platform and roughly when you subscribed so we can find it. Deleting that record does not cancel a subscription, and Apple and Google keep their own purchase records. Removing the app does not cancel a subscription or delete records already held by RevenueCat.
+
 ## App updates
 
 The app uses `expo-updates` to deliver small fixes without waiting for a store update. **This is enabled as of version 1.0.0.** Native release builds check Expo, Inc.’s servers for a newer version of the app’s code when the app launches. These requests are independent of PostHog and also occur in native release builds without an analytics key. Development and web builds do not use this native update process.
@@ -102,7 +129,9 @@ Invoice Creator is a business tool and is not directed to children. We do not kn
 ## Your choices and your rights
 
 - **Delete your local data** by uninstalling the app. This removes the app's database from that device. Device backups, if enabled by the device owner, are controlled by the operating system, not by us.
-- **Ask us to delete analytics data.** Email klm.labs.inc@gmail.com. Because analytics records use a random identifier rather than an account or name, please include the approximate dates you used the app and the device platform to help us investigate. We may need additional information to locate records, and will explain what we can locate and delete. Uninstalling the app does not delete records already held by PostHog or Expo.
+- **Cancel a subscription** in your Apple Account or Google Play settings; see the [terms](/invoice-creator/terms/) for the steps. Deleting the app does not cancel it.
+- **Ask us to delete subscription records** held by RevenueCat. Email klm.labs.inc@gmail.com with the platform and roughly when you subscribed.
+- **Ask us to delete analytics data.** Email klm.labs.inc@gmail.com. Because analytics records use a random identifier rather than an account or name, please include the approximate dates you used the app and the device platform to help us investigate. We may need additional information to locate records, and will explain what we can locate and delete. Uninstalling the app does not delete records already held by PostHog, Expo or RevenueCat.
 - **Ask what we hold.** Email the same address and we will tell you.
 
 Depending on where you live, you may have additional rights over personal data, including access, correction, deletion, and objecting to processing. Contact us and we will respond in accordance with applicable law.

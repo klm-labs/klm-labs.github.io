@@ -69,9 +69,18 @@ def main():
     assert 'Update checks operate independently of analytics.' in privacy
     terms = ' '.join(docs[ROOT / 'invoice-creator/terms/index.html'].words)
     assert not re.search(r'opt[ -]out', terms, re.I)
-    assert 'Invoice Creator is free to use and sells nothing inside the app.' in terms
-    assert not re.search(r'Some features require a purchase|subscription renews|free trial|Restore purchases', terms, re.I), 'FB-078 purchase wording regressed'
-    print(f'PASS: {len(paths)} pages, {links} internal references, metadata and FB-066/FB-078 wording.')
+    # Paid launch (2026-09-23): the app sells auto-renewing subscriptions, so the
+    # FB-078 free-app wording is now false and the store-required disclosures must stay.
+    assert not re.search(r'free to use|sells nothing|no in-app purchases', terms, re.I), 'Free-app wording regressed'
+    for phrase in ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore purchases',
+                   'Deleting the app does not cancel a subscription.', 'reportaproblem.apple.com',
+                   'Standard End User Licence Agreement', 'KLM Labs never sees your card or bank details']:
+        assert phrase in terms, f'Terms lost subscription disclosure: {phrase}'
+    assert 'RevenueCat' in privacy and 'KLM Labs never receives or stores your card or bank details' in privacy, 'Privacy lost RevenueCat disclosure'
+    support = ' '.join(docs[ROOT / 'invoice-creator/support/index.html'].words)
+    for phrase in ['Restore purchases', 'Cancel Subscription', 'reportaproblem.apple.com']:
+        assert phrase in support, f'Support lost subscription help: {phrase}'
+    print(f'PASS: {len(paths)} pages, {links} internal references, metadata, FB-066 wording and subscription disclosures.')
 
 
 if __name__ == '__main__':
