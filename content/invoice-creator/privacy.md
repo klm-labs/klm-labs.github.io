@@ -1,12 +1,12 @@
-# Invoice Creator Privacy Policy
+# Invoice Maker Privacy Policy
 
 **Effective date:** 2026-09-23
 
 **Contact:** klm.labs.inc@gmail.com
 
-Invoice Creator is made by KLM Labs. It creates invoices and estimates on a device and lets the user share a PDF when they choose.
+Invoice Maker is made by KLM Labs. It creates invoices and estimates on a device and lets the user share a PDF when they choose.
 
-**What changes in this revision.** Invoice Creator now offers subscriptions. Purchases are made through the App Store or Google Play, and RevenueCat, Inc. processes subscription records for KLM Labs so the app can check, unlock and restore your subscription. This revision adds a section describing that processing, the subscription events recorded by analytics, and how to ask for subscription records to be deleted.
+**What changes in this revision.** Invoice Maker now offers subscriptions. Purchases are made through the App Store or Google Play, and RevenueCat, Inc. processes subscription records for KLM Labs so the app can check, unlock and restore your subscription. This revision adds a section describing that processing, the subscription events recorded by analytics, and how to ask for subscription records to be deleted. Invoice Creator is now called Invoice Maker. Nothing else about the app, your data or your subscription changed.
 
 **Previous revision (2026-09-11).** Analytics collection is automatic in native builds that include a bundled analytics key. There is no analytics setting in the app. Collection includes approximate location derived from the internet connection and masked screen recordings, as described below. That revision also detailed automatic analytics metadata, IP-address storage, and the technical headers sent for app updates.
 
@@ -124,7 +124,7 @@ The app generates a PDF on the device and opens your operating system's share sh
 
 ## Children's data
 
-Invoice Creator is a business tool and is not directed to children. We do not knowingly collect children's personal information. If you believe a child has used the app, its local data can be removed by uninstalling the app, and you can contact us to ask that any analytics data be deleted.
+Invoice Maker is a business tool and is not directed to children. We do not knowingly collect children's personal information. If you believe a child has used the app, its local data can be removed by uninstalling the app, and you can contact us to ask that any analytics data be deleted.
 
 ## Your choices and your rights
 

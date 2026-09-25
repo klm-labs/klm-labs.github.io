@@ -1,6 +1,6 @@
 {
   "slug": "invoice-creator",
-  "name": "Invoice Creator",
+  "name": "Invoice Maker",
   "developer": "KLM Labs",
   "category": "Business",
   "schema_category": "BusinessApplication",
@@ -31,7 +31,7 @@
     { "file": "05-settings.webp", "title": "Set up. Get to work.", "caption": "Business details, in one place.", "alt": "Settings with business details, logo, invoice defaults and invoice numbering.", "width": 576, "height": 1280, "source": "docs/design/walkthrough/android-2026-09-10-AriWHd/23-settings.png" }
   ],
   "about": [
-    "You’ve finished the work. Getting the invoice out should be the easy part. Invoice Creator turns the details of a job into a clear, professional invoice or estimate, right from your phone.",
+    "You’ve finished the work. Getting the invoice out should be the easy part. Invoice Maker turns the details of a job into a clear, professional invoice or estimate, right from your phone.",
     "Set up your business once, save your clients, and add the work you’ve done. Create and edit offline, then share a PDF through the app you choose. Your business details and documents stay on your device.",
     "Built for people who bill by the job: contractors, electricians, plumbers, cleaners, photographers and independent freelancers. A focused tool for documents and follow-up."
   ],

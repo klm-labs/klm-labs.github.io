@@ -39,17 +39,18 @@ the smaller WOFF2 subsets. Font licenses and store badge provenance are in
 
 ## Add a new app
 
-1. Add `data/apps/<slug>.json`, using the Invoice Creator record as the schema.
-   Supply factual copy and store status. The `slug` must match the new directory
-   name. Replace every app-specific value, including `bundle_id`, platforms,
-   category, developer, contact and data-safety entries. Do not advertise an app
-   whose details have not been verified.
+1. Add `data/apps/<slug>.json`, using the Invoice Maker record
+   (`invoice-creator.json`) as the schema. Supply factual copy and store status.
+   The `slug` must match the new directory name. Replace every app-specific
+   value, including `bundle_id`, platforms, category, developer, contact and
+   data-safety entries. Do not advertise an app whose details have not been
+   verified.
 2. Put its icon and favicon at the paths in that record. Put real captures in
    `<slug>/screenshots/`; provide file, title, caption, alt text, dimensions and
    source provenance for every entry. At least one screenshot is required.
 3. Add `content/<slug>/privacy.md`, `terms.md` and `support.md`. Check privacy
    against that app’s implementation and current store declarations. Do not copy
-   Invoice Creator’s data practices into an unrelated app.
+   Invoice Maker’s data practices into an unrelated app.
 4. Rebuild. Its listing, three resource pages, studio card, social image and
    sitemap entries are generated automatically. No HTML or CSS copying is needed.
 5. Check links, inspect desktop/mobile renders, commit, push and verify live.
@@ -62,7 +63,7 @@ and renders an official badge link. `live: false` renders plain **Coming soon**
 text in a non-interactive element, even if a future URL is already known.
 The Apple artwork is used only when the App Store link is live.
 
-For **Invoice Creator**, change these exact entries in
+For **Invoice Maker**, change these exact entries in
 [`data/apps/invoice-creator.json`](data/apps/invoice-creator.json):
 
 - **App Store, line 16:** once App Store Connect → app → App Information supplies
@@ -85,7 +86,7 @@ The generator validates canonical Play URLs and numeric Apple listing URLs.
 ## Refresh screenshots
 
 Only use captures of the real app. Prefer the cleanest current release candidate;
-avoid errors, keyboards, junk test records and the Invoice Creator Preview screen
+avoid errors, keyboards, junk test records and the Invoice Maker Preview screen
 until its layout fixes have been verified. Do not draw, retouch or synthesize app UI.
 
 Replace files in `<slug>/screenshots/` and edit only that app’s `screenshots` list
@@ -111,6 +112,10 @@ The registered URLs must continue returning HTTP 200:
 - `/invoice-creator/privacy/`
 - `/invoice-creator/terms/`
 - `/invoice-creator/support/`
+
+The app was renamed from Invoice Creator to Invoice Maker on 2026-09-25. Its slug,
+file names and these paths stay `invoice-creator`, because the stores already link
+to them.
 
 With the local server running, the browser check saves full-page PNGs at
 390 × 844 and 1440 × 900 viewport sizes. Supply these three required environment

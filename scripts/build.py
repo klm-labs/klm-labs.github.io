@@ -199,7 +199,7 @@ def main():
     ImageDraw.Draw(mark).text((23, 51), 'klm', font=font(72, True), fill='#fbfaf7')
     mark.save(ROOT / 'assets/studio-icon.png', optimize=True)
     mark.resize((48, 48), Image.Resampling.LANCZOS).save(ROOT / 'assets/favicon.png', optimize=True)
-    render_page('/', template('studio', **arrows, app_count=f'{len(apps):02d}', app_cards=''.join(cards)), 'KLM Labs — Small apps. Real work.', 'An independent app studio making thoughtful tools for everyday tasks. Explore Invoice Creator and apps from KLM Labs.')
+    render_page('/', template('studio', **arrows, app_count=f'{len(apps):02d}', app_cards=''.join(cards)), 'KLM Labs — Small apps. Real work.', 'An independent app studio making thoughtful tools for everyday tasks. Explore Invoice Maker and apps from KLM Labs.')
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{ORIGIN}{url}</loc></url>' for url in urls) + '</urlset>\n')
     source_paths = ['README.md', 'CLAUDE.md', 'docs/', 'scripts/', 'data/', 'content/', 'templates/']
     (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\n' + ''.join(f'Disallow: /{path}\n' for path in source_paths) + f'Sitemap: {ORIGIN}/sitemap.xml\n')

@@ -1,8 +1,8 @@
-# Invoice Creator Support
+# Invoice Maker Support
 
 **Contact:** klm.labs.inc@gmail.com
 
-Invoice Creator is an offline tool for creating professional invoice and estimate PDFs on a phone. It is made for independent contractors and tradespeople who want a straightforward way to document a job, share a PDF, and track what they are owed.
+Invoice Maker is an offline tool for creating professional invoice and estimate PDFs on a phone. It is made for independent contractors and tradespeople who want a straightforward way to document a job, share a PDF, and track what they are owed.
 
 ## Common questions
 
@@ -20,7 +20,7 @@ Yes. Duplicate an invoice or estimate to make a new draft with a fresh document 
 
 ### How do I send a PDF?
 
-Open a document preview and choose **Share**. Invoice Creator generates the PDF on the device and opens the operating system's share sheet. Choose the mail, messaging, storage, or other destination you prefer. The app does not send messages or email itself.
+Open a document preview and choose **Share**. Invoice Maker generates the PDF on the device and opens the operating system's share sheet. Choose the mail, messaging, storage, or other destination you prefer. The app does not send messages or email itself.
 
 ### Does sharing mark an invoice as sent?
 
@@ -28,30 +28,30 @@ No. Sharing does not change a document's status. Use **Mark sent** when you deci
 
 ### Where is my data stored, and how do I delete it?
 
-Your business details, clients, documents, and a selected logo stay on your device. To remove the app's local data from a device, uninstall Invoice Creator. There is no account or server copy of your documents. Uninstalling does not delete analytics, update-service or subscription records, and does not cancel a subscription; see the [privacy policy](/invoice-creator/privacy/) to request information or deletion.
+Your business details, clients, documents, and a selected logo stay on your device. To remove the app's local data from a device, uninstall Invoice Maker. There is no account or server copy of your documents. Uninstalling does not delete analytics, update-service or subscription records, and does not cancel a subscription; see the [privacy policy](/invoice-creator/privacy/) to request information or deletion.
 
 ### Will I be able to choose a business-logo photo?
 
-Yes. Choose an image from your device's photo library in Business profile or during first-run setup. If photo access is denied or the image is unavailable, Invoice Creator shows a retry message and saves your other business details without a logo.
+Yes. Choose an image from your device's photo library in Business profile or during first-run setup. If photo access is denied or the image is unavailable, Invoice Maker shows a retry message and saves your other business details without a logo.
 
 ## Subscriptions
 
 ### Do I need a subscription?
 
-Yes. After first-run setup, Invoice Creator needs an active Invoice Creator Pro subscription or free trial. Choose a yearly plan, which includes a 7-day free trial for eligible new subscribers, or a monthly plan. The price and any trial are shown in the app before you confirm. Subscriptions renew automatically until you cancel. The full terms are in the [terms of use](/invoice-creator/terms/).
+Yes. After first-run setup, Invoice Maker needs an active Invoice Maker Pro subscription or free trial. Choose a yearly plan, which includes a 7-day free trial for eligible new subscribers, or a monthly plan. The price and any trial are shown in the app before you confirm. Subscriptions renew automatically until you cancel. The full terms are in the [terms of use](/invoice-creator/terms/).
 
 ### How do I cancel?
 
 Cancel in your store account; the app cannot cancel for you.
 
-- **iPhone or iPad:** open Settings, tap your name, then Subscriptions, choose Invoice Creator and tap Cancel Subscription. To avoid a charge, cancel at least 24 hours before a free trial or the current period ends.
-- **Android:** open the Google Play Store, go to Payments & subscriptions, then Subscriptions, choose Invoice Creator and tap Cancel subscription.
+- **iPhone or iPad:** open Settings, tap your name, then Subscriptions, choose Invoice Maker and tap Cancel Subscription. To avoid a charge, cancel at least 24 hours before a free trial or the current period ends.
+- **Android:** open the Google Play Store, go to Payments & subscriptions, then Subscriptions, choose Invoice Maker and tap Cancel subscription.
 
 Deleting the app does not cancel a subscription. After cancelling, you keep access until the end of the period you have already paid for.
 
 ### I reinstalled the app or got a new phone. How do I get my subscription back?
 
-Sign in to the same Apple Account or Google Play account that bought it, open Invoice Creator and tap **Restore purchases** on the subscribe screen. An App Store subscription works only on iPhone and iPad, and a Google Play subscription only on Android. Reinstalling does not bring back invoices from the old installation, because they were stored only on that device.
+Sign in to the same Apple Account or Google Play account that bought it, open Invoice Maker and tap **Restore purchases** on the subscribe screen. An App Store subscription works only on iPhone and iPad, and a Google Play subscription only on Android. Reinstalling does not bring back invoices from the old installation, because they were stored only on that device.
 
 ### How do I get a refund?
 
