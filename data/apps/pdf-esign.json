@@ -21,6 +21,6 @@
     "app_branch": "build/v1",
     "app_commit": "97a7c310953cc6e481eee8a9c9bb37543e60ed66",
     "asc_app_id": "6816484899",
-    "app_privacy": "Not yet entered in App Store Connect (docs/build/launch-checklist.md); the planned answers in docs/build/app-privacy.md omit the approximate location PostHog derives from the IP address"
+    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 03:02Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking"
   }
 }

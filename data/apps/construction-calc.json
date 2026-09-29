@@ -21,7 +21,7 @@
     "app_branch": "build/v1",
     "app_commit": "7bb50e5eed7685f0b7f1932036b2a29ad64b9f98",
     "asc_app_id": "6816445977",
-    "app_privacy": "App Store Connect App Privacy as read back 2026-09-28 21:55Z (docs/build/app-privacy.md): Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Not Linked to You, no tracking"
+    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 02:54Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking"
   },
   "locales": {
     "es": {

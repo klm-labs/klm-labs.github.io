@@ -25,7 +25,7 @@
     "app_repo": "klm-labs/pdf-scanner",
     "app_branch": "build/v1",
     "app_commit": "b09dfca921d8409ad07b71cf07391faf1a6a047f",
-    "asc_app_id": null,
-    "app_privacy": "No App Store Connect record yet. Written from the locked brief (docs/build/brief.md, Money and Data) and GATE2-decisions.md D4-D16; recheck against the code when build part P4 writes the analytics wrapper and page texts"
+    "asc_app_id": "6817175306",
+    "app_privacy": "App Store Connect record created 2026-09-29 (app id 6817175306); App Privacy not entered yet. Pages follow factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking); recheck against the code when build part P4 writes the analytics wrapper"
   }
 }
