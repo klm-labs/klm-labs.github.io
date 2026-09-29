@@ -40,7 +40,7 @@ We use product analytics to learn which features are used and where people get s
 
 **An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog stores that IP address with the events and uses it to estimate a country and city. **The app does not ask for location permission and never reads your device's GPS.**
 
-**Purchase events.** The app gives RevenueCat the same random identifier, so RevenueCat may send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
+**Purchase events.** The app gives RevenueCat the same random identifier. When you start a trial, buy, renew, cancel or when a plan expires, RevenueCat sends a record of that event (for example the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under that identifier, so we can see how the plans are used. See "Purchases and subscriptions" below.
 
 ### What analytics never collects
 
