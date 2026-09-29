@@ -9,7 +9,7 @@ PDF Scanner App: OCR & Search is made by KLM Labs. On your Home Screen it appear
 ## The short version
 
 - **Your scans are kept on your device, and the app never uploads them.** Scanning and text recognition run on your iPhone. Pages, the text read from them, document and folder names are stored in the app on your iPhone.
-- **There is no account and no sign-up.** Nothing the app collects is linked to your name, email address or an account.
+- **There is no account and no sign-up.** The app never asks for your name or email address. Your identifiers, usage data, purchase records and approximate location are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a scan was saved" with its page count, to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address. No page, text, image or document name is ever included.
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
@@ -36,11 +36,11 @@ We use product analytics to learn which features are used and where people get s
 
 **Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name iOS reports (such as "iPhone"), and whether the app is running in a simulator or was installed from outside the App Store.
 
-**A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier, and the app has no account to link it to.
+**A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier. The app may also give it to RevenueCat, so your usage and purchases can be matched (see below).
 
 **An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog stores that IP address with the events and uses it to estimate a country and city. **The app does not ask for location permission and never reads your device's GPS.**
 
-**Purchase events.** The app may give RevenueCat the same random identifier, so RevenueCat can send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product and its price) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
+**Purchase events.** The app may give RevenueCat the same random identifier, so RevenueCat can send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
 ### What analytics never collects
 
@@ -50,7 +50,7 @@ We do not collect your name, email address, phone number, contacts, scans, photo
 
 The app needs a plan: a yearly subscription with a free trial for eligible new subscribers, or a one-time Lifetime purchase. Payments are made through Apple's App Store with your Apple Account. **Apple processes the payment; KLM Labs never receives or stores your card or bank details.**
 
-[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have access, unlock it and restore it on another iPhone. RevenueCat receives your App Store purchase and subscription records (the product, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS version and App Store country, and, if the link described above is on, the random PostHog identifier. RevenueCat also receives your IP address when the app connects to it.
+[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have access, unlock it and restore it on another iPhone. RevenueCat receives your App Store purchase and subscription records (the product, Apple's transaction IDs, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS version and App Store country, and, if the link described above is on, the random PostHog identifier. RevenueCat also receives your IP address when the app connects to it, and your iPhone's vendor ID (IDFV) when iOS provides one. iOS gives each app developer one vendor ID per iPhone, the same in all of that developer's apps; it is not the advertising identifier.
 
 We use purchase records only to provide and restore your plan, to understand how the plans are used, and to handle your requests. We do not use them for advertising.
 

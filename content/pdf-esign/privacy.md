@@ -9,7 +9,7 @@ Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears a
 ## The short version
 
 - **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your iPhone. The app never uploads them to us or to anyone else.
-- **There is no account and no sign-up.** Nothing the app collects is linked to your name, email address or an account.
+- **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address. No document, file name, signature or text you type is ever included.
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore Signer Pro.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
@@ -36,11 +36,11 @@ We use product analytics to learn which features are used and where people get s
 
 **Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name iOS reports (such as "iPhone"), and whether the app is running in a simulator or was installed from outside the App Store.
 
-**A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier, and the app has no account to link it to.
+**A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier. The app also gives it to RevenueCat, so your usage and purchases can be matched (see below).
 
 **An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog stores that IP address with the events and uses it to estimate a country and city. **The app does not ask for location permission and never reads your device's GPS.**
 
-**Purchase events.** The app gives RevenueCat the same random identifier, so RevenueCat may send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product and its price) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
+**Purchase events.** The app gives RevenueCat the same random identifier, so RevenueCat may send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
 ### What analytics never collects
 
@@ -50,7 +50,7 @@ We do not collect your name, email address, phone number, contacts, documents, s
 
 The app is paid: Signer Pro is offered as a yearly subscription with a free trial for eligible new subscribers, or as a one-time Lifetime purchase. Payments are made through Apple's App Store with your Apple Account. **Apple processes the payment; KLM Labs never receives or stores your card or bank details.**
 
-[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have Signer Pro, unlock it and restore it on another iPhone. RevenueCat receives your App Store purchase and subscription records (the product, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS version and App Store country, and the random PostHog identifier described above so purchase events can be matched with usage analytics. RevenueCat also receives your IP address when the app connects to it.
+[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have Signer Pro, unlock it and restore it on another iPhone. RevenueCat receives your App Store purchase and subscription records (the product, Apple's transaction IDs, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS version and App Store country, and the random PostHog identifier described above so purchase events can be matched with usage analytics. RevenueCat also receives your IP address when the app connects to it, and your iPhone's vendor ID (IDFV) when iOS provides one. iOS gives each app developer one vendor ID per iPhone, the same in all of that developer's apps; it is not the advertising identifier.
 
 We use purchase records only to provide and restore Signer Pro, to understand how the plans are used, and to handle your requests. We do not use them for advertising.
 

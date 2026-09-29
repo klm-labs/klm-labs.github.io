@@ -9,7 +9,7 @@ Calculadora de Pies y Pulgadas (Fraction Feet Inch Calculator) es una app de KLM
 ## En resumen
 
 - **Tus cálculos se guardan en tu dispositivo.** Los números que escribes, los resultados, tu historial, los datos de las herramientas y el último resultado del widget de la pantalla de inicio se guardan en tu iPhone, y la app nunca nos los envía ni los envía a las estadísticas.
-- **No hay cuenta ni registro.** Nada de lo que recopila la app se vincula con tu nombre, tu correo o una cuenta.
+- **No hay cuenta ni registro.** La app nunca te pide tu nombre ni tu correo. Tus registros de uso y de compra se mantienen juntos mediante identificadores aleatorios, así que están vinculados a ti (consulta más abajo).
 - **Estadísticas de uso con un identificador aleatorio.** La versión del App Store envía a PostHog eventos de uso, como "se abrió una herramienta", junto con datos técnicos de la app y del dispositivo. A partir de tu dirección de internet se calcula una ubicación aproximada (país y ciudad). Nunca se incluye un cálculo, un dato que escribiste ni un resultado.
 - **Apple procesa los pagos.** Nunca vemos los datos de tu tarjeta ni de tu banco. RevenueCat recibe tus registros de compra del App Store para que la app pueda activar y restaurar tu plan.
 - **Sin anuncios y sin rastreo.** No vendemos datos, no mostramos anuncios, no usamos el identificador de publicidad y no te rastreamos en otras apps ni sitios web.
@@ -30,11 +30,11 @@ Usamos estadísticas de uso para saber qué funciones se usan y dónde se atoran
 
 **Datos técnicos** que el software de estadísticas agrega a cada evento: el nombre, la versión y la compilación de la app; la marca, el modelo y el tipo de dispositivo; la versión de iOS; el tamaño de la pantalla; tu idioma, región y zona horaria; si el dispositivo usa Wi-Fi o datos móviles; si la app viene de TestFlight; el nombre y la versión del software de estadísticas; la hora del evento; e identificadores aleatorios del evento y de la sesión. También incluyen el identificador de paquete de la app, el nombre del sistema operativo, el nombre genérico del dispositivo que informa iOS (como "iPhone") y si la app se ejecuta en un simulador o se instaló desde fuera del App Store.
 
-**Un identificador aleatorio** que PostHog crea en tu dispositivo. Le permite a PostHog contar los eventos de una misma instalación. No es tu nombre, tu correo, tu teléfono, tu cuenta de Apple ni el identificador de publicidad del dispositivo, y la app no tiene una cuenta con la cual vincularlo.
+**Un identificador aleatorio** que PostHog crea en tu dispositivo. Le permite a PostHog contar los eventos de una misma instalación. No es tu nombre, tu correo, tu teléfono, tu cuenta de Apple ni el identificador de publicidad del dispositivo. La app también se lo da a RevenueCat, para relacionar tu uso con tus compras (consulta más abajo).
 
 **Una ubicación aproximada.** Como cualquier servicio de internet, PostHog ve la dirección IP desde la que se conecta tu dispositivo. PostHog guarda esa dirección IP con los eventos y la usa para estimar un país y una ciudad. **La app no pide permiso de ubicación y nunca lee el GPS de tu dispositivo.**
 
-**Eventos de compra.** Cuando empiezas una prueba, compras, renuevas, cancelas o cuando un plan vence, RevenueCat envía a PostHog un registro de ese evento (por ejemplo, el producto y su precio) con el mismo identificador aleatorio, para que podamos ver cómo se usan los planes. Consulta "Compras y suscripciones" más abajo.
+**Eventos de compra.** Cuando empiezas una prueba, compras, renuevas, cancelas o cuando un plan vence, RevenueCat envía a PostHog un registro de ese evento (por ejemplo, el producto, su precio, el ID de usuario de RevenueCat y el ID de transacción de Apple) con el mismo identificador aleatorio, para que podamos ver cómo se usan los planes. Consulta "Compras y suscripciones" más abajo.
 
 ### Qué nunca recopilan las estadísticas
 
@@ -44,7 +44,7 @@ No recopilamos tu nombre, correo, teléfono, contactos, fotos, archivos, ubicaci
 
 La app es de paga: ofrece una suscripción anual con prueba gratis para nuevos suscriptores que califiquen, y una compra única De por vida. Los pagos se hacen en el App Store con tu cuenta de Apple. **Apple procesa el pago; KLM Labs nunca recibe ni guarda los datos de tu tarjeta ni de tu banco.**
 
-[RevenueCat, Inc.](https://www.revenuecat.com/privacy) procesa los registros de compra para KLM Labs, para que la app pueda revisar si tienes acceso, activarlo y restaurarlo en otro iPhone. RevenueCat recibe tus registros de compra y suscripción del App Store (el producto, las fechas y el estado de la prueba y de la renovación), un ID de usuario aleatorio que crea RevenueCat (no hay inicio de sesión), qué conjunto de planes te mostró la app, datos técnicos como la versión de la app, la versión de iOS y el país del App Store, y el identificador aleatorio de PostHog descrito arriba, para relacionar los eventos de compra con las estadísticas de uso. RevenueCat también recibe tu dirección IP cuando la app se conecta con él.
+[RevenueCat, Inc.](https://www.revenuecat.com/privacy) procesa los registros de compra para KLM Labs, para que la app pueda revisar si tienes acceso, activarlo y restaurarlo en otro iPhone. RevenueCat recibe tus registros de compra y suscripción del App Store (el producto, los ID de transacción de Apple, las fechas y el estado de la prueba y de la renovación), un ID de usuario aleatorio que crea RevenueCat (no hay inicio de sesión), qué conjunto de planes te mostró la app, datos técnicos como la versión de la app, la versión de iOS y el país del App Store, y el identificador aleatorio de PostHog descrito arriba, para relacionar los eventos de compra con las estadísticas de uso. RevenueCat también recibe tu dirección IP cuando la app se conecta con él, y el ID de proveedor de tu iPhone (IDFV) cuando iOS lo proporciona. iOS le da a cada desarrollador de apps un ID de proveedor por iPhone, el mismo en todas las apps de ese desarrollador; no es el identificador de publicidad.
 
 Usamos los registros de compra solo para darte y restaurar tu plan, para entender cómo se usan los planes y para atender tus solicitudes. No los usamos para publicidad.
 
