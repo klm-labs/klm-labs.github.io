@@ -13,6 +13,7 @@ PDF Scanner App: OCR & Search is made by KLM Labs. On your Home Screen it appear
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a scan was saved" with its page count, to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address. No page, text, image or document name is ever included.
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
+- **In the App Store's privacy details,** the app lists six types of data, all linked to you and none used for tracking: User ID, Device ID, Product Interaction, Other Usage Data, Purchase History and Coarse Location.
 
 ## What is kept on your device
 
@@ -23,7 +24,7 @@ Like other app data, your library is included in your iPhone's backups (iCloud B
 ## Camera, photos and text recognition
 
 - **Camera.** The app asks for camera access the first time you tap Scan. It uses Apple's document scanner, and the pages are processed on your iPhone. You can turn camera access off in Settings; importing from Photos still works.
-- **Photos.** When you import from Photos, iOS shows its own picker and the app receives only the photos you choose. The app does not ask for access to your photo library.
+- **Photos.** When you import from Photos, iOS shows its own picker and the app receives only the photos you choose. The app never asks to see your photo library. If you share a document as JPGs and save them to Photos, iOS first asks whether the app may add photos; that permission only adds images and does not let the app see your library.
 - **Text recognition.** Each page is read by Apple's on-device text recognition, so the text can be searched and copied. The text stays with the document on your iPhone.
 
 ## Product analytics (PostHog)
@@ -83,7 +84,7 @@ PDF Scanner is a tool for scanning documents and is not directed to children. We
 ## Your choices and rights
 
 - **Delete a document** in the app, or delete the app to remove everything it stored. Deleting a folder moves its documents out of the folder; it does not delete them.
-- **Turn off camera access or reminders** in your iPhone's Settings.
+- **Turn off camera access, adding photos or reminders** in your iPhone's Settings.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/pdf-scanner/terms/). Deleting the app does not cancel it.
 - **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
