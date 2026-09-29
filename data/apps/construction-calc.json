@@ -1,0 +1,34 @@
+{
+  "slug": "construction-calc",
+  "listing": false,
+  "name": "Fraction Feet Inch Calculator",
+  "developer": "KLM Labs",
+  "category": "Utilities",
+  "bundle_id": "com.klmlabs.constructioncalc",
+  "pitch": "Construction Math, No Ads",
+  "description": "Tape-measure math for the job site: feet, inches and fractions, with tools for stairs, roofs, concrete and more. It appears on your Home Screen as Construction Calculator.",
+  "icon": "/construction-calc/icon.png",
+  "favicon": "/construction-calc/favicon.png",
+  "social_image": "/construction-calc/social.png",
+  "platforms": ["iOS"],
+  "availability": "Coming soon to the App Store for iPhone.",
+  "contact": "klm.labs.inc@gmail.com",
+  "policy_date": "2026-09-29",
+  "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
+  "source_review": {
+    "date": "2026-09-29",
+    "app_repo": "klm-labs/construction-calc",
+    "app_branch": "build/v1",
+    "app_commit": "7bb50e5eed7685f0b7f1932036b2a29ad64b9f98",
+    "asc_app_id": "6816445977",
+    "app_privacy": "App Store Connect App Privacy as read back 2026-09-28 21:55Z (docs/build/app-privacy.md): Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Not Linked to You, no tracking"
+  },
+  "locales": {
+    "es": {
+      "name": "Calculadora de Pies y Pulgadas",
+      "pitch": "Construcción, sin anuncios",
+      "description": "Matemáticas de flexómetro para la obra: pies, pulgadas y fracciones, con herramientas para escaleras, techos, concreto y más. En tu pantalla de inicio aparece como Construction Calculator.",
+      "availability": "Muy pronto en el App Store para iPhone."
+    }
+  }
+}

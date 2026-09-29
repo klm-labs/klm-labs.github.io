@@ -17,6 +17,36 @@ DECKS = {
     'terms': 'The terms that apply when you use the app.',
     'support': 'A little help, so you can get back to work.',
 }
+# Interface text per page language. English reproduces the original shared layout exactly;
+# other languages serve an app's translated resource pages under /<slug>/<lang>/.
+UI = {
+    'en': {
+        'html_lang': 'en', 'labels': LABELS, 'decks': DECKS,
+        't_skip': 'Skip to content', 't_home': 'KLM Labs home', 't_studio_note': 'Independent app studio',
+        't_studio_nav': 'Studio', 't_our_apps': 'Our apps', 't_get_in_touch': 'Get in touch', 't_footer_nav': 'Footer',
+        't_tagline': 'Small apps. Thoughtfully made.', 't_contact': 'Contact',
+        't_trademarks': 'Google Play is a trademark of Google LLC. App Store and Apple are trademarks of Apple Inc.',
+        't_breadcrumb': 'Breadcrumb', 't_resources': 'App resources', 't_by': 'by', 't_back': 'Back to the app',
+        'switch_to': 'Read in English', 'hub_heading': 'Privacy, terms and support', 'hub_title': 'Privacy, terms and support',
+        'hub_contact': 'Questions or problems? Email',
+    },
+    'es': {
+        'html_lang': 'es-MX',
+        'labels': {'privacy': 'Aviso de privacidad', 'terms': 'Términos de uso', 'support': 'Ayuda de la app'},
+        'decks': {
+            'privacy': 'Qué se queda en tu dispositivo, qué se recopila y cómo contactarnos.',
+            'terms': 'Los términos que se aplican cuando usas la app.',
+            'support': 'Un poco de ayuda para que vuelvas al trabajo.',
+        },
+        't_skip': 'Ir al contenido', 't_home': 'Inicio de KLM Labs', 't_studio_note': 'Estudio independiente de apps',
+        't_studio_nav': 'Estudio', 't_our_apps': 'Nuestras apps', 't_get_in_touch': 'Escríbenos', 't_footer_nav': 'Pie de página',
+        't_tagline': 'Apps pequeñas, hechas con cuidado.', 't_contact': 'Contacto',
+        't_trademarks': 'Google Play es una marca de Google LLC. App Store y Apple son marcas de Apple Inc.',
+        't_breadcrumb': 'Ruta de navegación', 't_resources': 'Recursos de la app', 't_by': 'de', 't_back': 'Volver a la app',
+        'switch_to': 'Leer en español', 'hub_heading': 'Privacidad, términos y ayuda', 'hub_title': 'Privacidad, términos y ayuda',
+        'hub_contact': '¿Preguntas o problemas? Escribe a',
+    },
+}
 PATHS = {
     'arrow_right': '<path d="M4 12h16m-6-6 6 6-6 6"/>',
     'arrow_left': '<path d="M20 12H4m6-6-6 6 6 6"/>',
@@ -148,9 +178,23 @@ def store_buttons(app):
     return ''.join(buttons)
 
 
-def render_page(path, content, title, description, app=None, schema=None):
-    footer = ''.join(f'<a href="/{app["slug"]}/{key}/">{label}</a>' for key, label in LABELS.items()) if app else '<a href="/#apps">Our apps</a>'
-    values = dict(title=esc(title), description=esc(description), canonical=esc(ORIGIN + path), favicon=app['favicon'] if app else '/assets/favicon.png', icon=app['icon'] if app else '/assets/studio-icon.png', social_image=ORIGIN + (app['social_image'] if app else '/assets/social.png'), social_alt=esc(f'{app["name"]} — {app["pitch"]}' if app else 'KLM Labs — Small apps. Real work.'), content=content, footer_links=footer, structured_data='<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>' if schema else '')
+def ui_values(lang):
+    return {k: esc(v) if k.startswith('t_') else v for k, v in UI[lang].items() if k.startswith(('t_', 'html_lang'))}
+
+
+def app_home(app, lang='en'):
+    return f'/{app["slug"]}/' + ('' if lang == 'en' else f'{lang}/')
+
+
+def localized(app, lang):
+    """The app record with a translation's overrides (name, pitch, description, availability) applied."""
+    return {**app, **app.get('locales', {}).get(lang, {})} if lang != 'en' else app
+
+
+def render_page(path, content, title, description, app=None, schema=None, lang='en'):
+    labels = UI[lang]['labels']
+    footer = ''.join(f'<a href="{app_home(app, lang)}{key}/">{label}</a>' for key, label in labels.items()) if app else '<a href="/#apps">Our apps</a>'
+    values = dict(**ui_values(lang), title=esc(title), description=esc(description), canonical=esc(ORIGIN + path), favicon=app['favicon'] if app else '/assets/favicon.png', icon=app['icon'] if app else '/assets/studio-icon.png', social_image=ORIGIN + (app['social_image'] if app else '/assets/social.png'), social_alt=esc(f'{app["name"]} — {app["pitch"]}' if app else 'KLM Labs — Small apps. Real work.'), content=content, footer_links=footer, structured_data='<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>' if schema else '')
     for kind in ['css', 'js']:
         values[f'{kind}_version'] = hashlib.sha256((ROOT / f'assets/site.{kind}').read_bytes()).hexdigest()[:10]
     output = ROOT / path.lstrip('/') / 'index.html'
@@ -158,8 +202,49 @@ def render_page(path, content, title, description, app=None, schema=None):
     output.write_text('<!-- Generated by scripts/build.py; edit data, content or templates. -->\n' + template('base', **values))
 
 
+def language_link(app, lang, key=''):
+    """A link from this page to the same page in the app's other language, when it has one."""
+    others = [x for x in ['en', *app.get('locales', {})] if x != lang]
+    return ''.join(f'<a class="text-link language-link" href="{app_home(app, other)}{key + "/" if key else ""}" hreflang="{UI[other]["html_lang"]}" lang="{UI[other]["html_lang"]}">{esc(UI[other]["switch_to"])}</a>' for other in others)
+
+
+def document_links(app, lang, current=None):
+    labels = UI[lang]['labels']
+    return ''.join(f'<a href="{app_home(app, lang)}{k}/"{ " aria-current=\"page\"" if k == current else "" }>{v}</a>' for k, v in labels.items())
+
+
+def deck(local, ui, key):
+    """A document's one-line summary: the app record's own `decks` entry when it has one, else the language's."""
+    return local.get('decks', {}).get(key, ui['decks'][key])
+
+
+def render_documents(app, lang, values, urls):
+    """The privacy, terms and support pages for one language of one app."""
+    slug, ui, local = app['slug'], UI[lang], localized(app, lang)
+    folder = ROOT / 'content' / slug / ('' if lang == 'en' else lang)
+    for key, label in ui['labels'].items():
+        document = template('document', **{**values, 'page_label': label, 'deck': deck(local, ui, key), 'body': markdown((folder / f'{key}.md').read_text()), 'document_links': document_links(app, lang, key), 'language_link': language_link(app, lang, key) if app.get('locales') else ''})
+        render_page(f'{app_home(app, lang)}{key}/', document, f'{local["name"]} — {label} | KLM Labs', f'{local["name"]}: {deck(local, ui, key)}', local, lang=lang)
+        urls.append(f'{app_home(app, lang)}{key}/')
+
+
+def render_resources(app, urls, arrows):
+    """A resource-only app: a hub page plus the three documents, in English and each translation."""
+    for lang in ['en', *app.get('locales', {})]:
+        ui, local = UI[lang], localized(app, lang)
+        values = {k: esc(v) for k, v in local.items() if isinstance(v, str)}
+        values.update(arrows, **ui_values(lang), app_home=app_home(app, lang))
+        links = '\n'.join(f'- [{label}]({app_home(app, lang)}{key}/): {deck(local, ui, key)}' for key, label in ui['labels'].items())
+        body = markdown(f'{local["availability"]}\n\n## {ui["hub_heading"]}\n\n{links}\n\n{ui["hub_contact"]} [{app["contact"]}](mailto:{app["contact"]}).')
+        page = template('resources', **{**values, 'body': body, 'document_links': document_links(app, lang), 'language_link': language_link(app, lang) if app.get('locales') else ''})
+        render_page(app_home(app, lang), page, f'{local["name"]} — {ui["hub_title"]} | KLM Labs', local['description'], local, lang=lang)
+        urls.append(app_home(app, lang))
+        render_documents(app, lang, values, urls)
+
+
 def main():
     apps = [json.loads(p.read_text()) for p in sorted((ROOT / 'data/apps').glob('*.json'))]
+    listed = [app for app in apps if app.get('listing', True)]
     slugs = [app['slug'] for app in apps]
     assert len(set(slugs)) == len(slugs), 'Duplicate app slug'
     cards, urls = [], ['/']
@@ -169,6 +254,15 @@ def main():
         assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug), 'Invalid slug'
         for name in ['icon', 'favicon']:
             assert (ROOT / app[name].lstrip('/')).is_file(), f'Missing {name}'
+        for lang in app.get('locales', {}):
+            assert lang in UI and lang != 'en', f'{slug}: no interface text for locale {lang}'
+        social_card(app['social_image'], app)
+        if not app.get('listing', True):
+            # Resource-only record: an unreleased app that needs live privacy, terms and support
+            # pages before it has verified listing copy and real screenshots. It gets a small
+            # resource hub at /<slug>/ and no studio card.
+            render_resources(app, urls, arrows)
+            continue
         assert app['screenshots'], 'At least one real screenshot is required'
         for store in app['stores'].values():
             assert type(store['live']) is bool
@@ -176,22 +270,17 @@ def main():
         apple = app['stores']['app_store']['url']
         assert google is None or google == f'https://play.google.com/store/apps/details?id={app["bundle_id"]}', 'Use the canonical Play URL'
         assert apple is None or re.fullmatch(r'https://apps.apple.com/app/id[0-9]+', apple), 'Use the numeric Apple ID'
-        social_card(app['social_image'], app)
         values = {k: esc(v) for k, v in app.items() if isinstance(v, str)}
         shots = []
         for i, shot in enumerate(app['screenshots']):
             src = f'/{slug}/screenshots/{shot["file"]}'
             assert (ROOT / src.lstrip('/')).is_file(), f'Missing screenshot: {src}'
             shots.append(f'<figure class="screenshot-card" role="group" aria-roledescription="slide" aria-label="{i + 1} of {len(app["screenshots"])}"><figcaption><span class="shot-number">{i + 1:02d}</span><h3>{esc(shot["title"])}</h3><p>{esc(shot["caption"])}</p></figcaption><div class="screen-frame"><img src="{src}" alt="{esc(shot["alt"])}" width="{shot["width"]}" height="{shot["height"]}" loading="{ "eager" if i < 2 else "lazy" }" decoding="async"></div></figure>')
-        values.update(arrows, store_buttons=store_buttons(app), screenshot_count=len(shots), screenshots=''.join(shots), facts=''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["value"])}</dd></div>' for x in app['facts']), about=''.join(f'<p>{esc(x)}</p>' for x in app['about']), features=''.join(f'<div class="feature">{icon(x["icon"])}<h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div>' for x in app['features']), version=esc(app['release']['version']), release_label=esc(app['release']['label']), release_text=esc(app['release']['text']), safety=''.join(f'<div class="safety-item">{icon(x["icon"])}<div><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div></div>' for x in app['safety']), platforms='Android · iPhone' if app['platforms'] == ['Android', 'iOS'] else esc(' · '.join(app['platforms'])))
+        values.update(arrows, **ui_values('en'), app_home=app_home(app), language_link='', store_buttons=store_buttons(app), screenshot_count=len(shots), screenshots=''.join(shots), facts=''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["value"])}</dd></div>' for x in app['facts']), about=''.join(f'<p>{esc(x)}</p>' for x in app['about']), features=''.join(f'<div class="feature">{icon(x["icon"])}<h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div>' for x in app['features']), version=esc(app['release']['version']), release_label=esc(app['release']['label']), release_text=esc(app['release']['text']), safety=''.join(f'<div class="safety-item">{icon(x["icon"])}<div><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div></div>' for x in app['safety']), platforms='Android · iPhone' if app['platforms'] == ['Android', 'iOS'] else esc(' · '.join(app['platforms'])))
         schema = {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': app['name'], 'description': app['description'], 'applicationCategory': app['schema_category'], 'operatingSystem': ', '.join(app['platforms']), 'softwareVersion': app['release']['version'], 'url': ORIGIN + f'/{slug}/', 'image': ORIGIN + app['icon'], 'author': {'@type': 'Organization', 'name': app['developer'], 'url': ORIGIN + '/'}}
         render_page(f'/{slug}/', template('app', **values), f'{app["name"]} — {app["pitch"]} | KLM Labs', app['description'], app, schema)
         urls.append(f'/{slug}/')
-        for key, label in LABELS.items():
-            links = ''.join(f'<a href="/{slug}/{k}/"{ " aria-current=\"page\"" if k == key else "" }>{v}</a>' for k, v in LABELS.items())
-            document = template('document', **{**values, 'page_label': label, 'deck': DECKS[key], 'body': markdown((ROOT / 'content' / slug / f'{key}.md').read_text()), 'document_links': links})
-            render_page(f'/{slug}/{key}/', document, f'{app["name"]} — {label} | KLM Labs', f'{app["name"]}: {DECKS[key]}', app)
-            urls.append(f'/{slug}/{key}/')
+        render_documents(app, 'en', values, urls)
         mini_shots = ''.join(f'<img src="/{slug}/screenshots/{shot["file"]}" alt="" width="{shot["width"]}" height="{shot["height"]}" loading="lazy">' for shot in app['screenshots'][:2])
         cards.append(f'<a class="studio-app-card" href="/{slug}/"><div class="studio-card-copy"><img class="card-app-icon" src="{app["icon"]}" alt="" width="80" height="80"><p class="eyebrow">{esc(app["category"])}</p><h3>{esc(app["name"])}</h3><p class="card-pitch">{esc(app["pitch"])}</p><p>{esc(app["description"])}</p><span class="card-cta">Explore the app {arrows["arrow_right"]}</span><small>{esc(app["availability"])}</small></div><div class="studio-card-screens" aria-hidden="true">{mini_shots}<span>Built for your working day.</span></div></a>')
     social_card('/assets/social.png')
@@ -199,7 +288,7 @@ def main():
     ImageDraw.Draw(mark).text((23, 51), 'klm', font=font(72, True), fill='#fbfaf7')
     mark.save(ROOT / 'assets/studio-icon.png', optimize=True)
     mark.resize((48, 48), Image.Resampling.LANCZOS).save(ROOT / 'assets/favicon.png', optimize=True)
-    render_page('/', template('studio', **arrows, app_count=f'{len(apps):02d}', app_cards=''.join(cards)), 'KLM Labs — Small apps. Real work.', 'An independent app studio making thoughtful tools for everyday tasks. Explore Invoice Maker and apps from KLM Labs.')
+    render_page('/', template('studio', **arrows, app_count=f'{len(listed):02d}', app_cards=''.join(cards)), 'KLM Labs — Small apps. Real work.', 'An independent app studio making thoughtful tools for everyday tasks. Explore Invoice Maker and apps from KLM Labs.')
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{ORIGIN}{url}</loc></url>' for url in urls) + '</urlset>\n')
     source_paths = ['README.md', 'CLAUDE.md', 'docs/', 'scripts/', 'data/', 'content/', 'templates/']
     (ROOT / 'robots.txt').write_text('User-agent: *\nAllow: /\n' + ''.join(f'Disallow: /{path}\n' for path in source_paths) + f'Sitemap: {ORIGIN}/sitemap.xml\n')

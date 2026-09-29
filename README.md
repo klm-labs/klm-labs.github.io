@@ -10,13 +10,15 @@ generated HTML. There is no backend, CDN dependency, runtime package, or site an
 | --- | --- |
 | `data/apps/<slug>.json` | One app record: copy, store state, screenshots, release, data safety, contact and metadata |
 | `content/<slug>/{privacy,terms,support}.md` | The app’s reviewed policy and support text |
+| `content/<slug>/<lang>/{privacy,terms,support}.md` | A translation, for each language in the record’s `locales` |
 | `<slug>/icon.png`, `favicon.png`, `screenshots/` | Real app assets; all self-hosted |
-| `templates/` | One shared shell, app listing, studio index and document layout |
+| `templates/` | One shared shell, app listing, studio index, document layout and the resource-only hub |
 | `assets/site.css`, `assets/site.js` | Shared design system and progressive carousel enhancement |
 | `scripts/build.py` | Deterministic generator: HTML, social PNGs, sitemap and robots.txt |
 | `scripts/check.py`, `scripts/render.mjs` | Route, content, metadata and browser checks |
 
-The shared layout generates `/`, `/<slug>/`, and `/<slug>/{privacy,terms,support}/`.
+The shared layout generates `/`, `/<slug>/`, and `/<slug>/{privacy,terms,support}/`,
+plus `/<slug>/<lang>/` and `/<slug>/<lang>/{privacy,terms,support}/` for each translation.
 **Edit sources, then rebuild; never hand-edit generated HTML.** The generator has
 one pinned dependency, Pillow, used for social images. Python 3.12+ is required.
 The Markdown subset supports paragraphs, `##`/`###` headings, bullet lists, tables,
@@ -54,6 +56,38 @@ the smaller WOFF2 subsets. Font licenses and store badge provenance are in
 4. Rebuild. Its listing, three resource pages, studio card, social image and
    sitemap entries are generated automatically. No HTML or CSS copying is needed.
 5. Check links, inspect desktop/mobile renders, commit, push and verify live.
+
+## Resource-only apps and translations
+
+An app that has no public listing yet, but whose build already links to its Terms,
+Privacy and Support pages, gets a record with `"listing": false`. It needs no
+screenshots, stores, release or data-safety entries: only `slug`, `name`,
+`developer`, `category`, `bundle_id`, `pitch`, `description`, `icon`, `favicon`,
+`social_image`, `availability`, `contact` and `policy_date`. `/<slug>/` becomes a
+small hub that links the three pages; the studio index shows no card for it and
+the app count leaves it out. Its pages are still in the sitemap. Record where the
+policy facts came from in `source_review` (app repo, branch, commit, and the App
+Store Connect App Privacy state). When the app launches, turn it into a full
+listing as in "Add a new app".
+
+A record may add `"decks": {"privacy": "..."}` to replace a page's one-line summary
+when the shared wording would be untrue for that app.
+
+Translations: add `"locales": {"<lang>": {...}}` to the record with the translated
+`name`, `pitch`, `description` and `availability`, and put the translated pages in
+`content/<slug>/<lang>/`. The language must exist in `UI` in `scripts/build.py`
+(today `en` and `es`, rendered as `es-MX`). Each page links to its other language.
+Use the app's own translated words for buttons and menus (its String Catalog), so
+the steps match what the reader sees.
+
+For the native iOS apps (Swift, in `klm-labs/<slug>`, branch `build/v1`), check the
+policy against: the analytics wrapper (`Sources/Analytics/`), the RevenueCat
+provider (`Sources/Store/`), `Sources/Info.plist` usage strings,
+`Sources/PrivacyInfo.xcprivacy`, `docs/build/app-privacy.md`,
+`docs/store/iap-spec.json`, and the App Privacy answers in App Store Connect.
+PostHog stores the client IP address (project 572434 keeps it), so every policy
+says an approximate location is derived from it. The evidence for the first three
+native apps is in [`docs/native-apps-review-2026-09-29.md`](docs/native-apps-review-2026-09-29.md).
 
 ## Flip a store button live
 
@@ -112,6 +146,13 @@ The registered URLs must continue returning HTTP 200:
 - `/invoice-creator/privacy/`
 - `/invoice-creator/terms/`
 - `/invoice-creator/support/`
+- `/construction-calc/`, `/construction-calc/{privacy,terms,support}/`
+- `/construction-calc/es/`, `/construction-calc/es/{privacy,terms,support}/`
+- `/pdf-esign/`, `/pdf-esign/{privacy,terms,support}/`
+- `/pdf-scanner/`, `/pdf-scanner/{privacy,terms,support}/`
+
+The native apps' builds and App Store Connect records link to these; `check.py`
+fails if one disappears or loses its subscription disclosures.
 
 The app was renamed from Invoice Creator to Invoice Maker on 2026-09-25. Its slug,
 file names and these paths stay `invoice-creator`, because the stores already link

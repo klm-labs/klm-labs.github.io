@@ -1,0 +1,31 @@
+{
+  "slug": "pdf-scanner",
+  "listing": false,
+  "name": "PDF Scanner App: OCR & Search",
+  "developer": "KLM Labs",
+  "category": "Business",
+  "bundle_id": "com.klmlabs.pdfscanner",
+  "pitch": "Document Camera, Scan to Text",
+  "description": "Scan paper into clean, searchable PDFs on your iPhone, find the words inside every scan, and share a PDF or JPG. It appears on your Home Screen as PDF Scanner.",
+  "icon": "/pdf-scanner/icon.png",
+  "favicon": "/pdf-scanner/favicon.png",
+  "social_image": "/pdf-scanner/social.png",
+  "platforms": [
+    "iOS"
+  ],
+  "availability": "In development. Coming to the App Store for iPhone.",
+  "contact": "klm.labs.inc@gmail.com",
+  "decks": {
+    "privacy": "What is kept on your device, what is collected, and how to get in touch."
+  },
+  "policy_date": "2026-09-29",
+  "icon_source": "docs/build/board/icons/icon-1.png at the reviewed commit (Gate 2 decision D2, icon 1), resized",
+  "source_review": {
+    "date": "2026-09-29",
+    "app_repo": "klm-labs/pdf-scanner",
+    "app_branch": "build/v1",
+    "app_commit": "b09dfca921d8409ad07b71cf07391faf1a6a047f",
+    "asc_app_id": null,
+    "app_privacy": "No App Store Connect record yet. Written from the locked brief (docs/build/brief.md, Money and Data) and GATE2-decisions.md D4-D16; recheck against the code when build part P4 writes the analytics wrapper and page texts"
+  }
+}

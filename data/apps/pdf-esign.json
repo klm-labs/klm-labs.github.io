@@ -1,0 +1,26 @@
+{
+  "slug": "pdf-esign",
+  "listing": false,
+  "name": "Signer: Sign PDF Documents",
+  "developer": "KLM Labs",
+  "category": "Productivity",
+  "bundle_id": "com.klmlabs.pdfesign",
+  "pitch": "Signature Creator & Scanner",
+  "description": "Sign PDFs on your iPhone: place your signature or initials, fill in text, dates and checkmarks, scan paper, and share the signed PDF. It appears on your Home Screen as Signer.",
+  "icon": "/pdf-esign/icon.png",
+  "favicon": "/pdf-esign/favicon.png",
+  "social_image": "/pdf-esign/social.png",
+  "platforms": ["iOS"],
+  "availability": "In beta testing on TestFlight. Coming soon to the App Store for iPhone.",
+  "contact": "klm.labs.inc@gmail.com",
+  "policy_date": "2026-09-29",
+  "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
+  "source_review": {
+    "date": "2026-09-29",
+    "app_repo": "klm-labs/pdf-esign",
+    "app_branch": "build/v1",
+    "app_commit": "97a7c310953cc6e481eee8a9c9bb37543e60ed66",
+    "asc_app_id": "6816484899",
+    "app_privacy": "Not yet entered in App Store Connect (docs/build/launch-checklist.md); the planned answers in docs/build/app-privacy.md omit the approximate location PostHog derives from the IP address"
+  }
+}
