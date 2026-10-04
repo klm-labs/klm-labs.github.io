@@ -1,0 +1,31 @@
+{
+  "slug": "desk-clock",
+  "listing": false,
+  "name": "Flip Clock: Big Digital Alarm",
+  "developer": "KLM Labs",
+  "category": "Utilities",
+  "bundle_id": "com.klmlabs.deskclock",
+  "pitch": "Nightstand, 24 Hour & Widgets",
+  "description": "A big flip, digital or retro clock for your desk or nightstand, in your colors, with alarms that ring on Silent and in Focus, a 12/24-hour switch, night dimming and widgets. It appears on your Home Screen as Flip Clock.",
+  "icon": "/desk-clock/icon.png",
+  "favicon": "/desk-clock/favicon.png",
+  "social_image": "/desk-clock/social.png",
+  "platforms": [
+    "iOS"
+  ],
+  "availability": "In development. Coming to the App Store for iPhone.",
+  "contact": "klm.labs.inc@gmail.com",
+  "decks": {
+    "privacy": "What is kept on your device, what is collected, and how to get in touch."
+  },
+  "policy_date": "2026-10-04",
+  "icon_source": "docs/build/board/icons/icon-1.png at 7c24bab (Gate 2 decision D2, icon 1), resized",
+  "source_review": {
+    "date": "2026-10-04",
+    "app_repo": "klm-labs/desk-clock",
+    "app_branch": "main",
+    "app_commit": "32da1a450d77c92b41bb2d81f55c2ed68a1bbfcf",
+    "asc_app_id": "6819014371",
+    "app_privacy": "App Privacy published in App Store Connect 2026-10-04 12:59Z at factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking), read back equal to pdf-scanner's. No app code yet (build not started): the pages follow docs/build/brief.md (Money, Data, Native APIs) and docs/build/reviews/GATE2-decisions.md; recheck against the code when the build writes the analytics wrapper and the RevenueCat provider"
+  }
+}

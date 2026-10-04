@@ -85,10 +85,10 @@ def main():
 
 
 # The native iOS apps' legal and support pages: URLs the apps and App Store Connect already point at.
-NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'pdf-esign', 'pdf-scanner')
+NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'pdf-esign', 'pdf-scanner', 'desk-clock')
                  for key in ('privacy', 'terms', 'support')] + \
                 [f'construction-calc/es/{key}/index.html' for key in ('privacy', 'terms', 'support')] + \
-                ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html']
+                ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html', 'desk-clock/index.html']
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 NATIVE_DISCLOSURES = {
     'en': {'terms': ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore',

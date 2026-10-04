@@ -150,6 +150,7 @@ The registered URLs must continue returning HTTP 200:
 - `/construction-calc/es/`, `/construction-calc/es/{privacy,terms,support}/`
 - `/pdf-esign/`, `/pdf-esign/{privacy,terms,support}/`
 - `/pdf-scanner/`, `/pdf-scanner/{privacy,terms,support}/`
+- `/desk-clock/`, `/desk-clock/{privacy,terms,support}/`
 
 The native apps' builds and App Store Connect records link to these; `check.py`
 fails if one disappears or loses its subscription disclosures.
