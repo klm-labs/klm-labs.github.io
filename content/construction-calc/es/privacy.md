@@ -1,6 +1,6 @@
 # Aviso de privacidad de Calculadora de Pies y Pulgadas
 
-**Fecha de entrada en vigor:** 29 de septiembre de 2026
+**Fecha de entrada en vigor:** 6 de octubre de 2026
 
 **Contacto:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -10,7 +10,7 @@ Calculadora de Pies y Pulgadas (Fraction Feet Inch Calculator) es una app de KLM
 
 - **Tus cálculos se guardan en tu dispositivo.** Los números que escribes, los resultados, tu historial, los datos de las herramientas y el último resultado del widget de la pantalla de inicio se guardan en tu iPhone, y la app nunca nos los envía ni los envía a las estadísticas.
 - **No hay cuenta ni registro.** La app nunca te pide tu nombre ni tu correo. Tus registros de uso y de compra se mantienen juntos mediante identificadores aleatorios, así que están vinculados a ti (consulta más abajo).
-- **Estadísticas de uso con un identificador aleatorio.** La versión del App Store envía a PostHog eventos de uso, como "se abrió una herramienta", junto con datos técnicos de la app y del dispositivo. A partir de tu dirección de internet se calcula una ubicación aproximada (país y ciudad). Nunca se incluye un cálculo, un dato que escribiste ni un resultado.
+- **Estadísticas de uso con un identificador aleatorio.** La versión del App Store envía a PostHog eventos de uso, como "se abrió una herramienta", junto con datos técnicos de la app y del dispositivo. A partir de tu dirección de internet, que PostHog no guarda, se calcula una ubicación aproximada (país y ciudad). Nunca se incluye un cálculo, un dato que escribiste ni un resultado.
 - **Apple procesa los pagos.** Nunca vemos los datos de tu tarjeta ni de tu banco. RevenueCat recibe tus registros de compra del App Store para que la app pueda activar y restaurar tu plan.
 - **Sin anuncios y sin rastreo.** No vendemos datos, no mostramos anuncios, no usamos el identificador de publicidad y no te rastreamos en otras apps ni sitios web.
 
@@ -32,7 +32,7 @@ Usamos estadísticas de uso para saber qué funciones se usan y dónde se atoran
 
 **Un identificador aleatorio** que PostHog crea en tu dispositivo. Le permite a PostHog contar los eventos de una misma instalación. No es tu nombre, tu correo, tu teléfono, tu cuenta de Apple ni el identificador de publicidad del dispositivo. La app también se lo da a RevenueCat, para relacionar tu uso con tus compras (consulta más abajo).
 
-**Una ubicación aproximada.** Como cualquier servicio de internet, PostHog ve la dirección IP desde la que se conecta tu dispositivo. PostHog guarda esa dirección IP con los eventos y la usa para estimar un país y una ciudad. **La app no pide permiso de ubicación y nunca lee el GPS de tu dispositivo.**
+**Una ubicación aproximada.** Como cualquier servicio de internet, PostHog ve la dirección IP desde la que se conecta tu dispositivo. PostHog usa esa dirección IP para estimar un país y una ciudad cuando llegan los eventos, y está configurado para descartarla en lugar de guardarla con los eventos. **La app no pide permiso de ubicación y nunca lee el GPS de tu dispositivo.**
 
 **Eventos de compra.** Cuando empiezas una prueba, compras, renuevas, cancelas o cuando un plan vence, RevenueCat envía a PostHog un registro de ese evento (por ejemplo, el producto, su precio, el ID de usuario de RevenueCat y el ID de transacción de Apple) con el mismo identificador aleatorio, para que podamos ver cómo se usan los planes. Consulta "Compras y suscripciones" más abajo.
 

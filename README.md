@@ -85,8 +85,10 @@ policy against: the analytics wrapper (`Sources/Analytics/`), the RevenueCat
 provider (`Sources/Store/`), `Sources/Info.plist` usage strings,
 `Sources/PrivacyInfo.xcprivacy`, `docs/build/app-privacy.md`,
 `docs/store/iap-spec.json`, and the App Privacy answers in App Store Connect.
-PostHog stores the client IP address (project 572434 keeps it), so every policy
-says an approximate location is derived from it. The evidence for the first three
+PostHog derives a country and city from the client IP address, then discards the IP
+(project 572434 has "Discard client IP data" on since 2026-10-06 17:54Z; GeoIP runs
+first). So every policy says an approximate location is derived from the IP, and
+that PostHog does not store the IP. The evidence for the first three
 native apps is in [`docs/native-apps-review-2026-09-29.md`](docs/native-apps-review-2026-09-29.md).
 
 ## Flip a store button live

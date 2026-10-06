@@ -1,6 +1,6 @@
 # Signer: Sign PDF Documents Privacy Policy
 
-**Effective date:** 2026-09-29
+**Effective date:** 2026-10-06
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -10,7 +10,7 @@ Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears a
 
 - **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your iPhone. The app never uploads them to us or to anyone else.
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
-- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address. No document, file name, signature or text you type is ever included.
+- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No document, file name, signature or text you type is ever included.
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore Signer Pro.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 
@@ -38,7 +38,7 @@ We use product analytics to learn which features are used and where people get s
 
 **A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier. The app also gives it to RevenueCat, so your usage and purchases can be matched (see below).
 
-**An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog stores that IP address with the events and uses it to estimate a country and city. **The app does not ask for location permission and never reads your device's GPS.**
+**An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog uses that IP address to estimate a country and city when the events arrive, and is set to discard it instead of storing it with the events. **The app does not ask for location permission and never reads your device's GPS.**
 
 **Purchase events.** The app gives RevenueCat the same random identifier. When you start a trial, buy, renew, cancel or when a plan expires, RevenueCat sends a record of that event (for example the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under that identifier, so we can see how the plans are used. See "Purchases and subscriptions" below.
 
