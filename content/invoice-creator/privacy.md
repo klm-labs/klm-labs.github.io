@@ -87,6 +87,7 @@ After first-run setup, the app needs an active subscription or free trial. This 
 - **Your purchase records for this app** from the App Store or Google Play: the store's receipt or purchase token and the store's transaction IDs, and from them the plan bought, its price and currency, and purchase, trial, renewal, cancellation, billing-problem and expiry dates.
 - **Technical information sent with each request:** app version and build, app identifier, operating-system version, device model (and, on Android, device brand), preferred languages, store country, the version of RevenueCat's software, and whether the purchase is a test purchase.
 - **On iPhone and iPad, the identifier for vendor**, a random identifier that iOS gives to apps from the same developer on one device.
+- **The app's random analytics identifier**, so subscription events can be matched with the app's usage analytics. It is not your name, email or store account.
 - As with any internet request, **your IP address** is visible to RevenueCat's servers.
 
 **Why.** To confirm purchases with Apple or Google and prevent fraud; to unlock the app while your subscription or trial is active; to restore your subscription after reinstalling or on a new device; and to give KLM Labs subscription reports, such as how many trials started, renewed or were cancelled, and the resulting revenue.
