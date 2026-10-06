@@ -13,19 +13,19 @@
   "platforms": [
     "iOS"
   ],
-  "availability": "In development. Coming to the App Store for iPhone.",
+  "availability": "In development. Coming to the App Store for iPhone and iPad.",
   "contact": "klm.labs.inc@gmail.com",
   "decks": {
     "privacy": "What is kept on your device, what is collected, and how to get in touch."
   },
-  "policy_date": "2026-10-04",
+  "policy_date": "2026-10-06",
   "icon_source": "docs/build/board/icons/icon-1.png at 7c24bab (Gate 2 decision D2, icon 1), resized",
   "source_review": {
-    "date": "2026-10-04",
+    "date": "2026-10-06",
     "app_repo": "klm-labs/desk-clock",
-    "app_branch": "main",
-    "app_commit": "32da1a450d77c92b41bb2d81f55c2ed68a1bbfcf",
+    "app_branch": "build/v1",
+    "app_commit": "defadf7094c41105330d98562947fbc73dadcaf1",
     "asc_app_id": "6819014371",
-    "app_privacy": "App Privacy published in App Store Connect 2026-10-04 12:59Z at factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking), read back equal to pdf-scanner's. No app code yet (build not started): the pages follow docs/build/brief.md (Money, Data, Native APIs) and docs/build/reviews/GATE2-decisions.md; recheck against the code when the build writes the analytics wrapper and the RevenueCat provider"
+    "app_privacy": "App Privacy published in App Store Connect 2026-10-04 12:59Z at factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking), read back equal to pdf-scanner's. Written 2026-10-04 from docs/build/brief.md and GATE2-decisions.md; rechecked 2026-10-06 against the app code of TestFlight build 202610060022 (defadf7: events, Settings and Look labels, alarm screen), with iPad wording (iPad ships in 1.0), PostHog Discard client IP data on (GeoIP still estimates country and city), and the billing grace period off in production at launch"
   }
 }
