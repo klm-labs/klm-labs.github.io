@@ -1,6 +1,6 @@
 # Flip Clock: Big Digital Alarm Privacy Policy
 
-**Effective date:** 2026-10-06
+**Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -8,28 +8,29 @@ Flip Clock: Big Digital Alarm is made by KLM Labs. On your Home Screen it appear
 
 ## The short version
 
-- **Your alarms are kept on your device, and the app never uploads them.** Alarm times, repeat days and labels, your clock's look and your settings are stored in the app on your device. Analytics records only which clock face you choose (see below).
+- **Your alarms are kept on your device.** Alarm times, repeat days and labels, your clock's look and your settings are stored in the app on your device. The app never uploads them, and no analytics event contains them; analytics records only which clock face you choose (see below).
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your identifiers, usage data, purchase records and approximate location are linked to you (see below).
-- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "an alarm was saved" or "the clock face was changed", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No alarm time, repeat day or label is ever included.
+- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "an alarm was saved" or "the clock face was changed", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No event ever includes an alarm time, repeat day or label.
+- **Masked screen recordings, from version 1.0.1.** The App Store version also records the app's screens as you use them and where you tap. Text and pictures are masked on your iPhone or iPad before a recording is sent (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 - **In the App Store's privacy details,** the app lists six types of data, all linked to you and none used for tracking: User ID, Device ID, Product Interaction, Other Usage Data, Purchase History and Coarse Location.
 
 ## What is kept on your device
 
-Your alarms (time, repeat days, label, snooze length and whether each one is on), your clock's look (face, font, color, background, 12- or 24-hour time, and whether seconds, the date and the next alarm show), your brightness, night mode and keep-screen-on settings, and whether your plan is active (so the widgets know what to show) are stored in the app's own storage on your device, which the app's widgets can also read. The app does not sync them to iCloud or to any server of ours. Your alarm times, repeat days and labels are never sent to KLM Labs, PostHog or RevenueCat, and we cannot see, retrieve or delete them. The exceptions are described below: analytics records which clock face you choose and when an alarm is saved, and your plan's status comes from RevenueCat.
+Your alarms (time, repeat days, label, snooze length and whether each one is on), your clock's look (face, font, color, background, 12- or 24-hour time, and whether seconds, the date and the next alarm show), your brightness, night mode and keep-screen-on settings, and whether your plan is active (so the widgets know what to show) are stored in the app's own storage on your device, which the app's widgets can also read. The app does not sync them to iCloud or to any server of ours. No analytics event or purchase record contains your alarm times, repeat days or labels (for screen recordings, see "A masked recording of the app's screens" below), and we cannot retrieve or delete them. The exceptions are described below: analytics records which clock face you choose and when an alarm is saved, and your plan's status comes from RevenueCat.
 
 Like other app data, it is included in your device's backups (iCloud Backup or a computer backup) if you have backups turned on. Those backups are controlled by Apple and your settings, not by us.
 
 ## Alarms, the screen and the battery
 
-- **Alarms.** iOS or iPadOS asks you whether the app may schedule alarms. Your alarms are scheduled with Apple's alarm system (AlarmKit) on your device. When one rings, the system shows it on the Lock Screen (and on iPhone in the Dynamic Island, in StandBy and on a paired Apple Watch). Apple's system handles this on your devices; your alarm times, repeat days and labels are not sent to us (analytics records only that an alarm was saved or set again). If you turn alarm access off in Settings, the app's alarms are not scheduled and do not ring.
+- **Alarms.** iOS or iPadOS asks you whether the app may schedule alarms. Your alarms are scheduled with Apple's alarm system (AlarmKit) on your device. When one rings, the system shows it on the Lock Screen (and on iPhone in the Dynamic Island, in StandBy and on a paired Apple Watch). Apple's system handles this on your devices; no analytics event contains your alarm times, repeat days or labels (analytics records only that an alarm was saved or set again). If you turn alarm access off in Settings, the app's alarms are not scheduled and do not ring.
 - **Keeping the screen on.** While the clock is on screen, the app can stop your device from locking, depending on your keep-screen-on setting. To do that it checks whether your device is charging. This check happens on your device and is not sent anywhere.
 - **No other permissions.** The app does not ask for your camera, photos, microphone, contacts or location.
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics are sent only by the App Store version of the app (and TestFlight test builds); there is no analytics setting in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.1 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
@@ -43,9 +44,21 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** Because the app gives RevenueCat the same random identifier, RevenueCat sends records of purchase events (for example a trial starting, a renewal, a cancellation or a Lifetime purchase, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
+**A masked recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app, including the clock, your alarms, Look and Settings. Recordings are masked on your iPhone or iPad before they are sent, with every masking option of the recording software turned on, for text the app displays, text you type, and pictures. On a real recording of the first-run page where you pick a clock face, the free-trial page and the plans screen, this is what we saw:
+
+| What is masked | Result |
+|---|---|
+| Text on screen | Words and numbers appear as solid blocks, not readable text: titles, buttons, plan names, prices, and the Flip and Digital faces' digits and date |
+| Pictures | Appear as solid blocks, such as the app's icon on the plans screen |
+| The app's messages | The text of a message such as "Nothing to restore" appears as blocks |
+
+What stays visible: each screen's layout and colors, small symbols (such as the bell on the free-trial page), the clock face's card shapes, which option is selected, and where you tap. The Retro LED face draws its digits as shapes rather than text, so the time it shows (such as 16:54) stays readable. iOS's own requests, such as the one asking to allow notifications, did not appear in the recording.
+
+A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. Masking is a technical measure applied on the device, and we treat any change to it as a change to this policy.
+
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts, alarm times, repeat days, alarm labels, precise location or anything you type. We do not record your screen, and we do not collect crash reports.
+We do not collect your name, email address, phone number, contacts or precise location. No analytics event contains your alarm times, repeat days, alarm labels or anything you type; screen recordings are masked as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -75,7 +88,7 @@ PostHog, RevenueCat and, for email, Google (Gmail) process data for KLM Labs. We
 
 Your alarms and settings stay on your device until you delete them in the app or delete the app; copies in your backups are managed separately.
 
-We keep analytics events, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
+We keep analytics events, screen recordings, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
 
 ## Children
 
@@ -86,11 +99,11 @@ Flip Clock is a clock and alarm app and is not directed to children. We do not k
 - **Delete an alarm** in the app, or delete the app to remove everything it stored on your device.
 - **Turn off alarm access or notifications** in Settings. Without alarm access, the app's alarms do not ring.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/desk-clock/terms/). Deleting the app does not cancel it.
-- **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
+- **Ask us to delete analytics records (events and recordings) or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
 
 Depending on where you live, you may have further rights over personal data, such as access, correction, deletion and objection. Contact us and we will respond as the law requires.
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: masked screen recordings, from version 1.0.1 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
