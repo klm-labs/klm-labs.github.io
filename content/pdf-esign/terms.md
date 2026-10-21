@@ -1,6 +1,6 @@
 # Signer: Sign PDF Documents Terms of Use
 
-**Effective date:** 2026-09-29
+**Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -31,16 +31,16 @@ Neither plan includes Family Sharing. The price, billing period and any free tri
 
 **Cancelling.** Cancel in your Apple Account, not by deleting the app:
 
-- On your iPhone, open **Settings**, tap your name, then **Subscriptions**, choose Signer Pro and tap **Cancel Subscription**.
+- On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose Signer Pro and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Manage Subscription**.
 
 Deleting the app does not cancel a subscription. After you cancel, you keep Signer Pro until the end of the period you have already paid for. Buying Pro Lifetime does not cancel Pro Yearly; cancel the yearly plan yourself so it does not renew.
 
-**Restoring.** Signer Pro belongs to the Apple Account that bought it; the app has no account of its own. On a new iPhone or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
+**Restoring.** Signer Pro belongs to the Apple Account that bought it; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
-**When Signer Pro ends.** When a subscription or trial ends, or a purchase is refunded, your documents stay on your iPhone. You can still open them, place signatures, and share or save again a document you already shared or saved; finishing, sharing or saving any other document needs Signer Pro again. You can subscribe, buy Pro Lifetime or restore an active plan at any time.
+**When Signer Pro ends.** When a subscription or trial ends, or a purchase is refunded, your documents stay on your device. You can still open them, place signatures, and share or save again a document you already shared or saved; finishing, sharing or saving any other document needs Signer Pro again. You can subscribe, buy Pro Lifetime or restore an active plan at any time.
 
 **Changes to plans.** We may change plans, prices or trial offers for new purchases. Changes for existing subscribers are made through Apple under its rules and notices.
 

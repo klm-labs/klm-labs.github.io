@@ -2,13 +2,13 @@
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-Signer: Sign PDF Documents (Signer on your Home Screen) lets you sign, fill and stamp PDFs on your iPhone. Import from Files, Photos or another app, or scan paper with the camera; add your signature, initials, text, dates, check marks and stamps; then share or save the signed copy. Email us any time; we aim to reply within three business days.
+Signer: Sign PDF Documents (Signer on your Home Screen) lets you sign, fill and stamp PDFs on your iPhone or iPad. Import from Files, Photos or another app, or scan paper with the camera; add your signature, initials, text, dates, check marks and stamps; then share or save the signed copy. Email us any time; we aim to reply within three business days.
 
 ## Common questions
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. Your documents and signatures are stored on your iPhone and are never uploaded by the app. Buying Signer Pro and restoring a purchase need an internet connection.
+No account and no sign-up. Your documents and signatures are stored on your device and are never uploaded by the app. Buying Signer Pro and restoring a purchase need an internet connection.
 
 ### Do I need to pay?
 
@@ -18,18 +18,18 @@ Yes. To start using the app, you need Signer Pro or its free trial: **Pro Yearly
 
 Cancel in your Apple Account; deleting the app does not cancel it.
 
-- On your iPhone, open **Settings**, tap your name, then **Subscriptions**, choose Signer Pro and tap **Cancel Subscription**.
+- On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose Signer Pro and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Manage Subscription**.
 
 To avoid being charged, cancel at least 24 hours before your free trial or current period ends. You keep Signer Pro until the end of the period you have paid for.
 
-### I got a new iPhone or reinstalled the app. How do I get Signer Pro back?
+### I got a new iPhone or iPad, or reinstalled the app. How do I get Signer Pro back?
 
-Sign in with the Apple Account that bought it, open the app and tap **Restore** on the plans screen, or go to **Settings → Restore Purchases**. If the app says "No Signer Pro purchase was found for this Apple Account.", check that you are signed in to the App Store with the account you bought with. Restore brings back Signer Pro, not documents: documents are stored on the iPhone where you made them, and come back only if you restore that iPhone's backup.
+Sign in with the Apple Account that bought it, open the app and tap **Restore** on the plans screen, or go to **Settings → Restore Purchases**. If the app says "No Signer Pro purchase was found for this Apple Account.", check that you are signed in to the App Store with the account you bought with. Restore brings back Signer Pro, not documents: documents are stored on the device where you made them, and come back only if you restore that device's backup.
 
 ### My trial ended. Can I still open my documents?
 
-Yes. Your documents stay on your iPhone, and you can still open them and place signatures. You can share or save again a document you already shared or saved. Finishing, sharing or saving any other document needs Signer Pro.
+Yes. Your documents stay on your device, and you can still open them and place signatures. You can share or save again a document you already shared or saved. Finishing, sharing or saving any other document needs Signer Pro.
 
 ### How do I get a refund?
 
@@ -37,7 +37,7 @@ Apple handles all payments, so refunds go through Apple: visit [reportaproblem.a
 
 ### The scanner or the camera doesn't open.
 
-The app needs camera access to scan pages or photograph a signature. Open your iPhone's **Settings**, find **Signer** and turn on **Camera**. You can still import from Files or Photos without it.
+The app needs camera access to scan pages or photograph a signature. Open your device's **Settings**, find **Signer** and turn on **Camera**. You can still import from Files or Photos without it.
 
 ### A PDF won't open.
 
@@ -53,7 +53,7 @@ That depends on the law where you are and on who receives the document. Signer p
 
 ### What does the app collect?
 
-The app never sends your documents, signatures or anything you type to us or to analytics; they leave your iPhone only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. See the [privacy policy](/pdf-esign/privacy/).
+The app never sends your documents, signatures or anything you type to us or to analytics; they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. See the [privacy policy](/pdf-esign/privacy/).
 
 ## Report a problem
 
@@ -61,5 +61,5 @@ Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) with:
 
 - What happened, and what you expected.
 - What kind of document it was (PDF, scan or photo), without sending anything private.
-- Your iPhone model and iOS version, and the app version from **Settings**.
+- Your iPhone or iPad model and iOS or iPadOS version, and the app version from **Settings**.
 - A screenshot, if it helps.

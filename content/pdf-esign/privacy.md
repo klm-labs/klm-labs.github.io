@@ -1,14 +1,14 @@
 # Signer: Sign PDF Documents Privacy Policy
 
-**Effective date:** 2026-10-06
+**Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears as **Signer**. It lets you sign, fill and stamp PDFs and scanned pages on your iPhone. This policy explains what stays on your device, what leaves it, who receives it and why.
+Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears as **Signer**. It lets you sign, fill and stamp PDFs and scanned pages on your iPhone or iPad. This policy explains what stays on your device, what leaves it, who receives it and why.
 
 ## The short version
 
-- **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your iPhone. The app never uploads them to us or to anyone else.
+- **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your device. The app never uploads them to us or to anyone else.
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No document, file name, signature or text you type is ever included.
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore Signer Pro.
@@ -16,15 +16,15 @@ Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears a
 
 ## What is stored on your device
 
-Everything you bring into the app and make with it stays on your iPhone: imported PDFs and images, scanned pages, document names, the signatures and initials you draw or photograph, and everything you place on a page (signatures, initials, text, dates, check marks and stamps). They are kept in the app's own storage on your iPhone and are not synced to iCloud by the app. None of it is sent to KLM Labs, PostHog or RevenueCat, and we cannot see, retrieve or delete it. Like other app data, it is included in your iPhone's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
+Everything you bring into the app and make with it stays on your device: imported PDFs and images, scanned pages, document names, the signatures and initials you draw or photograph, and everything you place on a page (signatures, initials, text, dates, check marks and stamps). They are kept in the app's own storage on your device and are not synced to iCloud by the app. None of it is sent to KLM Labs, PostHog or RevenueCat, and we cannot see, retrieve or delete it. Like other app data, it is included in your device's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
 
-The app also keeps your settings and its last check of your plan on your iPhone.
+The app also keeps your settings and its last check of your plan on your device.
 
 ## Camera and photos
 
-- **Camera.** The app asks for camera access only when you scan a document or photograph a signature on paper. It uses Apple's document scanner, and the pages or signature are processed on your iPhone. You can turn camera access off in Settings; everything else still works.
-- **Photos.** When you import from Photos, iOS shows its own picker and the app receives only the photos you choose. The app does not ask for access to your photo library.
-- **Files and "Open in".** Files you choose in the Files picker, or send to Signer from another app, are copied into the app on your iPhone.
+- **Camera.** The app asks for camera access only when you scan a document or photograph a signature on paper. It uses Apple's document scanner, and the pages or signature are processed on your device. You can turn camera access off in Settings; everything else still works.
+- **Photos.** When you import from Photos, the system shows its own picker and the app receives only the photos you choose. The app does not ask for access to your photo library.
+- **Files and "Open in".** Files you choose in the Files picker, or send to Signer from another app, are copied into the app on your device.
 
 ## Product analytics (PostHog)
 
@@ -34,7 +34,7 @@ We use product analytics to learn which features are used and where people get s
 
 **Events describing what you did, never what your documents contain.** The app sends these events: the app was opened; a document was added (from Files, Photos, the scanner or "Open in"); an item was placed on a page (which kind: signature, initials, text, date, check mark or stamp); a signature or initials was saved (drawn or from a photo); a signed document was shared, saved or the share was cancelled; the plans screen was shown or closed (and where it was opened from); and the result of a purchase or restore (which plan, Yearly or Lifetime, and whether it completed, was cancelled, failed, restored or found nothing). **No event ever contains a document, a page, a file or document name, a signature, a stamp word or any text you type.**
 
-**Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name iOS reports (such as "iPhone"), and whether the app is running in a simulator or was installed from outside the App Store.
+**Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS or iPadOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name the system reports (such as "iPhone" or "iPad"), and whether the app is running in a simulator or was installed from outside the App Store.
 
 **A random identifier** that PostHog creates on your device. It lets PostHog count events from the same installation. It is not your name, email, phone number, Apple Account or the device's advertising identifier. The app also gives it to RevenueCat, so your usage and purchases can be matched (see below).
 
@@ -50,17 +50,17 @@ We do not collect your name, email address, phone number, contacts, documents, s
 
 The app is paid: Signer Pro is offered as a yearly subscription with a free trial for eligible new subscribers, or as a one-time Lifetime purchase. Payments are made through Apple's App Store with your Apple Account. **Apple processes the payment; KLM Labs never receives or stores your card or bank details.**
 
-[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have Signer Pro, unlock it and restore it on another iPhone. RevenueCat receives your App Store purchase and subscription records (the product, Apple's transaction IDs, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS version and App Store country, and the random PostHog identifier described above so purchase events can be matched with usage analytics. RevenueCat also receives your IP address when the app connects to it, and your iPhone's vendor ID (IDFV) when iOS provides one. iOS gives each app developer one vendor ID per iPhone, the same in all of that developer's apps; it is not the advertising identifier.
+[RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have Signer Pro, unlock it and restore it on another iPhone or iPad. RevenueCat receives your App Store purchase and subscription records (the product, Apple's transaction IDs, dates, trial and renewal status), a random app user ID that RevenueCat creates (there is no login), which set of plans the app showed you, technical details such as the app version, iOS or iPadOS version and App Store country, and the random PostHog identifier described above so purchase events can be matched with usage analytics. RevenueCat also receives your IP address when the app connects to it, and your device's vendor ID (IDFV) when the system provides one. iOS and iPadOS give each app developer one vendor ID per device, the same in all of that developer's apps; it is not the advertising identifier.
 
 We use purchase records only to provide and restore Signer Pro, to understand how the plans are used, and to handle your requests. We do not use them for advertising.
 
 ## Reminders and notifications
 
-Before the plans screen, if you can get the free trial and haven't answered before, the app shows a page about the trial and asks for permission to send notifications. If you allow them and your trial is set to renew, the app schedules a reminder on your iPhone for 2 days before the trial ends, and removes it if you cancel or the trial ends. The reminder is not sent from a server, and no push token is sent to us. You can say no, or turn notifications off later in Settings; the app works the same either way.
+Before the plans screen, if you can get the free trial and haven't answered before, the app shows a page about the trial and asks for permission to send notifications. If you allow them and your trial is set to renew, the app schedules a reminder on your device for 2 days before the trial ends, and removes it if you cancel or the trial ends. The reminder is not sent from a server, and no push token is sent to us. You can say no, or turn notifications off later in Settings; the app works the same either way.
 
 ## Sharing and saving documents
 
-When you share or save a signed document, the app makes a flattened copy on your iPhone and opens the system share sheet or the Files picker. The document leaves your device only if you choose a destination, which then handles it under its own privacy practices. After a completed share or save, the app may ask iOS to show Apple's rating prompt, at most once per app version.
+When you share or save a signed document, the app makes a flattened copy on your device and opens the system share sheet or the Files picker. The document leaves your device only if you choose a destination, which then handles it under its own privacy practices. After a completed share or save, the app may ask the system to show Apple's rating prompt, at most once per app version.
 
 ## When you email us
 
@@ -83,7 +83,7 @@ Signer is a tool for signing documents and is not directed to children. We do no
 ## Your choices and rights
 
 - **Delete a document** from the Documents list, and a saved signature in **Settings → My signatures**, or delete the app to remove everything it stored.
-- **Turn off camera access or reminders** in your iPhone's Settings.
+- **Turn off camera access or reminders** in your device's Settings.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/pdf-esign/terms/). Deleting the app does not cancel it.
 - **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
