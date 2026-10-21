@@ -1,6 +1,6 @@
 # PDF Scanner App: OCR & Search Privacy Policy
 
-**Effective date:** 2026-10-06
+**Effective date:** 2026-10-22
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -8,9 +8,10 @@ PDF Scanner App: OCR & Search is made by KLM Labs. On your Home Screen it appear
 
 ## The short version
 
-- **Your scans are kept on your device, and the app never uploads them.** Scanning and text recognition run on your iPhone. Pages, the text read from them, document and folder names are stored in the app on your iPhone.
+- **Your scans are kept on your device, and the app never uploads them.** Scanning and text recognition run on your iPhone. Pages, the text read from them, document and folder names are stored in the app on your iPhone, and screen recordings hide them (see below).
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your identifiers, usage data, purchase records and approximate location are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a scan was saved" with its page count, to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No page, text, image or document name is ever included.
+- **Masked screen recordings, from version 1.1.0.** The App Store version also records the app's screens as you use them and where your touches start and end. Recordings are made only on iOS and iPadOS 26 or newer; on an older version the app records nothing. In our test recordings, all text and every page, thumbnail and recognized text appeared only as solid blocks, and nothing was recorded while Photos, the share sheet, Save to Files or a touch-and-hold menu was open (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 - **In the App Store's privacy details,** the app lists six types of data, all linked to you and none used for tracking: User ID, Device ID, Product Interaction, Other Usage Data, Purchase History and Coarse Location.
@@ -29,7 +30,7 @@ Like other app data, your library is included in your iPhone's backups (iCloud B
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics are sent only by the App Store version of the app (and TestFlight test builds); there is no analytics setting in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.1.0 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
@@ -43,9 +44,23 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** The app may give RevenueCat the same random identifier, so RevenueCat can send records of purchase events (for example a trial starting, a renewal or a cancellation, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
+### Masked screen recordings (from version 1.1.0)
+
+So we can see where people get stuck, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where each touch starts and ends. **Recordings are made only on iOS and iPadOS 26 or newer; on an older version the app records nothing.** A recording can include any screen of the app. Masking is done by the app on your device, before a recording is sent: every masking option of the recording software is on, and the app adds its own solid block over each page, thumbnail and the recognized text. A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded.
+
+We checked test recordings of version 1.1.0 made on iPhone and iPad simulators (iOS 26), past the plans screen: the documents list, a search, reviewing and editing pages, a document's pages and its recognized text, renaming a document, the share options with a password typed, Settings and the plans screen. This is what they showed:
+
+| In a recording | What it shows |
+|---|---|
+| Solid blocks | All text on screen (document names, titles, buttons, prices, search text and the share password you type); every page and page thumbnail; the recognized text and the page crops in search results |
+| Not recorded | The Photos picker, the share sheet, Save to Files and a document's touch-and-hold menu: recording pauses while one is open and starts again a second after it closes. The Rename box did not appear in the recording, nor the name typed in it |
+| Visible | Each screen's layout and colors, small symbols (such as the gear and the + button), the app's own illustrations, which option is selected, and where each touch starts and ends |
+
+A frame taken while the screen moves can be slightly off: in one test frame, taken while a menu opened, the top edges of a few letters showed beside a block, too faint and cut off to read. Our test recordings could not show the scanner's camera, as simulators have none. We treat any change to what a recording shows or masks as a change to this policy.
+
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts, scans, photos, recognized text, searches, file names, precise location or anything you type. We do not record your screen, and we do not collect crash reports.
+We do not collect your name, email address, phone number, contacts or precise location. No analytics event contains your scans, photos, recognized text, searches, file names or anything you type; screen recordings hide them as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -75,7 +90,7 @@ PostHog, RevenueCat and, for email, Google (Gmail) process data for KLM Labs. We
 
 Documents on your device stay until you delete them in the app or delete the app; copies in your backups, and anything you shared, are managed separately.
 
-We keep analytics events, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
+We keep analytics events, screen recordings, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
 
 ## Children
 
@@ -86,11 +101,11 @@ PDF Scanner is a tool for scanning documents and is not directed to children. We
 - **Delete a document** in the app, or delete the app to remove everything it stored. Deleting a folder moves its documents out of the folder; it does not delete them.
 - **Turn off camera access, adding photos or reminders** in your iPhone's Settings.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/pdf-scanner/terms/). Deleting the app does not cancel it.
-- **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
+- **Ask us to delete analytics records (events and recordings) or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
 
 Depending on where you live, you may have further rights over personal data, such as access, correction, deletion and objection. Contact us and we will respond as the law requires.
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-22: masked screen recordings, from version 1.1.0 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
