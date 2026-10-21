@@ -8,26 +8,26 @@ Fraction Feet Inch Calculator is made by KLM Labs. On your Home Screen it appear
 
 ## The short version
 
-- **Your calculations are stored on your device.** Numbers you type, answers, your history tape, tool inputs and the Home Screen widget's last answer are stored on your iPhone. The app never sends them to us, and no analytics event contains them.
+- **Your calculations are stored on your device.** Numbers you type, answers, your history tape, tool inputs and the Home Screen widget's last answer are stored on your iPhone. No analytics event contains them, but from version 1.0.2 the screen recordings below show the calculator's numbers, its answers and your history.
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a tool was opened", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No event ever includes a calculation, input or answer.
-- **Masked screen recordings, from version 1.0.2.** The App Store version also records the app's screens as you use them and where you tap. Text and pictures are masked on your iPhone before a recording is sent (see below).
+- **Screen recordings, from version 1.0.2.** The App Store version also records the app's screens as you use them and where you tap. The recordings show the app's own words and numbers, including the calculator; the boxes you type into in the tools are masked on your iPhone (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 
 ## What is stored on your device
 
-Everything you enter and calculate is stored on your iPhone: the numbers and expressions you type, answers, memory, the history tape, your precision and other settings, the last inputs of each tool, and the last answer shown by the Home Screen widget. The app and its widget share that last answer through storage on your iPhone. No analytics event or purchase record contains any of it (for screen recordings, see "A masked recording of the app's screens" below), and we cannot retrieve or delete it. It leaves your iPhone only if you share it: you can share your history or a single line, copy an answer into another app, or share a stair layout PDF. Like other app data, it is included in your iPhone's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
+Everything you enter and calculate is stored on your iPhone: the numbers and expressions you type, answers, memory, the history tape, your precision and other settings, the last inputs of each tool, and the last answer shown by the Home Screen widget. The app and its widget share that last answer through storage on your iPhone. No analytics event or purchase record contains any of it, and we cannot retrieve or delete it. From version 1.0.2, though, the screen recordings described under "A recording of the app's screens" show the calculator's numbers, its answers and your history as they appear on screen. Apart from that, it leaves your iPhone only if you share it: you can share your history or a single line, copy an answer into another app, or share a stair layout PDF. Like other app data, it is included in your iPhone's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
 
 The calculator and tools work offline. Copy and paste use your iPhone's clipboard only when you choose Copy or Paste.
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.2 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.2 screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
-**Events describing what you did, never what you calculated.** The app sends these events: the app was opened; a calculation was completed; a tool was opened (which tool); a result was sent from a tool to the calculator (which tool); a stair layout PDF was shared; a guide was opened (which guide); the app was opened from the widget (which shortcut); the free-trial reminder page was shown, and whether you allowed notifications; the plans screen was shown (where it was opened from and which set of plans it showed); and the result of a purchase or restore (which plan, Yearly or Lifetime, whether a free trial started, and whether it completed, was cancelled, failed or is waiting for approval). **No event ever contains a number, an expression, an input or an answer from a calculation.**
+**Events describing what you did, never what you calculated.** The app sends these events: the app was opened; a calculation was completed; a tool was opened (which tool); a result was sent from a tool to the calculator (which tool); a stair layout PDF was shared; a guide was opened (which guide); the app was opened from the widget (which shortcut); the free-trial reminder page was shown, and whether you allowed notifications; the plans screen was shown (where it was opened from and which set of plans it showed); and the result of a purchase or restore (which plan, Yearly or Lifetime, whether a free trial started, and whether it completed, was cancelled, failed or is waiting for approval). The analytics software also sends an event when you tap the same spot quickly several times (which screen, and where on it). **No event ever contains a number, an expression, an input or an answer from a calculation.**
 
 **Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name iOS reports (such as "iPhone"), and whether the app is running in a simulator or was installed from outside the App Store.
 
@@ -37,21 +37,22 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** When you start a trial, buy, renew, cancel or when a plan expires, RevenueCat sends a record of that event (for example the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under the same random identifier, so we can see how the plans are used. See "Purchases and subscriptions" below.
 
-**A masked recording of the app's screens, from version 1.0.2.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app, including the calculator, its tools and your history. Recordings are masked on your iPhone before they are sent, with every masking option of the recording software turned on, for text the app displays, text you type, and pictures. On a real recording of the welcome pages, the free-trial page and the plans screen, this is what we saw:
+**A recording of the app's screens, from version 1.0.2.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app. We checked what one shows on a real recording of version 1.0.2: the welcome pages, the plans screen, a purchase, the calculator, the Stairs and Concrete tools, and History.
 
-| What is masked | Result |
+| In a recording | What it shows |
 |---|---|
-| Text on screen | Words and numbers appear as solid blocks, not readable text: titles, buttons, plan names, prices, and the sample calculations on the welcome pages |
-| Pictures | Appear as solid blocks |
-| The app's messages | The text of a message such as "No purchases found" appears as blocks |
+| Readable | The app's own words and numbers: titles, buttons, labels, plan names and prices, the calculator's display (what you entered and the answer), the results in the tools, your history, and a fraction you pick from a tool's menu |
+| Masked | Every box you type into in the tools: a solid block covers it, so the numbers you type there don't show (the results worked out from them do). A tip that pops up over a tool is covered by a block too |
+| Your taps | Where you tap. On the calculator's keypad, the taps show which keys you pressed |
+| Not in a recording | The keyboard, which is not part of the app's screen; iOS's own requests, such as the one asking to allow notifications, did not appear in our recordings either |
 
-What stays visible: each screen's layout and colours, small symbols, the app's logo, which option is selected, and where you tap. The tape-measure drawing on the first welcome page keeps its printed inch numbers (65 to 70); they are part of the drawing, not anything you entered. iOS's own requests, such as the one asking to allow notifications, did not appear in the recording.
+The app shows no photos; its logo and symbols are drawn shapes and stay visible.
 
-A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. Masking is a technical measure applied on the device, and we treat any change to it as a change to this policy.
+A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. We treat any change to what a recording shows or masks as a change to this policy.
 
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts, photos, files or precise location. No analytics event contains your calculations, inputs, answers, history or anything you type; screen recordings are masked as described above. We do not collect crash reports.
+We do not collect your name, email address, phone number, contacts, photos, files or precise location. No analytics event contains your calculations, inputs, answers, history or anything you type; screen recordings show the calculator and your history, and mask what you type into the tools' boxes, as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -99,4 +100,4 @@ Depending on where you live, you may have further rights over personal data, suc
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: masked screen recordings, from version 1.0.2 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: screen recordings, from version 1.0.2 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).

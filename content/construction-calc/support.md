@@ -45,7 +45,7 @@ Your history, settings and tool inputs are stored on your iPhone (and in its bac
 
 ### What does the app collect?
 
-The app never sends your calculations, inputs or answers to us or to analytics; they leave your iPhone only when you share or copy them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/construction-calc/privacy/).
+Analytics events never contain your calculations, inputs or answers. From version 1.0.2 the app also records its screens: the recordings show the calculator's numbers, its answers and your history, and mask what you type into the tools' boxes. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/construction-calc/privacy/).
 
 ## Report a problem
 

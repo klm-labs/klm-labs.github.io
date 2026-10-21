@@ -45,7 +45,7 @@ Tu historial, tus ajustes y los datos de las herramientas se guardan en tu iPhon
 
 ### ¿Qué recopila la app?
 
-La app nunca nos envía tus cálculos, datos ni resultados, ni los envía a las estadísticas; solo salen de tu iPhone cuando los compartes o los copias. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos, y a RevenueCat tus registros de compra del App Store para activar tu plan. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
+Ningún evento de estadísticas contiene tus cálculos, datos ni resultados. Desde la versión 1.0.2 la app también graba sus pantallas: las grabaciones muestran los números de la calculadora, sus resultados y tu historial, y enmascaran lo que escribes en las casillas de las herramientas. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos, y a RevenueCat tus registros de compra del App Store para activar tu plan. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
 
 ## Reportar un problema
 
