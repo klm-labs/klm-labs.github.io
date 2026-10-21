@@ -53,7 +53,7 @@ That depends on the law where you are and on who receives the document. Signer p
 
 ### What does the app collect?
 
-Analytics events never contain your documents, signatures or anything you type, and from version 1.1.0 the app's screen recordings cover them with solid blocks; they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. See the [privacy policy](/pdf-esign/privacy/).
+Analytics events never contain your documents, signatures or anything you type, and from version 1.1.0 the app's screen recordings are built to cover them with solid blocks (in our test recordings they do); they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. See the [privacy policy](/pdf-esign/privacy/).
 
 ## Report a problem
 
