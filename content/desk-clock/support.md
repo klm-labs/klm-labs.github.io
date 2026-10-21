@@ -56,7 +56,7 @@ Open the alarm in **Alarms** and tap **Delete**. Deleting the app deletes your a
 
 ### What does the app collect?
 
-Your alarm times, repeat days and labels are not sent to us. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/desk-clock/privacy/).
+No analytics event contains your alarm times, repeat days or labels. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.0.1 it also records its screens while you use it: the recordings show your alarm times and repeat days, and mask the labels you type. See the [privacy policy](/desk-clock/privacy/).
 
 ## Report a problem
 

@@ -8,17 +8,17 @@ Flip Clock: Big Digital Alarm is made by KLM Labs. On your Home Screen it appear
 
 ## The short version
 
-- **Your alarms are kept on your device.** Alarm times, repeat days and labels, your clock's look and your settings are stored in the app on your device. The app never uploads them, and no analytics event contains them; analytics records only which clock face you choose (see below).
+- **Your alarms are kept on your device.** Alarm times, repeat days and labels, your clock's look and your settings are stored in the app on your device. No analytics event contains them (analytics records only which clock face you choose), but from version 1.0.1 the screen recordings below show your alarm times and repeat days as they appear on screen; your alarm labels are masked.
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your identifiers, usage data, purchase records and approximate location are linked to you (see below).
 - **Usage analytics with a random identifier.** The App Store version sends usage events, such as "an alarm was saved" or "the clock face was changed", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No event ever includes an alarm time, repeat day or label.
-- **Masked screen recordings, from version 1.0.1.** The App Store version also records the app's screens as you use them and where you tap. Text and pictures are masked on your iPhone or iPad before a recording is sent (see below).
+- **Screen recordings, from version 1.0.1.** The App Store version also records the app's screens as you use them and where you tap. The recordings show the app's own words and numbers, including the clock, your alarm times and your settings; the alarm label you type is masked on your iPhone or iPad before a recording is sent (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
-- **In the App Store's privacy details,** the app lists six types of data, all linked to you and none used for tracking: User ID, Device ID, Product Interaction, Other Usage Data, Purchase History and Coarse Location.
+- **In the App Store's privacy details,** the app lists these types of data, all linked to you and none used for tracking: User ID, Device ID, Product Interaction, Other Usage Data, Purchase History and Coarse Location, and, for the screen recordings from version 1.0.1, Other User Content.
 
 ## What is kept on your device
 
-Your alarms (time, repeat days, label, snooze length and whether each one is on), your clock's look (face, font, color, background, 12- or 24-hour time, and whether seconds, the date and the next alarm show), your brightness, night mode and keep-screen-on settings, and whether your plan is active (so the widgets know what to show) are stored in the app's own storage on your device, which the app's widgets can also read. The app does not sync them to iCloud or to any server of ours. No analytics event or purchase record contains your alarm times, repeat days or labels (for screen recordings, see "A masked recording of the app's screens" below), and we cannot retrieve or delete them. The exceptions are described below: analytics records which clock face you choose and when an alarm is saved, and your plan's status comes from RevenueCat.
+Your alarms (time, repeat days, label, snooze length and whether each one is on), your clock's look (face, font, color, background, 12- or 24-hour time, and whether seconds, the date and the next alarm show), your brightness, night mode and keep-screen-on settings, and whether your plan is active (so the widgets know what to show) are stored in the app's own storage on your device, which the app's widgets can also read. The app does not sync them to iCloud or to any server of ours. No analytics event or purchase record contains your alarm times, repeat days or labels, and we cannot retrieve or delete them. From version 1.0.1, though, the screen recordings described under "A recording of the app's screens" show your alarm times and repeat days as they appear on screen (your labels are masked). The exceptions are described below: analytics records which clock face you choose and when an alarm is saved, and your plan's status comes from RevenueCat.
 
 Like other app data, it is included in your device's backups (iCloud Backup or a computer backup) if you have backups turned on. Those backups are controlled by Apple and your settings, not by us.
 
@@ -30,11 +30,11 @@ Like other app data, it is included in your device's backups (iCloud Backup or a
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.1 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.1 screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
-**Events describing what you did, never what your alarms say.** Events record actions such as opening the app, finishing the first-run screens, seeing the trial reminder page and your answer to the notification request, saving an alarm, the app setting an alarm again after it went missing, changing the clock face (which face only), seeing the plans screen, and the result of a purchase or restore (which plan, and whether it completed, was cancelled, failed or restored). Every property the app itself adds to an event is a count, a choice from a fixed list, or a yes/no; the analytics software adds the identifiers and technical details described below. **No event ever contains an alarm time, a repeat day or an alarm label.**
+**Events describing what you did, never what your alarms say.** Events record actions such as opening the app, finishing the first-run screens, seeing the trial reminder page and your answer to the notification request, saving an alarm, the app setting an alarm again after it went missing, changing the clock face (which face only), seeing the plans screen, and the result of a purchase or restore (which plan, and whether it completed, was cancelled, failed or restored). Every property the app itself adds to an event is a count, a choice from a fixed list, or a yes/no; the analytics software adds the identifiers and technical details described below. Its own automatic events (screen views, taps on buttons, repeated quick taps on one spot) are turned off. **No event ever contains an alarm time, a repeat day or an alarm label.**
 
 **Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS or iPadOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name the system reports (such as "iPhone" or "iPad"), and whether the app is running in a simulator or was installed from outside the App Store.
 
@@ -44,21 +44,22 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** Because the app gives RevenueCat the same random identifier, RevenueCat sends records of purchase events (for example a trial starting, a renewal, a cancellation or a Lifetime purchase, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
-**A masked recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app, including the clock, your alarms, Look and Settings. Recordings are masked on your iPhone or iPad before they are sent, with every masking option of the recording software turned on, for text the app displays, text you type, and pictures. On a real recording of the first-run page where you pick a clock face, the free-trial page and the plans screen, this is what we saw:
+**A recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app. We checked what one shows on a real recording of version 1.0.1 on iPhone: the first-run pages, the plans screen, a purchase, the clock, Alarms (adding two alarms, one with a label), Look and Settings.
 
-| What is masked | Result |
+| In a recording | What it shows |
 |---|---|
-| Text on screen | Words and numbers appear as solid blocks, not readable text: titles, buttons, plan names, prices, and the Flip and Digital faces' digits and date |
-| Pictures | Appear as solid blocks, such as the app's icon on the plans screen |
-| The app's messages | The text of a message such as "Nothing to restore" appears as blocks |
+| Readable | The app's own words and numbers: titles, buttons, plan names and prices, the time and date on the clock face, the next-alarm line under it, your alarm times and repeat days, the alarm time picker, your Look choices, and your settings (such as the night schedule's times) |
+| Masked | The alarm label you type: a solid block covers the Label box (before, while and after you type), and the line under an alarm's time in Alarms whenever it includes your label (the repeat days on that line are covered with it). The app's icon on the plans screen and in Settings is covered by a block too |
+| Your taps | Where you tap (the position on the screen). The analytics software's separate event for repeated quick taps is turned off |
+| Not in a recording | The keyboard, which is not part of the app's screen; iOS's own requests, such as the ones asking to allow notifications and alarms, did not appear in our recordings either |
 
-What stays visible: each screen's layout and colors, small symbols (such as the bell on the free-trial page), the clock face's card shapes, which option is selected, and where you tap. The Retro LED face draws its digits as shapes rather than text, so the time it shows (such as 16:54) stays readable. iOS's own requests, such as the one asking to allow notifications, did not appear in the recording.
+The app shows no photos; its symbols are drawn shapes and stay visible.
 
-A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. Masking is a technical measure applied on the device, and we treat any change to it as a change to this policy.
+A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. We treat any change to what a recording shows or masks as a change to this policy.
 
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts or precise location. No analytics event contains your alarm times, repeat days, alarm labels or anything you type; screen recordings are masked as described above. We do not collect crash reports.
+We do not collect your name, email address, phone number, contacts or precise location. No analytics event contains your alarm times, repeat days, alarm labels or anything you type; screen recordings show your alarm times and repeat days and mask your alarm labels, as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -106,4 +107,4 @@ Depending on where you live, you may have further rights over personal data, suc
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: masked screen recordings, from version 1.0.1 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: screen recordings, from version 1.0.1 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
