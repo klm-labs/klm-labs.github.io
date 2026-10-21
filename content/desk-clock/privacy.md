@@ -44,16 +44,16 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** Because the app gives RevenueCat the same random identifier, RevenueCat sends records of purchase events (for example a trial starting, a renewal, a cancellation or a Lifetime purchase, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. See "Purchases and subscriptions" below.
 
-**A recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app. We checked what one shows on a real recording of version 1.0.1 on iPhone: the first-run pages, the plans screen, a purchase, the clock, Alarms (adding two alarms, one with a label), Look and Settings.
+**A recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app. Recording stops after 5 minutes without a touch, such as when the clock is left on overnight, and starts again when you touch the screen or come back to the app. We checked what a recording shows on a test recording of version 1.0.1, made on a simulated iPhone: the first-run pages, the plans screen, the clock, Alarms (adding two alarms, one with a label), Look and Settings.
 
 | In a recording | What it shows |
 |---|---|
 | Readable | The app's own words and numbers: titles, buttons, plan names and prices, the time and date on the clock face, the next-alarm line under it, your alarm times and repeat days, the alarm time picker, your Look choices, and your settings (such as the night schedule's times) |
-| Masked | The alarm label you type: a solid block covers the Label box (before, while and after you type), and the line under an alarm's time in Alarms whenever it includes your label (the repeat days on that line are covered with it). The app's icon on the plans screen and in Settings is covered by a block too |
+| Masked | The alarm label you type: a solid block covers the Label box (before, while and after you type), and the line under an alarm's time in Alarms whenever it includes your label (the repeat days on that line are covered with it). The app's icon on the plans screen and in Settings, and the small symbols on the plans screen, are covered by blocks too |
 | Your taps | Where you tap (the position on the screen). The analytics software's separate event for repeated quick taps is turned off |
 | Not in a recording | The keyboard, which is not part of the app's screen; iOS's own requests, such as the ones asking to allow notifications and alarms, did not appear in our recordings either |
 
-The app shows no photos; its symbols are drawn shapes and stay visible.
+The app shows no photos. Small symbols elsewhere may or may not be covered by a block (the one in the Alarms header stayed visible in our test).
 
 A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. We treat any change to what a recording shows or masks as a change to this policy.
 
