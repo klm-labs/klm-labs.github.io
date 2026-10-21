@@ -8,15 +8,16 @@ Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears a
 
 ## The short version
 
-- **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your device. The app never uploads them to us or to anyone else.
+- **Your documents are stored on your device.** PDFs, scans, photos you import, your signatures and initials, and the text, dates and stamps you add are stored on your device. The app never uploads them to us or to anyone else, and screen recordings hide them (see below).
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
-- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No document, file name, signature or text you type is ever included.
+- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a document was added", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No event ever includes a document, file name, signature or text you type.
+- **Masked screen recordings, from version 1.1.0.** The App Store version also records the app's screens as you use them and where your touches start and end. All text, pages, signatures, initials, stamps and photos are covered by solid blocks on your iPhone or iPad before a recording is sent, and recording pauses while Photos, Files, the share sheet or a touch-and-hold menu is open (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore Signer Pro.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 
 ## What is stored on your device
 
-Everything you bring into the app and make with it stays on your device: imported PDFs and images, scanned pages, document names, the signatures and initials you draw or photograph, and everything you place on a page (signatures, initials, text, dates, check marks and stamps). They are kept in the app's own storage on your device and are not synced to iCloud by the app. None of it is sent to KLM Labs, PostHog or RevenueCat, and we cannot see, retrieve or delete it. Like other app data, it is included in your device's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
+Everything you bring into the app and make with it stays on your device: imported PDFs and images, scanned pages, document names, the signatures and initials you draw or photograph, and everything you place on a page (signatures, initials, text, dates, check marks and stamps). They are kept in the app's own storage on your device and are not synced to iCloud by the app. None of it is sent to KLM Labs, PostHog or RevenueCat (screen recordings show it only as solid blocks; see "A masked recording of the app's screens" below), and we cannot see, retrieve or delete it. Like other app data, it is included in your device's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
 
 The app also keeps your settings and its last check of your plan on your device.
 
@@ -28,7 +29,7 @@ The app also keeps your settings and its last check of your plan on your device.
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics are sent only by the App Store version of the app (and TestFlight test builds); there is no analytics setting in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.1.0 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
@@ -42,9 +43,20 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** The app gives RevenueCat the same random identifier. When you start a trial, buy, renew, cancel or when a plan expires, RevenueCat sends a record of that event (for example the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under that identifier, so we can see how the plans are used. See "Purchases and subscriptions" below.
 
+**A masked recording of the app's screens, from version 1.1.0.** So we can see where people get stuck and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where each touch starts and ends. A recording can include any screen of the app. Recordings are masked on your iPhone or iPad before they are sent: every masking option of the recording software is turned on, and the app adds its own solid block over everything it draws from your documents and signatures. We checked real recordings of version 1.1.0 covering the welcome pages, the plans screen, the signature pad, the documents list, a document being signed (zoomed, with a signature, initials, a stamp and text placed), a signature from a photo, the share screen and Settings. This is what they show:
+
+| In a recording | What it shows |
+|---|---|
+| Hidden by solid blocks | All text on screen (document names, titles, buttons, prices, and text you type or place on a page); every document page and page thumbnail, also while you zoom; signatures and initials, whether drawn, from a photo, saved or placed; stamps, dates and check marks on a page; photos and the scanner's camera view |
+| Not recorded | The Photos and Files pickers, the share sheet, Save to Files, and the touch-and-hold menu of a document or a saved signature: recording pauses while one is open and starts again a second after it closes |
+| Visible | Each screen's layout and colors, small symbols (such as the gear and the + button), the app's own icon on the plans screen, the ink color choices, which option is selected, and where each touch starts and ends |
+| Your touches | Only where a touch starts and where it ends. A stroke on the signature pad is two points, never its path, so it does not record your signature. Repeated fast taps are not recorded as a separate event |
+
+A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. Masking is a technical measure applied on the device, and we treat any change to what a recording shows or masks as a change to this policy.
+
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts, documents, scans, photos, signatures, file names, precise location or anything you type. We do not record your screen, and we do not collect crash reports.
+We do not collect your name, email address, phone number, contacts or precise location. No analytics event contains your documents, scans, photos, signatures, file names or anything you type; screen recordings hide them as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -74,7 +86,7 @@ PostHog, RevenueCat and, for email, Google (Gmail) process data for KLM Labs. We
 
 Documents and signatures on your device stay until you delete them in the app or delete the app; copies in your backups, and anything you shared, are managed separately.
 
-We keep analytics events, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
+We keep analytics events, screen recordings, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
 
 ## Children
 
@@ -85,11 +97,11 @@ Signer is a tool for signing documents and is not directed to children. We do no
 - **Delete a document** from the Documents list, and a saved signature in **Settings → My signatures**, or delete the app to remove everything it stored.
 - **Turn off camera access or reminders** in your device's Settings.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/pdf-esign/terms/). Deleting the app does not cancel it.
-- **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
+- **Ask us to delete analytics records (events and recordings) or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
 
 Depending on where you live, you may have further rights over personal data, such as access, correction, deletion and objection. Contact us and we will respond as the law requires.
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: masked screen recordings, from version 1.1.0 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
