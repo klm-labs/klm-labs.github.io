@@ -1,6 +1,6 @@
 # Aviso de privacidad de Calculadora de Pies y Pulgadas
 
-**Fecha de entrada en vigor:** 6 de octubre de 2026
+**Fecha de entrada en vigor:** 21 de octubre de 2026
 
 **Contacto:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -8,21 +8,22 @@ Calculadora de Pies y Pulgadas (Fraction Feet Inch Calculator) es una app de KLM
 
 ## En resumen
 
-- **Tus cálculos se guardan en tu dispositivo.** Los números que escribes, los resultados, tu historial, los datos de las herramientas y el último resultado del widget de la pantalla de inicio se guardan en tu iPhone, y la app nunca nos los envía ni los envía a las estadísticas.
+- **Tus cálculos se guardan en tu dispositivo.** Los números que escribes, los resultados, tu historial, los datos de las herramientas y el último resultado del widget de la pantalla de inicio se guardan en tu iPhone. La app nunca nos los envía, y ningún evento de estadísticas los contiene.
 - **No hay cuenta ni registro.** La app nunca te pide tu nombre ni tu correo. Tus registros de uso y de compra se mantienen juntos mediante identificadores aleatorios, así que están vinculados a ti (consulta más abajo).
-- **Estadísticas de uso con un identificador aleatorio.** La versión del App Store envía a PostHog eventos de uso, como "se abrió una herramienta", junto con datos técnicos de la app y del dispositivo. A partir de tu dirección de internet, que PostHog no guarda, se calcula una ubicación aproximada (país y ciudad). Nunca se incluye un cálculo, un dato que escribiste ni un resultado.
+- **Estadísticas de uso con un identificador aleatorio.** La versión del App Store envía a PostHog eventos de uso, como "se abrió una herramienta", junto con datos técnicos de la app y del dispositivo. A partir de tu dirección de internet, que PostHog no guarda, se calcula una ubicación aproximada (país y ciudad). Ningún evento incluye un cálculo, un dato que escribiste ni un resultado.
+- **Grabaciones de pantalla enmascaradas, desde la versión 1.0.2.** La versión del App Store también graba las pantallas de la app mientras la usas y dónde tocas. El texto y las imágenes se enmascaran en tu iPhone antes de enviar una grabación (consulta más abajo).
 - **Apple procesa los pagos.** Nunca vemos los datos de tu tarjeta ni de tu banco. RevenueCat recibe tus registros de compra del App Store para que la app pueda activar y restaurar tu plan.
 - **Sin anuncios y sin rastreo.** No vendemos datos, no mostramos anuncios, no usamos el identificador de publicidad y no te rastreamos en otras apps ni sitios web.
 
 ## Lo que se guarda en tu dispositivo
 
-Todo lo que escribes y calculas se guarda en tu iPhone: los números y operaciones que escribes, los resultados, la memoria, el historial, la precisión y demás ajustes, los últimos datos de cada herramienta y el último resultado que muestra el widget. La app y su widget comparten ese último resultado a través del almacenamiento de tu iPhone. La app no envía nada de esto a KLM Labs, a PostHog ni a RevenueCat, y no podemos verlo, recuperarlo ni borrarlo. Solo sale de tu iPhone si lo compartes: puedes compartir tu historial o una línea, copiar un resultado en otra app o compartir el PDF del trazo de una escalera. Como otros datos de apps, se incluye en los respaldos de tu iPhone (respaldo en iCloud o en una computadora) si los tienes activados; esos respaldos dependen de Apple y de tu configuración, no de nosotros.
+Todo lo que escribes y calculas se guarda en tu iPhone: los números y operaciones que escribes, los resultados, la memoria, el historial, la precisión y demás ajustes, los últimos datos de cada herramienta y el último resultado que muestra el widget. La app y su widget comparten ese último resultado a través del almacenamiento de tu iPhone. Ningún evento de estadísticas ni registro de compra contiene nada de esto (sobre las grabaciones de pantalla, consulta "Una grabación enmascarada de las pantallas de la app" más abajo), y no podemos recuperarlo ni borrarlo. Solo sale de tu iPhone si lo compartes: puedes compartir tu historial o una línea, copiar un resultado en otra app o compartir el PDF del trazo de una escalera. Como otros datos de apps, se incluye en los respaldos de tu iPhone (respaldo en iCloud o en una computadora) si los tienes activados; esos respaldos dependen de Apple y de tu configuración, no de nosotros.
 
 La calculadora y las herramientas funcionan sin internet. Copiar y pegar usan el portapapeles de tu iPhone solo cuando eliges Copiar o Pegar.
 
 ## Estadísticas de uso (PostHog)
 
-Usamos estadísticas de uso para saber qué funciones se usan y dónde se atoran las personas, y así mejorar la app. [PostHog, Inc.](https://posthog.com/privacy) procesa las estadísticas para KLM Labs en servidores de Estados Unidos. Solo las envía la versión del App Store (y las versiones de prueba de TestFlight); la app no tiene un ajuste para las estadísticas.
+Usamos estadísticas de uso para saber qué funciones se usan y dónde se atoran las personas, y así mejorar la app. [PostHog, Inc.](https://posthog.com/privacy) procesa las estadísticas para KLM Labs en servidores de Estados Unidos. Las estadísticas, y desde la versión 1.0.2 las grabaciones de pantalla enmascaradas, solo las envía la versión del App Store (y las versiones de prueba de TestFlight); la app no tiene un ajuste para ellas.
 
 ### Qué recopilan las estadísticas
 
@@ -36,9 +37,21 @@ Usamos estadísticas de uso para saber qué funciones se usan y dónde se atoran
 
 **Eventos de compra.** Cuando empiezas una prueba, compras, renuevas, cancelas o cuando un plan vence, RevenueCat envía a PostHog un registro de ese evento (por ejemplo, el producto, su precio, el ID de usuario de RevenueCat y el ID de transacción de Apple) con el mismo identificador aleatorio, para que podamos ver cómo se usan los planes. Consulta "Compras y suscripciones" más abajo.
 
+**Una grabación enmascarada de las pantallas de la app, desde la versión 1.0.2.** Para ver dónde tocan las personas, qué se les dificulta y dónde se rinden, la app graba sus pantallas mientras la usas: capturas de las pantallas de la propia app, tomadas cuando cambian, y los lugares donde tocas. Una grabación puede incluir cualquier pantalla de la app, también la calculadora, sus herramientas y tu historial. Las grabaciones se enmascaran en tu iPhone antes de enviarse, con todas las opciones de enmascaramiento del software de grabación activadas, para el texto que muestra la app, el texto que escribes y las imágenes. En una grabación real de las páginas de bienvenida, la página de la prueba gratis y la pantalla de planes, esto es lo que vimos:
+
+| Qué se enmascara | Resultado |
+|---|---|
+| El texto en pantalla | Las palabras y los números aparecen como bloques sólidos, no como texto legible: títulos, botones, nombres de planes, precios y los cálculos de ejemplo de las páginas de bienvenida |
+| Las imágenes | Aparecen como bloques sólidos |
+| Los mensajes de la app | El texto de un mensaje como "No se encontraron compras" aparece como bloques |
+
+Lo que sigue visible: el diseño y los colores de cada pantalla, los símbolos pequeños, el logotipo de la app, qué opción está seleccionada y dónde tocas. El dibujo del flexómetro en la primera página de bienvenida conserva sus números de pulgadas impresos (del 65 al 70); son parte del dibujo, no algo que hayas escrito. Las solicitudes propias de iOS, como la que pide permitir notificaciones, no aparecieron en la grabación.
+
+Una grabación lleva el mismo identificador aleatorio y el mismo identificador de sesión que tus eventos de estadísticas, así que está vinculada a ti de la misma manera. No se graban los mensajes de la consola ni la actividad de red. El enmascaramiento es una medida técnica que se aplica en el dispositivo, y tratamos cualquier cambio en él como un cambio a este aviso.
+
 ### Qué nunca recopilan las estadísticas
 
-No recopilamos tu nombre, correo, teléfono, contactos, fotos, archivos, ubicación precisa, cálculos, datos que escribes, resultados, historial ni nada de lo que teclees. No grabamos tu pantalla y no recopilamos informes de fallos.
+No recopilamos tu nombre, correo, teléfono, contactos, fotos, archivos ni ubicación precisa. Ningún evento de estadísticas contiene tus cálculos, datos que escribes, resultados, historial ni nada de lo que teclees; las grabaciones de pantalla se enmascaran como se describe arriba. No recopilamos informes de fallos.
 
 ## Compras y suscripciones (Apple y RevenueCat)
 
@@ -68,7 +81,7 @@ PostHog, RevenueCat y, para el correo, Google (Gmail) procesan datos para KLM La
 
 En tu dispositivo, el Historial conserva los 1,000 cálculos más recientes y borra los anteriores automáticamente. **Historial → Más (…) → Borrar todo** borra el historial y el último resultado del widget; no borra la memoria de la calculadora, los datos guardados de las herramientas ni los ajustes. Eliminar la app borra todo lo que guardó en el dispositivo; las copias en tus respaldos y lo que hayas compartido se manejan por separado.
 
-Conservamos los eventos de estadísticas, los registros de compra y los correos de ayuda solo mientras los necesitamos para operar, dar soporte y mejorar la app, o mientras la ley lo exija (por ejemplo, los registros de compra para fines fiscales y contables), y después los borramos. Eliminar la app no borra los registros que ya se enviaron a PostHog o a RevenueCat; para pedirnos que los borremos, consulta "Tus opciones y derechos" más abajo.
+Conservamos los eventos de estadísticas, las grabaciones de pantalla, los registros de compra y los correos de ayuda solo mientras los necesitamos para operar, dar soporte y mejorar la app, o mientras la ley lo exija (por ejemplo, los registros de compra para fines fiscales y contables), y después los borramos. Eliminar la app no borra los registros que ya se enviaron a PostHog o a RevenueCat; para pedirnos que los borremos, consulta "Tus opciones y derechos" más abajo.
 
 ## Menores de edad
 
@@ -79,11 +92,11 @@ Calculadora de Pies y Pulgadas es una herramienta para la construcción y los of
 - **Borra tu historial** con Historial → Más (…) → Borrar todo, o elimina la app para borrar todo lo que guardó. Los respaldos del dispositivo, si los tienes activados, dependen de Apple y de tu configuración, no de nosotros.
 - **Desactiva los recordatorios** en Configuración → Notificaciones de tu iPhone.
 - **Cancela una suscripción** en la configuración de tu cuenta de Apple; consulta los [términos de uso](/construction-calc/es/terms/). Eliminar la app no la cancela.
-- **Pídenos borrar registros de estadísticas o de compras.** Escribe a [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Como estos registros usan identificadores aleatorios y no una cuenta, dinos aproximadamente cuándo usaste la app y, si es una compra, cuándo compraste, para poder encontrarlos. Te diremos qué encontramos y borramos. Apple conserva sus propios registros de compra.
+- **Pídenos borrar registros de estadísticas (eventos y grabaciones) o de compras.** Escribe a [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Como estos registros usan identificadores aleatorios y no una cuenta, dinos aproximadamente cuándo usaste la app y, si es una compra, cuándo compraste, para poder encontrarlos. Te diremos qué encontramos y borramos. Apple conserva sus propios registros de compra.
 - **Pregúntanos qué datos tenemos** escribiendo a la misma dirección.
 
 Según dónde vivas, puedes tener otros derechos sobre tus datos personales, como el acceso, la rectificación, la cancelación y la oposición. Escríbenos y responderemos como lo exija la ley.
 
 ## Cambios a este aviso
 
-Si cambian las prácticas de datos de la app, actualizaremos este aviso y los detalles de privacidad del App Store antes de publicar esa versión. La fecha de entrada en vigor, arriba, indica el último cambio. Preguntas: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+Si cambian las prácticas de datos de la app, actualizaremos este aviso y los detalles de privacidad del App Store antes de publicar esa versión. La fecha de entrada en vigor, arriba, indica el último cambio. 21 de octubre de 2026: grabaciones de pantalla enmascaradas, desde la versión 1.0.2 (consulta "Estadísticas de uso"). Preguntas: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).

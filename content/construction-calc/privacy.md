@@ -1,6 +1,6 @@
 # Fraction Feet Inch Calculator Privacy Policy
 
-**Effective date:** 2026-10-06
+**Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -8,21 +8,22 @@ Fraction Feet Inch Calculator is made by KLM Labs. On your Home Screen it appear
 
 ## The short version
 
-- **Your calculations are stored on your device.** Numbers you type, answers, your history tape, tool inputs and the Home Screen widget's last answer are stored on your iPhone, and the app never sends them to us or to analytics.
+- **Your calculations are stored on your device.** Numbers you type, answers, your history tape, tool inputs and the Home Screen widget's last answer are stored on your iPhone. The app never sends them to us, and no analytics event contains them.
 - **There is no account and no sign-up.** The app never asks for your name or email address. Your usage and purchase records are kept together by random identifiers, so they are linked to you (see below).
-- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a tool was opened", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No calculation, input or answer is ever included.
+- **Usage analytics with a random identifier.** The App Store version sends usage events, such as "a tool was opened", to PostHog, together with technical details about the app and device. An approximate location (country and city) is worked out from your internet address, which PostHog does not store. No event ever includes a calculation, input or answer.
+- **Masked screen recordings, from version 1.0.2.** The App Store version also records the app's screens as you use them and where you tap. Text and pictures are masked on your iPhone before a recording is sent (see below).
 - **Purchases are handled by Apple.** We never see your card or bank details. RevenueCat receives your App Store purchase records so the app can unlock and restore your plan.
 - **No ads and no tracking.** We do not sell data, show adverts, use an advertising identifier, or track you across other apps and websites.
 
 ## What is stored on your device
 
-Everything you enter and calculate is stored on your iPhone: the numbers and expressions you type, answers, memory, the history tape, your precision and other settings, the last inputs of each tool, and the last answer shown by the Home Screen widget. The app and its widget share that last answer through storage on your iPhone. The app never sends any of it to KLM Labs, PostHog or RevenueCat, and we cannot see, retrieve or delete it. It leaves your iPhone only if you share it: you can share your history or a single line, copy an answer into another app, or share a stair layout PDF. Like other app data, it is included in your iPhone's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
+Everything you enter and calculate is stored on your iPhone: the numbers and expressions you type, answers, memory, the history tape, your precision and other settings, the last inputs of each tool, and the last answer shown by the Home Screen widget. The app and its widget share that last answer through storage on your iPhone. No analytics event or purchase record contains any of it (for screen recordings, see "A masked recording of the app's screens" below), and we cannot retrieve or delete it. It leaves your iPhone only if you share it: you can share your history or a single line, copy an answer into another app, or share a stair layout PDF. Like other app data, it is included in your iPhone's backups (iCloud Backup or a computer backup) if you have backups turned on; those backups are controlled by Apple and your settings, not by us.
 
 The calculator and tools work offline. Copy and paste use your iPhone's clipboard only when you choose Copy or Paste.
 
 ## Product analytics (PostHog)
 
-We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics are sent only by the App Store version of the app (and TestFlight test builds); there is no analytics setting in the app.
+We use product analytics to learn which features are used and where people get stuck, so we can improve the app. [PostHog, Inc.](https://posthog.com/privacy) processes the analytics for KLM Labs on servers in the United States. Analytics, and from version 1.0.2 masked screen recordings, are sent only by the App Store version of the app (and TestFlight test builds); there is no setting for them in the app.
 
 ### What analytics collects
 
@@ -36,9 +37,21 @@ We use product analytics to learn which features are used and where people get s
 
 **Purchase events.** When you start a trial, buy, renew, cancel or when a plan expires, RevenueCat sends a record of that event (for example the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under the same random identifier, so we can see how the plans are used. See "Purchases and subscriptions" below.
 
+**A masked recording of the app's screens, from version 1.0.2.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app, including the calculator, its tools and your history. Recordings are masked on your iPhone before they are sent, with every masking option of the recording software turned on, for text the app displays, text you type, and pictures. On a real recording of the welcome pages, the free-trial page and the plans screen, this is what we saw:
+
+| What is masked | Result |
+|---|---|
+| Text on screen | Words and numbers appear as solid blocks, not readable text: titles, buttons, plan names, prices, and the sample calculations on the welcome pages |
+| Pictures | Appear as solid blocks |
+| The app's messages | The text of a message such as "No purchases found" appears as blocks |
+
+What stays visible: each screen's layout and colours, small symbols, the app's logo, which option is selected, and where you tap. The tape-measure drawing on the first welcome page keeps its printed inch numbers (65 to 70); they are part of the drawing, not anything you entered. iOS's own requests, such as the one asking to allow notifications, did not appear in the recording.
+
+A recording carries the same random identifier and session identifier as your analytics events, so it is linked to you in the same way. Console output and network activity are not recorded. Masking is a technical measure applied on the device, and we treat any change to it as a change to this policy.
+
 ### What analytics never collects
 
-We do not collect your name, email address, phone number, contacts, photos, files, precise location, calculations, inputs, answers, history or anything you type. We do not record your screen, and we do not collect crash reports.
+We do not collect your name, email address, phone number, contacts, photos, files or precise location. No analytics event contains your calculations, inputs, answers, history or anything you type; screen recordings are masked as described above. We do not collect crash reports.
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
@@ -68,7 +81,7 @@ PostHog, RevenueCat and, for email, Google (Gmail) process data for KLM Labs. We
 
 On your device, History keeps the newest 1,000 calculations and removes older ones automatically. **History → More (…) → Clear All** removes the history and the widget's last answer; it does not clear the calculator's memory, saved tool inputs or settings. Deleting the app removes everything it stored on the device; copies in your backups, and anything you shared, are managed separately.
 
-We keep analytics events, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
+We keep analytics events, screen recordings, purchase records and support emails only as long as we need them to run, support and improve the app, or as the law requires (for example, purchase records for tax and accounting), and then delete them. Deleting the app does not delete records already sent to PostHog or RevenueCat; to ask us to delete them, see "Your choices and rights" below.
 
 ## Children
 
@@ -79,11 +92,11 @@ Fraction Feet Inch Calculator is a tool for building and trade work and is not d
 - **Delete your history** with History → More (…) → Clear All, or delete the app to remove everything it stored. Device backups, if you have them on, are controlled by Apple and your settings, not by us.
 - **Turn off reminders** in your iPhone's Settings → Notifications.
 - **Cancel a subscription** in your Apple Account settings; see the [terms of use](/construction-calc/terms/). Deleting the app does not cancel it.
-- **Ask us to delete analytics or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
+- **Ask us to delete analytics records (events and recordings) or purchase records.** Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). Because these records use random identifiers rather than an account, tell us roughly when you used the app and, for purchases, when you bought, so we can find them. We will tell you what we could find and delete. Apple keeps its own purchase records.
 - **Ask what we hold** by emailing the same address.
 
 Depending on where you live, you may have further rights over personal data, such as access, correction, deletion and objection. Contact us and we will respond as the law requires.
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: masked screen recordings, from version 1.0.2 (see "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
