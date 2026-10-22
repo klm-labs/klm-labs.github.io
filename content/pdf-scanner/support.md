@@ -2,7 +2,7 @@
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-PDF Scanner App: OCR & Search (PDF Scanner on your Home Screen) scans paper into clean multi-page PDFs, reads the text on every page on your iPhone, and lets you search the words inside your scans, file them in folders, and share a PDF or JPG. Email us any time; we aim to reply within three business days.
+PDF Scanner App: OCR & Search (PDF Scanner on your Home Screen) scans paper into clean multi-page PDFs, reads the text on every page on your iPhone or iPad, and lets you search the words inside your scans, file them in folders, and share a PDF or JPG. Email us any time; we aim to reply within three business days.
 
 ## Common questions
 
@@ -18,18 +18,18 @@ Yes. Every feature needs the free trial or a plan: **Yearly**, an auto-renewing 
 
 Cancel in your Apple Account; deleting the app does not cancel it.
 
-- On your iPhone, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
+- On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Manage Subscription**.
 
 To avoid being charged, cancel at least 24 hours before your free trial or current period ends. You keep access until the end of the period you have paid for.
 
-### I got a new iPhone or reinstalled the app. How do I get my plan back?
+### I got a new iPhone or iPad, or reinstalled the app. How do I get my plan back?
 
-Sign in with the Apple Account that bought it, open the app and tap **Restore** on the plans screen, or go to **Settings → Restore Purchases**. Restoring brings back your plan, not your documents: documents are kept on the iPhone where you scanned them, and in that iPhone's backups if you have them turned on.
+Sign in with the Apple Account that bought it, open the app and tap **Restore** on the plans screen, or go to **Settings → Restore Purchases**. Restoring brings back your plan, not your documents: documents are kept on the iPhone or iPad where you scanned them, and in its backups if you have them turned on.
 
 ### My plan ended. Are my documents gone?
 
-No. They are still on your iPhone, untouched. The app shows the plans screen until you subscribe, buy Lifetime or restore an active plan, and then your documents open again.
+No. They are still on your iPhone or iPad, untouched. The app shows the plans screen until you subscribe, buy Lifetime or restore an active plan, and then your documents open again.
 
 ### How do I get a refund?
 
@@ -37,11 +37,11 @@ Apple handles all payments, so refunds go through Apple: visit [reportaproblem.a
 
 ### The scanner doesn't open.
 
-The app needs camera access to scan. Open your iPhone's **Settings**, find **PDF Scanner** and turn on **Camera**. On a device without a document camera, import photos instead.
+The app needs camera access to scan. Open **Settings** on your iPhone or iPad, find **PDF Scanner** and turn on **Camera**. On a device without a document camera, import photos instead.
 
 ### Search doesn't find a word I can see on the page.
 
-Text is read on your iPhone after you save a scan, page by page, so a new scan can take a moment to become searchable. Faint, handwritten or skewed pages can be misread. Rotating a page to upright reads it again.
+Text is read on your iPhone or iPad after you save a scan, page by page, so a new scan can take a moment to become searchable. Faint, handwritten or skewed pages can be misread. Rotating a page to upright reads it again.
 
 ### How do I delete a document or a folder?
 
@@ -57,5 +57,5 @@ Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) with:
 
 - What happened, and what you expected.
 - For a text or search problem, what kind of page it was, without sending anything private.
-- Your iPhone model and iOS version, and the app version from **Settings**.
+- Your iPhone or iPad model and its iOS or iPadOS version, and the app version from **Settings**.
 - A screenshot, if it helps.
