@@ -100,8 +100,12 @@ try {
       const file = `${output}/${name}-${viewport.width}x${viewport.height}.png`;
       await page.screenshot({ path: file, fullPage: true });
       if (name === 'app') {
-        const apple = page.locator('.store-coming-soon');
-        if (await apple.evaluate(e => e.tagName !== 'DIV' || e.closest('a,button') !== null || e.tabIndex >= 0)) throw new Error('Coming soon must be non-interactive');
+        for (const soon of await page.locator('.store-coming-soon').all()) {
+          if (await soon.evaluate(e => e.tagName !== 'DIV' || e.closest('a,button') !== null || e.tabIndex >= 0)) throw new Error('Coming soon must be non-interactive');
+        }
+        // Invoice Maker has been live on the App Store since 2026-10-03 (Apple ID 6815655785).
+        if (await page.locator('.store-badge.app_store').getAttribute('href') !== 'https://apps.apple.com/app/id6815655785') throw new Error('Wrong App Store URL');
+        if (await page.locator('.store-coming-soon').count()) throw new Error('Both stores are linked: no Coming soon');
         if (await page.locator('.store-badge.google_play').getAttribute('href') !== 'https://play.google.com/store/apps/details?id=com.klmlabs.invoicecreator') throw new Error('Wrong Play URL');
         const next = page.locator('.carousel-next');
         await next.click();
@@ -121,7 +125,7 @@ try {
   const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const page = await noJS.newPage();
   await page.goto(base + '/invoice-creator/');
-  if (await page.locator('.screenshot-card').count() !== 5 || await page.locator('.store-badge').count() !== 1) throw new Error('No-JS content missing');
+  if (await page.locator('.screenshot-card').count() !== 5 || await page.locator('.store-badge').count() !== 2) throw new Error('No-JS content missing');
   await noJS.close();
   await writeFile(output + '/checks.json', JSON.stringify(findings, null, 2) + '\n');
 } finally {

@@ -65,7 +65,10 @@ screenshots, stores, release or data-safety entries: only `slug`, `name`,
 `developer`, `category`, `bundle_id`, `pitch`, `description`, `icon`, `favicon`,
 `social_image`, `availability`, `contact` and `policy_date`. `/<slug>/` becomes a
 small hub that links the three pages; the studio index shows no card for it and
-the app count leaves it out. Its pages are still in the sitemap. Record where the
+the app count leaves it out. Its pages are still in the sitemap. Once the app is
+publicly live, add `"stores": {"app_store": {"url": "https://apps.apple.com/app/id<digits>", "live": true}}`
+and say so in `availability`: the hub then shows the official App Store badge
+under that line (Construction Calculator, since 2026-10-25). Record where the
 policy facts came from in `source_review` (app repo, branch, commit, and the App
 Store Connect App Privacy state). When the app launches, turn it into a full
 listing as in "Add a new app".
@@ -102,12 +105,11 @@ The Apple artwork is used only when the App Store link is live.
 For **Invoice Maker**, change these exact entries in
 [`data/apps/invoice-creator.json`](data/apps/invoice-creator.json):
 
-- **App Store, line 16:** once App Store Connect → app → App Information supplies
-  the numeric Apple ID and its listing is publicly available, replace
-  `"app_store": { "url": null, "live": false }` with
-  `"app_store": { "url": "https://apps.apple.com/app/id<ACTUAL_NUMERIC_ID>", "live": true }`.
-  Replace the entire placeholder with the real digits. Do not use a bundle ID,
-  TestFlight URL, search URL or fabricated numeric ID.
+- **App Store, line 16:** live since 2026-10-25 as
+  `"app_store": { "url": "https://apps.apple.com/app/id6815655785", "live": true }`
+  (the US lookup showed 1.2.1 for iPhone and iPad). For another app, use the numeric
+  Apple ID from App Store Connect only once its listing is publicly available; never
+  a bundle ID, TestFlight URL, search URL or fabricated numeric ID.
 - **Google Play, line 17:** the final canonical URL and `live: true` are already
   set, explicitly requested by the founder while the app is in closed testing.
   **No button change is required at production launch.** The public URL returned

@@ -28,7 +28,7 @@ UI = {
         't_trademarks': 'Google Play is a trademark of Google LLC. App Store and Apple are trademarks of Apple Inc.',
         't_breadcrumb': 'Breadcrumb', 't_resources': 'App resources', 't_by': 'by', 't_back': 'Back to the app',
         'switch_to': 'Read in English', 'hub_heading': 'Privacy, terms and support', 'hub_title': 'Privacy, terms and support',
-        'hub_contact': 'Questions or problems? Email',
+        'hub_contact': 'Questions or problems? Email', 'app_store_badge': 'Download on the App Store',
     },
     'es': {
         'html_lang': 'es-MX',
@@ -44,7 +44,7 @@ UI = {
         't_trademarks': 'Google Play es una marca de Google LLC. App Store y Apple son marcas de Apple Inc.',
         't_breadcrumb': 'Ruta de navegación', 't_resources': 'Recursos de la app', 't_by': 'de', 't_back': 'Volver a la app',
         'switch_to': 'Leer en español', 'hub_heading': 'Privacidad, términos y ayuda', 'hub_title': 'Privacidad, términos y ayuda',
-        'hub_contact': '¿Preguntas o problemas? Escribe a',
+        'hub_contact': '¿Preguntas o problemas? Escribe a', 'app_store_badge': 'Descargar en el App Store',
     },
 }
 PATHS = {
@@ -228,6 +228,15 @@ def render_documents(app, lang, values, urls):
         urls.append(f'{app_home(app, lang)}{key}/')
 
 
+def hub_badge(app, lang):
+    """A resource-only app already live on the App Store: the official badge under its availability line."""
+    store = app.get('stores', {}).get('app_store')
+    if not store or not store['live']:
+        return ''
+    assert re.fullmatch(r'https://apps.apple.com/app/id[0-9]+', store['url'] or ''), f'{app["slug"]}: use the numeric Apple ID'
+    return f'<div class="store-buttons"><a class="store-badge app_store" href="{esc(store["url"])}"><img src="/assets/badges/app-store.svg" alt="{esc(UI[lang]["app_store_badge"])}" width="120" height="40"></a></div>'
+
+
 def render_resources(app, urls, arrows):
     """A resource-only app: a hub page plus the three documents, in English and each translation."""
     for lang in ['en', *app.get('locales', {})]:
@@ -235,7 +244,7 @@ def render_resources(app, urls, arrows):
         values = {k: esc(v) for k, v in local.items() if isinstance(v, str)}
         values.update(arrows, **ui_values(lang), app_home=app_home(app, lang))
         links = '\n'.join(f'- [{label}]({app_home(app, lang)}{key}/): {deck(local, ui, key)}' for key, label in ui['labels'].items())
-        body = markdown(f'{local["availability"]}\n\n## {ui["hub_heading"]}\n\n{links}\n\n{ui["hub_contact"]} [{app["contact"]}](mailto:{app["contact"]}).')
+        body = '\n'.join(filter(None, [markdown(local['availability']), hub_badge(app, lang), markdown(f'## {ui["hub_heading"]}\n\n{links}\n\n{ui["hub_contact"]} [{app["contact"]}](mailto:{app["contact"]}).')]))
         page = template('resources', **{**values, 'body': body, 'document_links': document_links(app, lang), 'language_link': language_link(app, lang) if app.get('locales') else ''})
         render_page(app_home(app, lang), page, f'{local["name"]} — {ui["hub_title"]} | KLM Labs', local['description'], local, lang=lang)
         urls.append(app_home(app, lang))

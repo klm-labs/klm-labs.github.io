@@ -41,7 +41,8 @@ about 48.6 px high, at least as large as Apple’s. Both retain their minimum
 Trademark credit is in the footer. The download link in the official hub is a
 temporary signed URL, so only the original artwork is committed, not that URL.
 
-The App Store download artwork is retained for launch but is not displayed while
-the app is unavailable. Its current “Coming soon” state is plain text, not a
-modified badge and not a link. Google’s canonical link remains active during
-closed testing by the founder’s explicit direction, with the availability note.
+The App Store artwork is shown only for a live listing (Invoice Maker and the
+Construction Calculator hub since 2026-10-25). A store that is not live shows
+“Coming soon” as plain text, not a modified badge and not a link. Google’s
+canonical link remains active during closed testing by the founder’s explicit
+direction, with the availability note.

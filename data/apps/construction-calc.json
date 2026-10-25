@@ -11,7 +11,8 @@
   "favicon": "/construction-calc/favicon.png",
   "social_image": "/construction-calc/social.png",
   "platforms": ["iOS"],
-  "availability": "Coming soon to the App Store for iPhone.",
+  "stores": { "app_store": { "url": "https://apps.apple.com/app/id6816445977", "live": true } },
+  "availability": "Available on the App Store for iPhone.",
   "contact": "klm.labs.inc@gmail.com",
   "policy_date": "2026-10-21",
   "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
@@ -28,7 +29,7 @@
       "name": "Calculadora de Pies y Pulgadas",
       "pitch": "Construcción, sin anuncios",
       "description": "Matemáticas de flexómetro para la obra: pies, pulgadas y fracciones, con herramientas para escaleras, techos, concreto y más. En tu pantalla de inicio aparece como Construction Calculator.",
-      "availability": "Muy pronto en el App Store para iPhone."
+      "availability": "Disponible en el App Store para iPhone."
     }
   }
 }
