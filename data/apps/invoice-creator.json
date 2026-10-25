@@ -41,7 +41,7 @@
     { "icon": "clients", "title": "Less typing, next time", "text": "Save client details and set your usual currency, tax rate and payment terms. Running totals update as you edit." },
     { "icon": "check", "title": "Keep track of the follow-up", "text": "Mark invoices sent or paid yourself, see what you’re owed, and spot overdue invoices at a glance." }
   ],
-  "release": { "version": "1.0.0", "label": "First release · on the App Store", "text": "Invoices and estimates, saved clients, PDF sharing, and a clear view of what you’re owed. Works offline, with no account or sign-up." },
+  "release": { "version": "1.2.1", "label": "First release · on the App Store", "text": "Invoices and estimates, saved clients, PDF sharing, and a clear view of what you’re owed. Works offline, with no account or sign-up." },
   "safety_intro": "Your documents stay on your device. Some technical, usage and subscription data leaves the app, as explained below.",
   "safety": [
     { "icon": "device", "title": "Business data stays local", "text": "Client details, invoices, estimates and your logo are stored on your phone. PDFs are shared only when you choose a destination." },
