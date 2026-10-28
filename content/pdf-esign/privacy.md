@@ -1,10 +1,10 @@
-# Signer: Sign PDF Documents Privacy Policy
+# eSign: Document Signer & Fill Privacy Policy
 
 **Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-Signer: Sign PDF Documents is made by KLM Labs. On your Home Screen it appears as **Signer**. It lets you sign, fill and stamp PDFs and scanned pages on your iPhone or iPad. This policy explains what stays on your device, what leaves it, who receives it and why.
+eSign: Document Signer & Fill is made by KLM Labs. On your Home Screen it appears as **Signer**. It lets you sign, fill and stamp PDFs and scanned pages on your iPhone or iPad. This policy explains what stays on your device, what leaves it, who receives it and why.
 
 ## The short version
 

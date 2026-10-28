@@ -1,10 +1,10 @@
-# Signer: Sign PDF Documents Terms of Use
+# eSign: Document Signer & Fill Terms of Use
 
 **Effective date:** 2026-10-21
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-Signer: Sign PDF Documents (shown on your Home Screen as Signer) is made by KLM Labs. These terms are the agreement between you and KLM Labs when you use the app. Please also read the [Privacy Policy](/pdf-esign/privacy/), which explains what stays on your device and what the app collects.
+eSign: Document Signer & Fill (shown on your Home Screen as Signer) is made by KLM Labs. These terms are the agreement between you and KLM Labs when you use the app. Please also read the [Privacy Policy](/pdf-esign/privacy/), which explains what stays on your device and what the app collects.
 
 ## Apple's standard licence applies
 

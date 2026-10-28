@@ -1,8 +1,8 @@
-# Signer: Sign PDF Documents Support
+# eSign: Document Signer & Fill Support
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
-Signer: Sign PDF Documents (Signer on your Home Screen) lets you sign, fill and stamp PDFs on your iPhone or iPad. Import from Files, Photos or another app, or scan paper with the camera; add your signature, initials, text, dates, check marks and stamps; then share or save the signed copy. Email us any time; we aim to reply within three business days.
+eSign: Document Signer & Fill (Signer on your Home Screen) lets you sign, fill and stamp PDFs on your iPhone or iPad. Import from Files, Photos or another app, or scan paper with the camera; add your signature, initials, text, dates, check marks and stamps; then share or save the signed copy. Email us any time; we aim to reply within three business days.
 
 ## Common questions
 
