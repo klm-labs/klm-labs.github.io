@@ -14,7 +14,7 @@
   "stores": { "app_store": { "url": "https://apps.apple.com/app/id6816445977", "live": true } },
   "availability": "Available on the App Store for iPhone.",
   "contact": "klm.labs.inc@gmail.com",
-  "policy_date": "2026-10-21",
+  "policy_date": "2026-10-29",
   "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
   "source_review": {
     "date": "2026-09-29",

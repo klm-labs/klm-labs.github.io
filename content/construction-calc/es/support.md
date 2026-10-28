@@ -18,18 +18,18 @@ Sí. Todas las funciones requieren la prueba gratis o un plan: **Anual**, una su
 
 Cancela en tu cuenta de Apple; eliminar la app no la cancela.
 
-- En tu iPhone, abre **Configuración**, toca tu nombre y luego **Suscripciones**, elige la app y toca **Cancelar suscripción**.
+- En tu iPhone o iPad, abre **Configuración**, toca tu nombre y luego **Suscripciones**, elige la app y toca **Cancelar suscripción**.
 - O, en la app, abre **Configuración → Tu plan → Administrar suscripción**.
 
 Para que no se te cobre, cancela al menos 24 horas antes de que termine tu prueba gratis o el periodo actual. Conservas el acceso hasta el final del periodo que ya pagaste.
 
-### Tengo un iPhone nuevo o reinstalé la app. ¿Cómo recupero mi plan?
+### Tengo un iPhone o iPad nuevo, o reinstalé la app. ¿Cómo recupero mi plan?
 
 Inicia sesión con la cuenta de Apple con la que compraste, abre la app y toca **Restaurar** en la pantalla de planes, o ve a **Configuración → Tu plan → Restaurar compras**. Si la app dice "No se encontraron compras para esta cuenta de Apple.", revisa que hayas iniciado sesión en el App Store con la cuenta con la que compraste.
 
 ### ¿Mi familia puede usar mi compra?
 
-De por vida incluye Compartir en familia: los miembros de tu grupo de Compartir en familia de Apple pueden restaurarla en sus propios iPhone. El plan Anual no se comparte.
+De por vida incluye Compartir en familia: los miembros de tu grupo de Compartir en familia de Apple pueden restaurarla en sus propios dispositivos. El plan Anual no se comparte.
 
 ### ¿Cómo pido un reembolso?
 
@@ -41,11 +41,11 @@ Los precios y las compras vienen del App Store. Revisa tu conexión a internet y
 
 ### ¿Dónde está mi historial y cómo lo borro?
 
-Tu historial, tus ajustes y los datos de las herramientas se guardan en tu iPhone (y en sus respaldos, si los tienes activados). El historial conserva tus 1,000 cálculos más recientes. Para borrarlo, abre **Historial**, toca **Más (…)**, luego **Borrar todo**, y confirma. Eliminar la app borra todo lo que guardó en el iPhone. No tenemos ninguna copia, así que no podemos recuperar un historial perdido.
+Tu historial, tus ajustes y los datos de las herramientas se guardan en tu dispositivo (y en sus respaldos, si los tienes activados). El historial conserva tus 1,000 cálculos más recientes. Para borrarlo, abre **Historial**, toca **Más (…)**, luego **Borrar todo**, y confirma. Eliminar la app borra todo lo que guardó en el dispositivo. No tenemos ninguna copia, así que no podemos recuperar un historial perdido.
 
 ### ¿Qué recopila la app?
 
-Ningún evento de estadísticas contiene tus cálculos, datos ni resultados. Desde la versión 1.0.2 la app también graba sus pantallas: las grabaciones muestran los números de la calculadora, sus resultados y tu historial, y enmascaran lo que escribes en las casillas de las herramientas. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos, y a RevenueCat tus registros de compra del App Store para activar tu plan. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
+Ningún evento de estadísticas contiene tus cálculos, datos ni resultados. Desde la versión 1.0.2 la app también graba sus pantallas: las grabaciones muestran los números de la calculadora, sus resultados y tu historial, y enmascaran lo que escribes en las casillas de las herramientas. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos (y, desde la versión 1.1.0, reportes de fallas), y a RevenueCat tus registros de compra del App Store para activar tu plan. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
 
 ## Reportar un problema
 
@@ -53,5 +53,5 @@ Escribe a [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) con:
 
 - Qué pasó y qué esperabas.
 - Los números o datos de la herramienta que dan un resultado incorrecto, si es un problema de cálculo.
-- El modelo de tu iPhone y la versión de iOS.
+- El modelo de tu iPhone o iPad y la versión de iOS o iPadOS.
 - Una captura de pantalla, si ayuda.

@@ -18,18 +18,18 @@ Yes. Every feature needs the free trial or a plan: **Yearly**, an auto-renewing 
 
 Cancel in your Apple Account; deleting the app does not cancel it.
 
-- On your iPhone, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
+- On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Your plan → Manage subscription**.
 
 To avoid being charged, cancel at least 24 hours before your free trial or current period ends. You keep access until the end of the period you have paid for.
 
-### I got a new iPhone or reinstalled the app. How do I get my plan back?
+### I got a new iPhone or iPad, or reinstalled the app. How do I get my plan back?
 
 Sign in with the Apple Account that bought it, open the app and tap **Restore** on the plans screen, or go to **Settings → Your plan → Restore Purchases**. If the app says "No purchases found for this Apple Account.", check that you are signed in to the App Store with the account you bought with.
 
 ### Can my family use my purchase?
 
-Lifetime includes Family Sharing: members of your Apple Family Sharing group can restore it on their own iPhones. The Yearly plan is not shared.
+Lifetime includes Family Sharing: members of your Apple Family Sharing group can restore it on their own devices. The Yearly plan is not shared.
 
 ### How do I get a refund?
 
@@ -41,11 +41,11 @@ Prices and purchases come from the App Store. Check your internet connection and
 
 ### Where is my history, and how do I delete it?
 
-Your history, settings and tool inputs are stored on your iPhone (and in its backups, if you have them turned on). History keeps your newest 1,000 calculations. To delete it, open **History**, tap **More (…)**, then **Clear All**, and confirm. Deleting the app deletes everything it stored on the iPhone. We have no copy, so we cannot recover a lost history.
+Your history, settings and tool inputs are stored on your device (and in its backups, if you have them turned on). History keeps your newest 1,000 calculations. To delete it, open **History**, tap **More (…)**, then **Clear All**, and confirm. Deleting the app deletes everything it stored on the device. We have no copy, so we cannot recover a lost history.
 
 ### What does the app collect?
 
-Analytics events never contain your calculations, inputs or answers. From version 1.0.2 the app also records its screens: the recordings show the calculator's numbers, its answers and your history, and mask what you type into the tools' boxes. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/construction-calc/privacy/).
+Analytics events never contain your calculations, inputs or answers. From version 1.0.2 the app also records its screens: the recordings show the calculator's numbers, its answers and your history, and mask what you type into the tools' boxes. The app sends usage events with a random identifier, and technical details (and, from version 1.1.0, crash reports), to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/construction-calc/privacy/).
 
 ## Report a problem
 
@@ -53,5 +53,5 @@ Email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) with:
 
 - What happened, and what you expected.
 - The numbers or tool inputs that give the wrong result, if it is a calculation problem.
-- Your iPhone model and iOS version.
+- Your iPhone or iPad model and iOS or iPadOS version.
 - A screenshot, if it helps.

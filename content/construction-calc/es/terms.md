@@ -1,6 +1,6 @@
 # Términos de uso de Calculadora de Pies y Pulgadas
 
-**Fecha de entrada en vigor:** 29 de septiembre de 2026
+**Fecha de entrada en vigor:** 29 de octubre de 2026
 
 **Contacto:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -31,12 +31,12 @@ El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app a
 
 **Cancelar.** Cancela en tu cuenta de Apple, no eliminando la app:
 
-- En tu iPhone, abre **Configuración**, toca tu nombre y luego **Suscripciones**, elige la app y toca **Cancelar suscripción**.
+- En tu iPhone o iPad, abre **Configuración**, toca tu nombre y luego **Suscripciones**, elige la app y toca **Cancelar suscripción**.
 - O, en la app, abre **Configuración → Tu plan → Administrar suscripción**.
 
 Eliminar la app no cancela una suscripción. Después de cancelar, conservas el acceso hasta el final del periodo que ya pagaste. Comprar De por vida no cancela una suscripción Anual; cancela tú el plan Anual para que no se renueve.
 
-**Restaurar.** Los planes pertenecen a la cuenta de Apple con la que se compraron; la app no tiene cuenta propia. En un iPhone nuevo o después de reinstalar, inicia sesión con la misma cuenta de Apple y toca **Restaurar** en la pantalla de planes, o ve a **Configuración → Tu plan → Restaurar compras**.
+**Restaurar.** Los planes pertenecen a la cuenta de Apple con la que se compraron; la app no tiene cuenta propia. En un iPhone o iPad nuevo, o después de reinstalar, inicia sesión con la misma cuenta de Apple y toca **Restaurar** en la pantalla de planes, o ve a **Configuración → Tu plan → Restaurar compras**.
 
 **Reembolsos.** Apple maneja todos los pagos, así que KLM Labs no puede cobrar ni reembolsar directamente a tu cuenta. Para pedir un reembolso, ve a [reportaproblem.apple.com](https://reportaproblem.apple.com). Los reembolsos siguen las políticas de Apple y la ley de tu país.
 

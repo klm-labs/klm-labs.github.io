@@ -1,6 +1,6 @@
 # Fraction Feet Inch Calculator Terms of Use
 
-**Effective date:** 2026-09-29
+**Effective date:** 2026-10-29
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -31,12 +31,12 @@ The price, billing period and any free trial are shown in the app before you con
 
 **Cancelling.** Cancel in your Apple Account, not by deleting the app:
 
-- On your iPhone, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
+- On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Your plan → Manage subscription**.
 
 Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Buying Lifetime does not cancel a Yearly subscription; cancel the Yearly plan yourself so it does not renew.
 
-**Restoring.** Plans belong to the Apple Account that bought them; the app has no account of its own. On a new iPhone or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Your plan → Restore Purchases**.
+**Restoring.** Plans belong to the Apple Account that bought them; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Your plan → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
