@@ -1,6 +1,6 @@
 # Fraction Feet Inch Calculator Terms of Use
 
-**Effective date:** 2026-10-29
+**Effective date:** 2026-10-30
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -36,7 +36,7 @@ The price, billing period and any free trial are shown in the app before you con
 
 Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Buying Lifetime does not cancel a Yearly subscription; cancel the Yearly plan yourself so it does not renew.
 
-**Restoring.** Plans belong to the Apple Account that bought them; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Your plan → Restore Purchases**.
+**Restoring.** Plans belong to the Apple Account that bought them, not to the app's optional sign-in. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Your plan → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
@@ -53,6 +53,8 @@ The app does arithmetic and applies standard formulas to the measurements you en
 ## Your data
 
 Your calculations, history and settings are stored on your device, and in your device backups if you have them turned on. We do not hold a copy, so we cannot recover them if your device is lost or reset or the app is deleted; restoring your own backup may bring them back.
+
+Signing in with Apple or Google is optional, and the app works the same without an account. Signing in does not back up or sync your calculations. The [Privacy Policy](/construction-calc/privacy/) explains what signing in shares and how to delete your account.
 
 ## Changes to the app and these terms
 

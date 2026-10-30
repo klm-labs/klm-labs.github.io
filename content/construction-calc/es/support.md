@@ -8,7 +8,11 @@ Calculadora de Pies y Pulgadas (Construction Calculator en tu pantalla de inicio
 
 ### ¿Necesito una cuenta o conexión a internet?
 
-No hay cuenta ni registro. La calculadora y las herramientas funcionan sin internet. Comprar un plan, restaurar una compra y la primera verificación de tu plan requieren conexión a internet.
+No. Iniciar sesión con Apple o Google es opcional, y la app funciona igual sin una cuenta. La calculadora y las herramientas funcionan sin internet. Comprar un plan, restaurar una compra y la primera verificación de tu plan requieren conexión a internet.
+
+### ¿Por qué la app ofrece iniciar sesión y cómo elimino mi cuenta?
+
+Iniciar sesión nos permite escribirte sobre la app: si algo falla o para saber qué opinas. Toca **Ahora no** para omitirlo; nada en la app lo requiere. Si iniciaste sesión, elimina tu cuenta cuando quieras en **Configuración → Cuenta → Eliminar mi cuenta**, o escríbenos y la eliminaremos. Eliminar tu cuenta no cancela una suscripción; eso se cancela en tu cuenta de Apple (consulta más abajo).
 
 ### ¿Tengo que pagar?
 
@@ -45,7 +49,7 @@ Tu historial, tus ajustes y los datos de las herramientas se guardan en tu dispo
 
 ### ¿Qué recopila la app?
 
-Ningún evento de estadísticas contiene tus cálculos, datos ni resultados. Desde la versión 1.0.2 la app también graba sus pantallas: las grabaciones muestran los números de la calculadora, sus resultados y tu historial, y enmascaran lo que escribes en las casillas de las herramientas. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos (y, desde la versión 1.1.0, reportes de fallas), y a RevenueCat tus registros de compra del App Store para activar tu plan. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
+Ningún evento de estadísticas contiene tus cálculos, datos ni resultados. Desde la versión 1.0.2 la app también graba sus pantallas: las grabaciones muestran los números de la calculadora, sus resultados y tu historial, y enmascaran lo que escribes en las casillas de las herramientas. La app envía a PostHog eventos de uso con un identificador aleatorio y datos técnicos (y, desde la versión 1.1.0, reportes de fallas), y a RevenueCat tus registros de compra del App Store para activar tu plan. Si inicias sesión (desde la versión 1.2.0), tu correo y, si lo compartes, tu nombre se guardan en Google Firebase para que podamos escribirte sobre la app; nunca van a PostHog ni a RevenueCat. Consulta el [aviso de privacidad](/construction-calc/es/privacy/).
 
 ## Reportar un problema
 

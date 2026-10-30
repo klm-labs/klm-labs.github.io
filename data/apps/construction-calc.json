@@ -14,7 +14,7 @@
   "stores": { "app_store": { "url": "https://apps.apple.com/app/id6816445977", "live": true } },
   "availability": "Available on the App Store for iPhone and iPad.",
   "contact": "klm.labs.inc@gmail.com",
-  "policy_date": "2026-10-29",
+  "policy_date": "2026-10-30",
   "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
   "source_review": {
     "date": "2026-09-29",
@@ -22,7 +22,7 @@
     "app_branch": "build/v1",
     "app_commit": "7bb50e5eed7685f0b7f1932036b2a29ad64b9f98",
     "asc_app_id": "6816445977",
-    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 02:54Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking"
+    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 02:54Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking. From 1.2.0 (optional sign-in with Apple or Google, email-capture design F-2), Contact Info adds Email Address and Name for App Functionality, Data Linked to You, no tracking; set in App Store Connect before 1.2.0 is submitted, not yet read back"
   },
   "locales": {
     "es": {

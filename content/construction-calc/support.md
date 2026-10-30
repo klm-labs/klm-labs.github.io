@@ -8,7 +8,11 @@ Fraction Feet Inch Calculator (Construction Calculator on your Home Screen) does
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. The calculator and tools work offline. Buying a plan, restoring a purchase and the first check of your plan need an internet connection.
+No. Signing in with Apple or Google is optional, and the app works the same without an account. The calculator and tools work offline. Buying a plan, restoring a purchase and the first check of your plan need an internet connection.
+
+### Why does the app offer sign-in, and how do I delete my account?
+
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Not now** to skip it; nothing in the app needs it. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
@@ -45,7 +49,7 @@ Your history, settings and tool inputs are stored on your device (and in its bac
 
 ### What does the app collect?
 
-Analytics events never contain your calculations, inputs or answers. From version 1.0.2 the app also records its screens: the recordings show the calculator's numbers, its answers and your history, and mask what you type into the tools' boxes. The app sends usage events with a random identifier, and technical details (and, from version 1.1.0, crash reports), to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/construction-calc/privacy/).
+Analytics events never contain your calculations, inputs or answers. From version 1.0.2 the app also records its screens: the recordings show the calculator's numbers, its answers and your history, and mask what you type into the tools' boxes. The app sends usage events with a random identifier, and technical details (and, from version 1.1.0, crash reports), to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. If you sign in (from version 1.2.0), your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/construction-calc/privacy/).
 
 ## Report a problem
 
