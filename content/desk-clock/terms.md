@@ -1,6 +1,6 @@
 # Flip Clock: Big Digital Alarm Terms of Use
 
-**Effective date:** 2026-10-06
+**Effective date:** 2026-11-02
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -36,7 +36,7 @@ The price, billing period and any free trial are shown in the app before you con
 
 Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Switching to Lifetime does not cancel the Yearly subscription; cancel the Yearly plan yourself so it does not renew.
 
-**Restoring.** Plans belong to the Apple Account that bought them; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
+**Restoring.** Plans belong to the Apple Account that bought them, not to the app's optional sign-in. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
@@ -49,6 +49,10 @@ Deleting the app does not cancel a subscription. After you cancel, you keep acce
 Alarms are scheduled with Apple's alarm system (AlarmKit) and ring with the system alarm sound, also when your iPhone or iPad is on Silent or in a Focus. An alarm does not ring if the app's alarm access is turned off in Settings, or if your device is switched off or its battery is empty. Use **Test alarm** in the alarm editor to hear how it sounds. Check your alarms before you rely on them, and keep a second way to wake up or be reminded when missing an alarm would matter, for example for travel, work or medicine.
 
 Keeping the screen on uses more battery. If you choose to keep it on while your device is not charging, keep an eye on the battery so it does not run out before an alarm.
+
+## Signing in
+
+Signing in with Apple or Google is optional, and the app works the same without an account. Signing in does not back up or sync your alarms, look or settings. The [Privacy Policy](/desk-clock/privacy/) explains what signing in shares and how to delete your account.
 
 ## Changes to the app and these terms
 

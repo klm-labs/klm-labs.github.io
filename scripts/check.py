@@ -120,6 +120,18 @@ def check_native(docs):
         assert 'klmlabs.com' not in text, f'{route}: names klmlabs.com, a domain KLM Labs does not own'
         html = (ROOT / route).read_text()
         assert f'<html lang="{"es-MX" if lang == "es" else "en"}"' in html, f'{route}: wrong html lang'
+    # Flip Clock 1.1.0 (CR-001 R7, email-capture design F-1 to F-3): optional sign-in and crash reports are disclosed,
+    # and 1.0's "no account" lines do not come back.
+    clock = {key: ' '.join(' '.join(docs[ROOT / f'desk-clock/{key}/index.html'].words).split())
+             for key in ('privacy', 'terms', 'support')}
+    for phrase in ['Signing in with Apple or Google', 'Firebase Authentication', 'Delete my account',
+                   'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.1.0', 'Email Address and Name']:
+        assert phrase in clock['privacy'], f'desk-clock/privacy: lost sign-in or crash disclosure: {phrase}'
+    assert 'Signing in with Apple or Google is optional' in clock['terms'], 'desk-clock/terms: lost the optional sign-in line'
+    assert 'Signing in with Apple or Google is optional' in clock['support'], 'desk-clock/support: lost the optional sign-in answer'
+    for key, text in clock.items():
+        assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports',
+                             text, re.I), f'desk-clock/{key}: 1.0 no-account or no-crash wording regressed'
     # pdf-scanner's brief bans these words (Store copy) outside the trial wording.
     for page in ('privacy/', 'terms/', 'support/', ''):
         key = page.rstrip('/') or 'hub'

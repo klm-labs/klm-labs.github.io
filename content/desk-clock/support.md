@@ -8,7 +8,11 @@ Flip Clock: Big Digital Alarm (Flip Clock on your Home Screen) turns your iPhone
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. The clock and your alarms work offline. Buying a plan and restoring a purchase need an internet connection.
+No. Signing in with Apple or Google is optional, and the app works the same without an account. The clock and your alarms work offline. Buying a plan and restoring a purchase need an internet connection.
+
+### Why does the app offer sign-in, and how do I delete my account?
+
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Continue** under the two sign-in buttons to skip it; nothing in the app needs it. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
@@ -56,7 +60,7 @@ Open the alarm in **Alarms** and tap **Delete**. Deleting the app deletes your a
 
 ### What does the app collect?
 
-No analytics event contains your alarm times, repeat days or labels. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.0.1 it also records its screens while you use it: the recordings show your alarm times and repeat days, and mask the labels you type. See the [privacy policy](/desk-clock/privacy/).
+No analytics event contains your alarm times, repeat days or labels. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.0.1 it also records its screens while you use it: the recordings show your alarm times and repeat days, and mask the labels you type. From version 1.1.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/desk-clock/privacy/).
 
 ## Report a problem
 
