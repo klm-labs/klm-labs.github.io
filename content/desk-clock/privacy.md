@@ -30,7 +30,7 @@ Like other app data, it is included in your device's backups (iCloud Backup or a
 
 ## Signing in with Apple or Google
 
-From version 1.1.0 the app offers sign-in with Apple or Google: on a page before the plans screen, at most once more as a small card on the clock, and any time in **Settings → Account**. Signing in is optional. Tap **Continue** under the two sign-in buttons to skip it, or **Close** on the card; every feature, purchase and free trial works the same without an account.
+From version 1.1.0 the app offers sign-in with Apple or Google: on a page before the plans screen or as a small card on the clock, at most twice in all, and any time in **Settings → Account**. Signing in is optional. Tap **Continue** under the two sign-in buttons to skip it, or **Close** on the card; every feature, purchase and free trial works the same without an account.
 
 **What we get.** If you sign in, Apple or Google gives the app your email address and, if you share it, your name. You never type them. If you sign in with Apple and choose **Hide My Email**, we get Apple's private relay address instead of your own.
 
@@ -42,7 +42,7 @@ From version 1.1.0 the app offers sign-in with Apple or Google: on a page before
 
 **Our list.** To see which app you signed in from and whether you have a plan, KLM Labs can export the list from Firebase, joined with RevenueCat's purchase records, to one file. Each export replaces the last one. It is the only other copy.
 
-**Deleting your account.** In the app, open **Settings → Account → Delete my account** and confirm. The app asks you to confirm with Apple or Google once more, then deletes your account from Firebase. If you signed in with Apple, it also revokes the app's access to your Apple Account; if that step fails, the app tells you, and you can remove the app under Sign in with Apple in your Apple Account settings. If you signed in with Google, it disconnects the app from your Google Account. It also removes the account ID from your purchase record at RevenueCat and the sign-in details stored on your device. Deleting your account does not cancel a subscription, and your alarms, look and settings stay on your device. Deleting the app does not delete your account. You can also email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) and we will delete it.
+**Deleting your account.** In the app, open **Settings → Account → Delete my account** and confirm. With Apple, the app asks you to confirm once more. Then it deletes your account from Firebase. If you signed in with Apple, it also revokes the app's access to your Apple Account; if that step fails, the app tells you, and you can remove the app under Sign in with Apple in your Apple Account settings. If you signed in with Google, it disconnects the app from your Google Account. It also removes the account ID from your purchase record at RevenueCat and the sign-in details stored on your device. Deleting your account does not cancel a subscription, and your alarms, look and settings stay on your device. Deleting the app does not delete your account. You can also email [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com) and we will delete it.
 
 ## Product analytics (PostHog)
 
