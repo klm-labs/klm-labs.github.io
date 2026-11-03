@@ -126,13 +126,13 @@ def check_native(docs):
               for key in ('privacy', 'terms', 'support')}
     for phrase in ['Signing in with Apple or Google', 'Firebase Authentication', 'Delete my account',
                    'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.2.0',
-                   'could still include part of it']:
+                   'could still include part of it', 'No usage event ever contains', 'when the app can tell']:
         assert phrase in signer['privacy'], f'pdf-esign/privacy: lost sign-in or crash disclosure: {phrase}'
     assert 'Signing in with Apple or Google is optional' in signer['terms'], 'pdf-esign/terms: lost the optional sign-in line'
-    assert 'Signing in with Apple or Google is optional' in signer['support'], 'pdf-esign/support: lost the optional sign-in answer'
+    assert 'signing in with Apple or Google is optional' in signer['support'], 'pdf-esign/support: lost the optional sign-in answer'
     for key, text in signer.items():
         assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports'
-                             r'|never asks for your name|we do not collect your name', text, re.I), f'pdf-esign/{key}: 1.1.0 no-account or no-crash wording regressed'
+                             r'|never asks for your name|we do not collect your name|no event ever contains', text, re.I), f'pdf-esign/{key}: 1.1.0 no-account or no-crash wording regressed'
     # pdf-scanner's brief bans these words (Store copy) outside the trial wording.
     for page in ('privacy/', 'terms/', 'support/', ''):
         key = page.rstrip('/') or 'hub'

@@ -8,7 +8,7 @@ eSign: Document Signer & Fill (Signer on your Home Screen) lets you sign, fill a
 
 ### Do I need an account or an internet connection?
 
-No. Signing in with Apple or Google is optional, and the app works the same without an account. Your documents and signatures are stored on your device and are never uploaded by the app. Buying Signer Pro and restoring a purchase need an internet connection.
+You don't need an account: signing in with Apple or Google is optional, and the app works the same without one. Your documents and signatures are stored on your device and are never uploaded by the app; buying Signer Pro and restoring a purchase need an internet connection.
 
 ### Why does the app offer sign-in, and how do I delete my account?
 
