@@ -53,7 +53,7 @@ Delete a document in the library. Deleting a folder moves its documents out of t
 
 ### What does the app collect?
 
-Your scans, their text and your searches are not sent to us. The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.1.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-scanner/privacy/).
+Your scans, their text and your searches are not sent to us (a crash report's error message could still include part of a document's name). The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.1.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-scanner/privacy/).
 
 ## Report a problem
 
