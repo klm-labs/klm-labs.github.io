@@ -8,7 +8,7 @@ PDF Scanner App: OCR & Search (PDF Scanner on your Home Screen) scans paper into
 
 ### Do I need an account or an internet connection?
 
-No. Signing in with Apple or Google is optional, and the app works the same without an account. Scanning, text recognition and search work offline. Buying a plan and restoring a purchase need an internet connection.
+You don't need an account: signing in with Apple or Google is optional, and the app works the same without one. Scanning, text recognition and search work offline; buying a plan and restoring a purchase need an internet connection.
 
 ### Why does the app offer sign-in, and how do I delete my account?
 

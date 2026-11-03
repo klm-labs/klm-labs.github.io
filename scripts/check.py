@@ -133,13 +133,14 @@ def check_native(docs):
                for key in ('privacy', 'terms', 'support')}
     for phrase in ['Signing in with Apple or Google', 'Firebase Authentication', 'Delete my account',
                    'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.1.0',
-                   'could still include part of it', 'Crash Data']:
+                   'could still include part of it', 'Crash Data', 'nine types of data', 'Email Address and Name',
+                   'No usage event ever contains']:
         assert phrase in scanner['privacy'], f'pdf-scanner/privacy: lost sign-in or crash disclosure: {phrase}'
     assert 'Signing in with Apple or Google is optional' in scanner['terms'], 'pdf-scanner/terms: lost the optional sign-in line'
-    assert 'Signing in with Apple or Google is optional' in scanner['support'], 'pdf-scanner/support: lost the optional sign-in answer'
+    assert 'signing in with Apple or Google is optional' in scanner['support'], 'pdf-scanner/support: lost the optional sign-in answer'
     for key, text in scanner.items():
         assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports'
-                             r'|never asks for your name|we do not collect your name|six types of data', text, re.I), \
+                             r'|never asks for your name|we do not collect your name|six types of data|no event ever contains', text, re.I), \
             f'pdf-scanner/{key}: pre-1.1.0 no-account or no-crash wording regressed'
 
 
