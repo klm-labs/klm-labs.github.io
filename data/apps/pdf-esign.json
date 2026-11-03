@@ -13,7 +13,7 @@
   "platforms": ["iOS"],
   "availability": "In beta testing on TestFlight. Coming soon to the App Store for iPhone.",
   "contact": "klm.labs.inc@gmail.com",
-  "policy_date": "2026-10-21",
+  "policy_date": "2026-11-03",
   "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",
   "source_review": {
     "date": "2026-09-29",
@@ -21,6 +21,6 @@
     "app_branch": "build/v1",
     "app_commit": "97a7c310953cc6e481eee8a9c9bb37543e60ed66",
     "asc_app_id": "6816484899",
-    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 03:02Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking"
+    "app_privacy": "App Store Connect App Privacy as read back 2026-09-29 03:02Z (factory rule v2): User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking. From 1.2.0 (optional sign-in with Apple or Google, email-capture design F-2; crash capture on, analytics-standard §7): Contact Info adds Email Address and Name for App Functionality, and Diagnostics adds Crash Data for App Functionality, all Data Linked to You, no tracking; the masked screen recordings from 1.1.0 add no User Content type (pdf-esign docs/build/app-privacy.md). Set in App Store Connect before 1.2.0 is submitted, not yet read back"
   }
 }

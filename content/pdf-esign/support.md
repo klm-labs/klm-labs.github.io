@@ -8,7 +8,11 @@ eSign: Document Signer & Fill (Signer on your Home Screen) lets you sign, fill a
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. Your documents and signatures are stored on your device and are never uploaded by the app. Buying Signer Pro and restoring a purchase need an internet connection.
+No. Signing in with Apple or Google is optional, and the app works the same without an account. Your documents and signatures are stored on your device and are never uploaded by the app. Buying Signer Pro and restoring a purchase need an internet connection.
+
+### Why does the app offer sign-in, and how do I delete my account?
+
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Continue** under the two sign-in buttons to skip it; nothing in the app needs it. Signing in does not upload, back up or sync your documents or signatures. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
@@ -53,7 +57,7 @@ That depends on the law where you are and on who receives the document. Signer p
 
 ### What does the app collect?
 
-Analytics events never contain your documents, signatures or anything you type, and from version 1.1.0 the app's screen recordings are built to cover them with solid blocks (in our test recordings they do); they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. See the [privacy policy](/pdf-esign/privacy/).
+Analytics events never contain your documents, signatures or anything you type, and from version 1.1.0 the app's screen recordings are built to cover them with solid blocks (in our test recordings they do); they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. From version 1.2.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-esign/privacy/).
 
 ## Report a problem
 

@@ -1,6 +1,6 @@
 # eSign: Document Signer & Fill Terms of Use
 
-**Effective date:** 2026-10-21
+**Effective date:** 2026-11-03
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -36,7 +36,7 @@ Neither plan includes Family Sharing. The price, billing period and any free tri
 
 Deleting the app does not cancel a subscription. After you cancel, you keep Signer Pro until the end of the period you have already paid for. Buying Pro Lifetime does not cancel Pro Yearly; cancel the yearly plan yourself so it does not renew.
 
-**Restoring.** Signer Pro belongs to the Apple Account that bought it; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
+**Restoring.** Signer Pro belongs to the Apple Account that bought it, not to the app's optional sign-in. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
@@ -49,6 +49,10 @@ Deleting the app does not cancel a subscription. After you cancel, you keep Sign
 The app places your signature and other marks on a document and makes a copy for you to share or save. It does not verify anyone's identity, and it does not create certificate-based digital signatures, an audit trail or proof of who signed. Whether an electronic signature is valid or accepted for a particular document depends on the law and on the people or organisation you send it to. It is your responsibility to check that before you rely on it. Nothing in the app is legal advice.
 
 Your documents and signatures are stored on your device, and in your device backups if you have them turned on. We do not hold a copy, so we cannot recover them if your device is lost or reset or the app is deleted; restoring your own backup may bring them back. Keep your own copies of anything important.
+
+## Signing in
+
+Signing in with Apple or Google is optional, and the app works the same without an account. Signing in does not upload, back up or sync your documents or signatures. You can delete your account any time in **Settings → Account → Delete my account**, or by emailing [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). The [Privacy Policy](/pdf-esign/privacy/) explains what signing in shares.
 
 ## Changes to the app and these terms
 
