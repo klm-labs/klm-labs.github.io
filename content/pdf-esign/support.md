@@ -57,7 +57,7 @@ That depends on the law where you are and on who receives the document. Signer p
 
 ### What does the app collect?
 
-Analytics events never contain your documents, signatures or anything you type, and from version 1.1.0 the app's screen recordings are built to cover them with solid blocks (in our test recordings they do); they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. From version 1.2.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-esign/privacy/).
+Analytics events never contain your documents, signatures or anything you type (a crash report's error message could still include part of a document's name), and from version 1.1.0 the app's screen recordings are built to cover them with solid blocks (in our test recordings they do); they leave your device only when you share or save them. The app sends usage events with a random identifier, and technical details, to PostHog, and your App Store purchase records to RevenueCat so it can unlock Signer Pro. From version 1.2.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-esign/privacy/).
 
 ## Report a problem
 
