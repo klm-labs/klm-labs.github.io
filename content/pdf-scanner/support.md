@@ -8,7 +8,11 @@ PDF Scanner App: OCR & Search (PDF Scanner on your Home Screen) scans paper into
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. Scanning, text recognition and search work offline. Buying a plan and restoring a purchase need an internet connection.
+No. Signing in with Apple or Google is optional, and the app works the same without an account. Scanning, text recognition and search work offline. Buying a plan and restoring a purchase need an internet connection.
+
+### Why does the app offer sign-in, and how do I delete my account?
+
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Continue** under the two sign-in buttons to skip it; nothing in the app needs it. Signing in does not upload, back up or sync your scans or their text. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
@@ -49,7 +53,7 @@ Delete a document in the library. Deleting a folder moves its documents out of t
 
 ### What does the app collect?
 
-Your scans, their text and your searches are not sent to us. The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/pdf-scanner/privacy/).
+Your scans, their text and your searches are not sent to us. The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.1.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-scanner/privacy/).
 
 ## Report a problem
 

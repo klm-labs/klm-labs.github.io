@@ -127,6 +127,20 @@ def check_native(docs):
         assert not re.search(r'stays? on your (iphone|device)', text, re.I), f'pdf-scanner/{key}: claims it stays on the device (iCloud Backup may copy it)'
         assert not re.search(r'\b(secure|security|encrypted|unlimited|HIPAA|bank-grade)\b|protected by', text, re.I), f'pdf-scanner/{key}: banned word'
         assert not re.search(r'\bfree\b(?! trial)', text, re.I), f'pdf-scanner/{key}: "free" outside the trial wording'
+    # Scanner 1.1.0 (email-capture design F-1 to F-3, analytics-standard §7 and §8): optional sign-in and crash reports are
+    # disclosed, and the earlier "no account" and "no crash reports" lines do not come back.
+    scanner = {key: ' '.join(' '.join(docs[ROOT / f'pdf-scanner/{key}/index.html'].words).split())
+               for key in ('privacy', 'terms', 'support')}
+    for phrase in ['Signing in with Apple or Google', 'Firebase Authentication', 'Delete my account',
+                   'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.1.0',
+                   'could still include part of it', 'Crash Data']:
+        assert phrase in scanner['privacy'], f'pdf-scanner/privacy: lost sign-in or crash disclosure: {phrase}'
+    assert 'Signing in with Apple or Google is optional' in scanner['terms'], 'pdf-scanner/terms: lost the optional sign-in line'
+    assert 'Signing in with Apple or Google is optional' in scanner['support'], 'pdf-scanner/support: lost the optional sign-in answer'
+    for key, text in scanner.items():
+        assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports'
+                             r'|never asks for your name|we do not collect your name|six types of data', text, re.I), \
+            f'pdf-scanner/{key}: pre-1.1.0 no-account or no-crash wording regressed'
 
 
 if __name__ == '__main__':

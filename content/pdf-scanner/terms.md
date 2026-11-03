@@ -1,6 +1,6 @@
 # PDF Scanner App: OCR & Search Terms of Use
 
-**Effective date:** 2026-09-29
+**Effective date:** 2026-11-03
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -36,7 +36,7 @@ Neither plan includes Family Sharing. The price, billing period and any free tri
 
 Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Switching to Lifetime does not cancel the Yearly subscription; cancel the Yearly plan yourself so it does not renew.
 
-**Restoring.** Plans belong to the Apple Account that bought them; the app has no account of its own. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
+**Restoring.** Plans belong to the Apple Account that bought them, not to the app's optional sign-in. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
@@ -53,6 +53,10 @@ Text recognition reads each page on your iPhone or iPad and can misread words, e
 Your documents are stored in the app on your device. We do not hold a copy, so we cannot recover them if your device is lost or reset or the app is deleted, except from your own iPhone or iPad backup. Keep your own copies of anything important, for example with Save to Files.
 
 A password you add to a shared PDF only asks for that password in other PDF apps. Keep it somewhere safe: we do not store it and cannot recover it.
+
+## Signing in
+
+Signing in with Apple or Google is optional, and the app works the same without an account. Signing in does not upload, back up or sync your scans or their text. You can delete your account any time in **Settings → Account → Delete my account**, or by emailing [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com). The [Privacy Policy](/pdf-scanner/privacy/) explains what signing in shares.
 
 ## Changes to the app and these terms
 
