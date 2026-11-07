@@ -1,6 +1,6 @@
 # Términos de uso de Calculadora de Pies y Pulgadas
 
-**Fecha de entrada en vigor:** 29 de octubre de 2026
+**Fecha de entrada en vigor:** 7 de noviembre de 2026
 
 **Contacto:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -20,10 +20,10 @@ No puedes revender, rentar ni redistribuir la app, ni intentar evadir sus verifi
 
 Todas las funciones de la app requieren un plan activo o una prueba gratis. Hay dos planes:
 
-- **Anual:** una suscripción de renovación automática que da acceso a la calculadora y a todas las herramientas por un año a la vez. En Estados Unidos cuesta US$9.99 al año.
-- **De por vida:** una compra única que da acceso a la calculadora y a todas las herramientas, sin renovaciones. En Estados Unidos cuesta US$19.99. De por vida incluye Compartir en familia, así que los miembros de tu grupo de Compartir en familia de Apple también pueden usarla. El plan Anual no incluye Compartir en familia.
+- **Anual:** una suscripción de renovación automática que da acceso a la calculadora y a todas las herramientas por un año a la vez.
+- **De por vida:** una compra única que da acceso a la calculadora y a todas las herramientas, sin renovaciones. De por vida incluye Compartir en familia, así que los miembros de tu grupo de Compartir en familia de Apple también pueden usarla. El plan Anual no incluye Compartir en familia.
 
-El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app antes de que confirmes una compra. Los precios en otros países los fija el App Store en moneda local, pueden incluir impuestos locales y son los que ves al comprar.
+El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app antes de que confirmes una compra. Los precios los fija el App Store en tu moneda local, pueden incluir impuestos locales y son los que ves al comprar.
 
 **Prueba gratis.** El plan Anual incluye 7 días de prueba gratis para nuevos suscriptores que califiquen. Apple decide quién califica; en general, una prueba por cuenta de Apple para la suscripción de esta app. Cuando termina la prueba, empieza la suscripción Anual y se te cobra, a menos que canceles **al menos 24 horas antes de que termine la prueba**. Si permites las notificaciones, la app puede avisarte 2 días antes de que termine la prueba.
 
@@ -36,7 +36,7 @@ El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app a
 
 Eliminar la app no cancela una suscripción. Después de cancelar, conservas el acceso hasta el final del periodo que ya pagaste. Comprar De por vida no cancela una suscripción Anual; cancela tú el plan Anual para que no se renueve.
 
-**Restaurar.** Los planes pertenecen a la cuenta de Apple con la que se compraron; la app no tiene cuenta propia. En un iPhone o iPad nuevo, o después de reinstalar, inicia sesión con la misma cuenta de Apple y toca **Restaurar** en la pantalla de planes, o ve a **Configuración → Tu plan → Restaurar compras**.
+**Restaurar.** Los planes pertenecen a la cuenta de Apple con la que se compraron, no al inicio de sesión opcional de la app. En un iPhone o iPad nuevo, o después de reinstalar, inicia sesión con la misma cuenta de Apple y toca **Restaurar** en la pantalla de planes, o ve a **Configuración → Tu plan → Restaurar compras**.
 
 **Reembolsos.** Apple maneja todos los pagos, así que KLM Labs no puede cobrar ni reembolsar directamente a tu cuenta. Para pedir un reembolso, ve a [reportaproblem.apple.com](https://reportaproblem.apple.com). Los reembolsos siguen las políticas de Apple y la ley de tu país.
 
@@ -53,6 +53,8 @@ La app hace operaciones aritméticas y aplica fórmulas estándar a las medidas 
 ## Tus datos
 
 Tus cálculos, tu historial y tus ajustes se guardan en tu dispositivo, y en sus respaldos si los tienes activados. No tenemos una copia, así que no podemos recuperarlos si pierdes o restableces tu dispositivo o si eliminas la app; restaurar tu propio respaldo puede recuperarlos.
+
+Iniciar sesión con Apple o Google es opcional, y la app funciona igual sin una cuenta. Iniciar sesión no respalda ni sincroniza tus cálculos. El [aviso de privacidad](/construction-calc/es/privacy/) explica qué se comparte al iniciar sesión y cómo eliminar tu cuenta.
 
 ## Cambios a la app y a estos términos
 
