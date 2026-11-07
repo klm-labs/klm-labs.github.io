@@ -91,7 +91,7 @@ NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'p
                 ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html', 'desk-clock/index.html']
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 NATIVE_DISCLOSURES = {
-    'en': {'terms': ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore',
+    'en': {'terms': ['renews automatically', 'at least 24 hours before', 'Restore',
                      'Deleting the app does not cancel a subscription.', 'reportaproblem.apple.com', 'Standard EULA'],
            'privacy': ['PostHog', 'RevenueCat', 'KLM Labs never receives or stores your card or bank details',
                        'IP address', 'never reads your device\'s GPS'],
@@ -114,6 +114,10 @@ def check_native(docs):
         text = ' '.join(' '.join(doc.words).split())
         for phrase in NATIVE_DISCLOSURES[lang][key]:
             assert phrase in text, f'{route}: lost disclosure: {phrase}'
+        # Paywall v2 (2026-11-06): each app's trial has its own length (Calc and Clock 1.0's Yearly 7 days, Scanner's and
+        # Signer's Weekly 3), so English terms must name one, whatever its length.
+        if key == 'terms' and lang == 'en':
+            assert re.search(r'\b\d+-day free trial\b', text), f'{route}: lost the free trial length'
         if key == 'terms':
             assert EULA in doc.refs, f'{route}: lost the Standard EULA link'
         assert 'mailto:klm.labs.inc@gmail.com' in doc.refs, f'{route}: lost the support address'
@@ -126,7 +130,8 @@ def check_native(docs):
         text = ' '.join(docs[ROOT / f'pdf-scanner/{page}index.html'].words)
         assert not re.search(r'stays? on your (iphone|device)', text, re.I), f'pdf-scanner/{key}: claims it stays on the device (iCloud Backup may copy it)'
         assert not re.search(r'\b(secure|security|encrypted|unlimited|HIPAA|bank-grade)\b|protected by', text, re.I), f'pdf-scanner/{key}: banned word'
-        assert not re.search(r'\bfree\b(?! trial)', text, re.I), f'pdf-scanner/{key}: "free" outside the trial wording'
+        # Paywall v2 (2026-11-06): scanning and 3 exports are free, so "free" may also say that, never sell the app.
+        assert not re.search(r'(?<!is )(?<!are )\bfree\b(?! trial| exports?\b)', text, re.I), f'pdf-scanner/{key}: "free" outside the trial and free-export wording'
     # Scanner 1.1.0 (email-capture design F-1 to F-3, analytics-standard §7 and §8): optional sign-in and crash reports are
     # disclosed, and the earlier "no account" and "no crash reports" lines do not come back.
     scanner = {key: ' '.join(' '.join(docs[ROOT / f'pdf-scanner/{key}/index.html'].words).split())

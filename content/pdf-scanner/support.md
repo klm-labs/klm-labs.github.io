@@ -12,11 +12,11 @@ You don't need an account: signing in with Apple or Google is optional, and the 
 
 ### Why does the app offer sign-in, and how do I delete my account?
 
-Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Continue** under the two sign-in buttons to skip it; nothing in the app needs it. Signing in does not upload, back up or sync your scans or their text. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Skip** at the top right to go on without signing in; nothing in the app needs it. Signing in does not upload, back up or sync your scans or their text. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
-Yes. Every feature needs the free trial or a plan: **Yearly**, an auto-renewing subscription with a 7-day free trial for eligible new subscribers, or **Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
+Only to export more than 3 documents. Scanning, editing, searching and keeping documents in the app are free, with no limit, and your first 3 documents go out as free exports (exporting one of them again is free). After that, exporting another document needs the free trial or a plan: **Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
 
 ### How do I cancel my subscription?
 
@@ -33,7 +33,7 @@ Sign in with the Apple Account that bought it, open the app and tap **Restore** 
 
 ### My plan ended. Are my documents gone?
 
-No. They are still on your iPhone or iPad, untouched. The app shows the plans screen until you subscribe, buy Lifetime or restore an active plan, and then your documents open again.
+No. They are still on your iPhone or iPad, untouched, and you can keep scanning and opening them. Exporting a document that hasn't left the app yet uses any free exports you have left, then needs a plan again.
 
 ### How do I get a refund?
 

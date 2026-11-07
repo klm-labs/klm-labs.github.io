@@ -1,6 +1,6 @@
 # PDF Scanner App: OCR & Search Terms of Use
 
-**Effective date:** 2026-11-03
+**Effective date:** 2026-11-07
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -18,29 +18,29 @@ You may not resell, rent or redistribute the app itself, or try to get around it
 
 ## Plans, free trial and payment
 
-Every feature of the app needs an active plan or free trial. There are two plans:
+Scanning, editing, searching and keeping documents in the app are free, with no limit. Exporting is free for your first 3 documents: the first time each one leaves the app (shared, saved to Files or printed), it uses one of 3 free exports, and exporting the same document again is free. After that, exporting another document needs an active plan or free trial. There are two plans:
 
-- **Yearly:** an auto-renewing subscription, one year at a time. In the United States it costs US$19.99 a year.
-- **Lifetime:** a one-time purchase with nothing to renew. In the United States it costs US$39.99.
+- **Weekly:** an auto-renewing subscription, one week at a time.
+- **Lifetime:** a one-time purchase with nothing to renew.
 
-Neither plan includes Family Sharing. The price, billing period and any free trial are shown in the app before you confirm a purchase. Prices in other countries are set through the App Store in local currency, may include local taxes, and are the ones shown to you at purchase.
+Neither plan includes Family Sharing. The price, billing period and any free trial are shown in the app before you confirm a purchase. Prices are set through the App Store in your local currency, may include local taxes, and are the ones shown to you at purchase.
 
-**Free trial.** The Yearly plan includes a 7-day free trial for eligible new subscribers. Apple decides eligibility; generally, one trial per Apple Account for this app's subscription. When the trial ends, the Yearly subscription starts and you are charged unless you cancel **at least 24 hours before the trial ends**. If you allow notifications, the app can remind you 2 days before the trial ends.
+**Free trial.** The Weekly plan includes a 3-day free trial for eligible new subscribers. Apple decides eligibility; generally, one trial per Apple Account for this app's subscription. When the trial ends, the Weekly subscription starts and you are charged unless you cancel **at least 24 hours before the trial ends**.
 
-**Payment and automatic renewal.** Payment is charged to your Apple Account when you confirm a purchase, or when a free trial ends. The Yearly subscription renews automatically each year at the then-current price unless you cancel it at least 24 hours before the end of the current period. Your account is charged for the renewal within the 24 hours before the period ends. If a price changes, Apple tells you in advance and asks for your agreement where its rules require it. If a renewal payment fails, Apple retries it, and you keep access for up to 16 days while it does.
+**Payment and automatic renewal.** Payment is charged to your Apple Account when you confirm a purchase, or when a free trial ends. The Weekly subscription renews automatically each week at the then-current price unless you cancel it at least 24 hours before the end of the current period. Your account is charged for the renewal within the 24 hours before the period ends. If a price changes, Apple tells you in advance and asks for your agreement where its rules require it. If a renewal payment fails, Apple retries it, and you keep access for up to 16 days while it does.
 
 **Cancelling.** Cancel in your Apple Account, not by deleting the app:
 
 - On your iPhone or iPad, open **Settings**, tap your name, then **Subscriptions**, choose the app and tap **Cancel Subscription**.
 - Or, in the app, open **Settings → Manage Subscription**.
 
-Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Switching to Lifetime does not cancel the Yearly subscription; cancel the Yearly plan yourself so it does not renew.
+Deleting the app does not cancel a subscription. After you cancel, you keep access until the end of the period you have already paid for. Switching to Lifetime does not cancel the Weekly subscription; cancel the Weekly plan yourself so it does not renew.
 
 **Restoring.** Plans belong to the Apple Account that bought them, not to the app's optional sign-in. On a new iPhone or iPad, or after reinstalling, sign in with the same Apple Account and tap **Restore** on the plans screen, or **Settings → Restore Purchases**.
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
-**When a plan ends.** When a subscription or trial ends, or a purchase is refunded, the app shows the plans screen and nothing else until you subscribe, buy Lifetime or restore an active plan. Your documents are still on your iPhone or iPad, untouched, and open again when you do.
+**When a plan ends.** When a subscription or trial ends, or a purchase is refunded, scanning and your documents work as before, and they are still on your iPhone or iPad, untouched. Exporting a document that hasn't left the app yet uses any free exports you have left, then needs a plan again.
 
 **Changes to plans.** We may change plans, prices or trial offers for new purchases. Changes for existing subscribers are made through Apple under its rules and notices.
 
