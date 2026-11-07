@@ -16,7 +16,7 @@ Signing in lets us contact you about the app: if something breaks, or to hear wh
 
 ### Do I need to pay?
 
-Only to export more than 3 documents. Scanning, editing, searching and keeping documents in the app are free, with no limit, and your first 3 documents go out as free exports (exporting one of them again is free). After that, exporting another document needs the free trial or a plan: **Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
+Only to export more than 3 documents. Scanning, editing, searching and keeping documents in the app are free, with no limit, and your first 3 documents go out as free exports (exporting one of them again is free). After that, exporting another document needs the free trial or a plan: **Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Lifetime**, paid once. If the Weekly plan can't be loaded, the app shows **Yearly** instead: an auto-renewing subscription with a 7-day free trial for eligible new subscribers. No plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
 
 ### How do I cancel my subscription?
 

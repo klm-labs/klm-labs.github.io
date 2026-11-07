@@ -91,7 +91,7 @@ NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'p
                 ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html', 'desk-clock/index.html']
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 NATIVE_DISCLOSURES = {
-    'en': {'terms': ['renews automatically', 'at least 24 hours before', 'Restore',
+    'en': {'terms': ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore',
                      'Deleting the app does not cancel a subscription.', 'reportaproblem.apple.com', 'Standard EULA'],
            'privacy': ['PostHog', 'RevenueCat', 'KLM Labs never receives or stores your card or bank details',
                        'IP address', 'never reads your device\'s GPS'],
@@ -104,6 +104,16 @@ NATIVE_DISCLOSURES = {
 }
 
 
+# The only phrases in which the Scanner pages may say "free" outside "free trial" (paywall v2, 2026-11-06).
+SCANNER_FREE_PHRASES = [
+    'keeping documents in the app are free, with no limit', 'Exporting is free for your first 3 documents',
+    'uses one of 3 free exports', 'exporting the same document again is free', 'go out as free exports',
+    'exporting one of them again is free', 'uses any free exports you have left', 'uses one of your free exports',
+    'Scanning is free, and so are your first 3 exported documents', 'scanning and 3 exported documents are free',
+    'uses one of the free exports',
+]
+
+
 def check_native(docs):
     for route in NATIVE_ROUTES:
         parts = route.split('/')
@@ -114,10 +124,6 @@ def check_native(docs):
         text = ' '.join(' '.join(doc.words).split())
         for phrase in NATIVE_DISCLOSURES[lang][key]:
             assert phrase in text, f'{route}: lost disclosure: {phrase}'
-        # Paywall v2 (2026-11-06): each app's trial has its own length (Calc and Clock 1.0's Yearly 7 days, Scanner's and
-        # Signer's Weekly 3), so English terms must name one, whatever its length.
-        if key == 'terms' and lang == 'en':
-            assert re.search(r'\b\d+-day free trial\b', text), f'{route}: lost the free trial length'
         if key == 'terms':
             assert EULA in doc.refs, f'{route}: lost the Standard EULA link'
         assert 'mailto:klm.labs.inc@gmail.com' in doc.refs, f'{route}: lost the support address'
@@ -130,8 +136,11 @@ def check_native(docs):
         text = ' '.join(docs[ROOT / f'pdf-scanner/{page}index.html'].words)
         assert not re.search(r'stays? on your (iphone|device)', text, re.I), f'pdf-scanner/{key}: claims it stays on the device (iCloud Backup may copy it)'
         assert not re.search(r'\b(secure|security|encrypted|unlimited|HIPAA|bank-grade)\b|protected by', text, re.I), f'pdf-scanner/{key}: banned word'
-        # Paywall v2 (2026-11-06): scanning and 3 exports are free, so "free" may also say that, never sell the app.
-        assert not re.search(r'(?<!is )(?<!are )\bfree\b(?! trial| exports?\b)', text, re.I), f'pdf-scanner/{key}: "free" outside the trial and free-export wording'
+        # Paywall v2 (2026-11-06): scanning and 3 exports are free. "free" may say only that, in these exact phrases
+        # (as the app's StoreCopyTests pin its store text), and the trial; never sell the app as free.
+        for allowed in SCANNER_FREE_PHRASES:
+            text = text.replace(allowed, '')
+        assert not re.search(r'\bfree\b(?! trial)', text, re.I), f'pdf-scanner/{key}: "free" outside the trial and free-export wording'
     # Scanner 1.1.0 (email-capture design F-1 to F-3, analytics-standard §7 and §8): optional sign-in and crash reports are
     # disclosed, and the earlier "no account" and "no crash reports" lines do not come back.
     scanner = {key: ' '.join(' '.join(docs[ROOT / f'pdf-scanner/{key}/index.html'].words).split())
@@ -143,6 +152,11 @@ def check_native(docs):
         assert phrase in scanner['privacy'], f'pdf-scanner/privacy: lost sign-in or crash disclosure: {phrase}'
     assert 'Signing in with Apple or Google is optional' in scanner['terms'], 'pdf-scanner/terms: lost the optional sign-in line'
     assert 'signing in with Apple or Google is optional' in scanner['support'], 'pdf-scanner/support: lost the optional sign-in answer'
+    # Paywall v2 (2026-11-06): Weekly (3-day trial) or Lifetime, with Yearly (7-day trial) only when Weekly can't load.
+    for key in ('terms', 'support'):
+        for phrase in ['3-day free trial', '7-day free trial', "instead of Weekly only if the Weekly plan can't be loaded"
+                       if key == 'terms' else "If the Weekly plan can't be loaded, the app shows Yearly instead"]:
+            assert phrase in scanner[key], f'pdf-scanner/{key}: lost the plan wording: {phrase}'
     for key, text in scanner.items():
         assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports'
                              r'|never asks for your name|we do not collect your name|six types of data|no event ever contains', text, re.I), \
