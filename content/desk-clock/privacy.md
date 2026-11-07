@@ -30,7 +30,7 @@ Like other app data, it is included in your device's backups (iCloud Backup or a
 
 ## Signing in with Apple or Google
 
-From version 1.1.0 the app offers sign-in with Apple or Google: on a page after you buy Clock Pro, start a free trial or restore a purchase, or, while you have Clock Pro or a plan, as a small card on the clock, at most twice in all, and any time in **Settings → Account**. Signing in is optional. Tap **Skip** at the top right to go on without signing in, or **Close** on the card; every feature, purchase and free trial works the same without an account.
+From version 1.1.0 the app offers sign-in with Apple or Google: on a page after you buy Clock Pro or restore a purchase, or, while you have Clock Pro or a plan, as a small card on the clock, at most twice in all, and any time in **Settings → Account**. Signing in is optional. Tap **Skip** at the top right to go on without signing in, or **Close** on the card; every feature and purchase works the same without an account.
 
 **What we get.** If you sign in, Apple or Google gives the app your email address and, if you share it, your name. You never type them. If you sign in with Apple and choose **Hide My Email**, we get Apple's private relay address instead of your own.
 

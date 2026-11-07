@@ -128,6 +128,12 @@ def check_native(docs):
                    'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.1.0', 'Email Address and Name']:
         assert phrase in clock['privacy'], f'desk-clock/privacy: lost sign-in or crash disclosure: {phrase}'
     assert 'Signing in with Apple or Google is optional' in clock['terms'], 'desk-clock/terms: lost the optional sign-in line'
+    # Paywall v2 (2026-11-06): the clock is free and Clock Pro is a one-time purchase; 1.1.0 sells no subscription.
+    for phrase in ['The clock is free', 'Clock Pro is a one-time purchase', "Version 1.0's Yearly plan includes a 7-day free trial"]:
+        assert phrase in clock['terms'], f'desk-clock/terms: lost the free clock and Clock Pro wording: {phrase}'
+    assert 'The clock, its three faces, alarms and night mode are free' in clock['support'], 'desk-clock/support: lost the free clock answer'
+    for key, text in clock.items():
+        assert not re.search(r'every feature[^.]*needs|start a free trial or restore|buy Clock Pro, subscribe', text, re.I), f'desk-clock/{key}: 1.1.0 offered a plan it does not sell'
     assert 'Signing in with Apple or Google is optional' in clock['support'], 'desk-clock/support: lost the optional sign-in answer'
     for key, text in clock.items():
         assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports',

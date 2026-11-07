@@ -33,7 +33,7 @@ Sign in with the Apple Account that bought it, open the app and tap **Restore** 
 
 ### My plan ended. What happens to my alarms?
 
-Nothing: the clock, its three faces and your alarms are free and keep working. Only the Clock Pro extras lock again, and the clock shows the free look; your saved look comes back when you buy Clock Pro, subscribe or restore an active purchase.
+Nothing: the clock, its three faces and your alarms are free and keep working. Only the Clock Pro extras lock again, and the clock shows the free look; your saved look comes back when you buy Clock Pro or restore an active purchase.
 
 ### How do I get a refund?
 

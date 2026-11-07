@@ -24,7 +24,7 @@ The price is shown in the app before you confirm a purchase. Prices are set thro
 
 **Plans from version 1.0.** Version 1.0 of the app sold two plans instead, and still offers them on devices that have not updated: **Yearly**, an auto-renewing subscription, one year at a time, which can be shared with your family through Apple's Family Sharing; and **Lifetime**, a one-time purchase with nothing to renew, without Family Sharing. Both keep working and unlock everything Clock Pro does.
 
-**Free trial.** The Yearly plan includes a 7-day free trial for eligible new subscribers. Apple decides eligibility; generally, one trial per Apple Account for this app's subscription. When the trial ends, the Yearly subscription starts and you are charged unless you cancel **at least 24 hours before the trial ends**. If you allow notifications, the app can remind you 2 days before the trial ends.
+**Free trial.** Version 1.0's Yearly plan includes a 7-day free trial for eligible new subscribers. Apple decides eligibility; generally, one trial per Apple Account for this app's subscription. When the trial ends, the Yearly subscription starts and you are charged unless you cancel **at least 24 hours before the trial ends**. If you allow notifications, the app can remind you 2 days before the trial ends.
 
 **Payment and automatic renewal.** Payment is charged to your Apple Account when you confirm a purchase, or when a free trial ends. The Yearly subscription renews automatically each year at the then-current price unless you cancel it at least 24 hours before the end of the current period. Your account is charged for the renewal within the 24 hours before the period ends. If a price changes, Apple tells you in advance and asks for your agreement where its rules require it. If a renewal payment fails, Apple retries it for a while; your access ends when the period you paid for ends.
 
@@ -39,7 +39,7 @@ Deleting the app does not cancel a subscription. After you cancel, you keep acce
 
 **Refunds.** Apple handles all payments, so KLM Labs cannot charge or refund your account directly. To ask for a refund, go to [reportaproblem.apple.com](https://reportaproblem.apple.com). Refunds follow Apple's policies and the law where you live.
 
-**When a plan ends.** When a Yearly subscription or trial ends, or a purchase is refunded, the clock, its three faces and your alarms keep working. The Clock Pro extras lock again until you buy Clock Pro, subscribe or restore an active purchase; until then the clock shows the free look. Your saved look and settings stay in the app on your device and come back when you do.
+**When a plan ends.** When a Yearly subscription or trial ends, or a purchase is refunded, the clock, its three faces and your alarms keep working. The Clock Pro extras lock again until you buy Clock Pro or restore an active purchase; until then the clock shows the free look. Your saved look and settings stay in the app on your device and come back when you do.
 
 **Changes to plans.** We may change plans, prices or trial offers for new purchases. Changes for existing subscribers are made through Apple under its rules and notices.
 
