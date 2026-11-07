@@ -26,6 +26,9 @@ p{color:var(--muted)}
 .text-link:hover{text-decoration:underline}
 .skip-link{position:absolute;left:16px;top:-100px;z-index:20;padding:12px 20px;background:var(--ink);color:white}
 .skip-link:focus{top:12px}
+.official-bar{border-bottom:1px solid var(--line);background:var(--paper)}
+.official-bar p{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:44px;margin:0 auto;font-size:14px}
+.official-bar a{display:inline-flex;align-items:center;gap:5px;min-height:44px;font-weight:600}
 .site-header{border-bottom:1px solid var(--line)}
 .header-inner{height:94px;display:flex;align-items:center;justify-content:space-between}
 .wordmark{display:flex;align-items:center;gap:13px;font-size:19px;line-height:1.2;font-weight:700;text-decoration:none;letter-spacing:-.04em}

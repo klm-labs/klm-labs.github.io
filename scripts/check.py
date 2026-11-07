@@ -39,6 +39,10 @@ class Document(HTMLParser):
 def main():
     paths = [ROOT / 'index.html'] + sorted(p for folder in (ROOT / 'data/apps').glob('*.json') for p in (ROOT / json.loads(folder.read_text())['slug']).rglob('index.html'))
     docs = {p: Document(p.read_text()) for p in paths}
+    records = {json.loads(f.read_text())['slug']: json.loads(f.read_text()) for f in (ROOT / 'data/apps').glob('*.json')}
+    # Cross-domain canonicals (2026-11-07): an app home that duplicates its klmlabs.app facts page names that page.
+    cross = {f'/{s}/': r['canonical_url'] for s, r in records.items() if r.get('canonical_url')}
+    sitemap = (ROOT / 'sitemap.xml').read_text()
     assert len(paths) >= 5
     for registered in ['index.html', 'invoice-creator/index.html', 'invoice-creator/privacy/index.html', 'invoice-creator/terms/index.html', 'invoice-creator/support/index.html'] + NATIVE_ROUTES:
         assert ROOT / registered in docs, f'Registered route lost: {registered}'
@@ -48,7 +52,11 @@ def main():
         route = '/' + str(path.parent.relative_to(ROOT)).strip('.')
         if route != '/':
             route += '/'
-        assert doc.canonical == ['https://klm-labs.github.io' + route]
+        assert doc.canonical == [cross.get(route, 'https://klm-labs.github.io' + route)], f'{path}: canonical {doc.canonical}'
+        if route in cross:
+            assert cross[route].startswith('https://klmlabs.app/'), f'{route}: cross-domain canonical must be on klmlabs.app'
+            assert f'<loc>https://klm-labs.github.io{route}</loc>' not in sitemap, f'{route}: canonical elsewhere, so not in the sitemap'
+        assert any(r.startswith('https://klmlabs.app/') for r in doc.refs), f'{path}: lost the Official site link to klmlabs.app'
         assert len(doc.social) == 1
         assert (ROOT / urlparse(doc.social[0]).path.lstrip('/')).is_file()
         for ref in doc.refs:

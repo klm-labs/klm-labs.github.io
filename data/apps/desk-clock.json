@@ -13,7 +13,9 @@
   "platforms": [
     "iOS"
   ],
-  "availability": "In development. Coming to the App Store for iPhone and iPad.",
+  "stores": { "app_store": { "url": "https://apps.apple.com/app/id6819014371", "live": true } },
+  "availability": "Available on the App Store for iPhone and iPad.",
+  "official_url": "https://klmlabs.app/flip-clock/",
   "contact": "klm.labs.inc@gmail.com",
   "decks": {
     "privacy": "What is kept on your device, what is collected, and how to get in touch."

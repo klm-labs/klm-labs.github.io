@@ -13,6 +13,7 @@
   "platforms": ["iOS"],
   "stores": { "app_store": { "url": "https://apps.apple.com/app/id6816445977", "live": true } },
   "availability": "Available on the App Store for iPhone and iPad.",
+  "official_url": "https://klmlabs.app/construction-calculator/",
   "contact": "klm.labs.inc@gmail.com",
   "policy_date": "2026-11-07",
   "icon_source": "Sources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png at the reviewed commit, resized",

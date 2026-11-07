@@ -106,7 +106,8 @@ try {
         // Invoice Maker has been live on the App Store since 2026-10-03 (Apple ID 6815655785).
         if (await page.locator('.store-badge.app_store').getAttribute('href') !== 'https://apps.apple.com/app/id6815655785') throw new Error('Wrong App Store URL');
         if (await page.locator('.store-coming-soon').count()) throw new Error('Both stores are linked: no Coming soon');
-        if (await page.locator('.store-badge.google_play').getAttribute('href') !== 'https://play.google.com/store/apps/details?id=com.klmlabs.invoicecreator') throw new Error('Wrong Play URL');
+        // Android is off and the Play listing was never public (404, 2026-11-07): no Google Play badge.
+        if (await page.locator('.store-badge.google_play').count()) throw new Error('Google Play badge is back');
         const next = page.locator('.carousel-next');
         await next.click();
         if (await page.locator('.screenshot-track').evaluate(e => e.scrollLeft) <= 0) throw new Error('Carousel next did not scroll');

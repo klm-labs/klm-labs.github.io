@@ -11,6 +11,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGIN = 'https://klm-labs.github.io'
+OFFICIAL = 'https://klmlabs.app/'  # The official KLM Labs site since 2026-11-07; this site keeps the apps' registered URLs.
 LABELS = {'privacy': 'Privacy policy', 'terms': 'Terms of use', 'support': 'App support'}
 DECKS = {
     'privacy': 'What stays on your device, what is collected, and how to get in touch.',
@@ -29,6 +30,7 @@ UI = {
         't_breadcrumb': 'Breadcrumb', 't_resources': 'App resources', 't_by': 'by', 't_back': 'Back to the app',
         'switch_to': 'Read in English', 'hub_heading': 'Privacy, terms and support', 'hub_title': 'Privacy, terms and support',
         'hub_contact': 'Questions or problems? Email', 'app_store_badge': 'Download on the App Store',
+        't_official': 'Official site:',
     },
     'es': {
         'html_lang': 'es-MX',
@@ -45,6 +47,7 @@ UI = {
         't_breadcrumb': 'Ruta de navegación', 't_resources': 'Recursos de la app', 't_by': 'de', 't_back': 'Volver a la app',
         'switch_to': 'Leer en español', 'hub_heading': 'Privacidad, términos y ayuda', 'hub_title': 'Privacidad, términos y ayuda',
         'hub_contact': '¿Preguntas o problemas? Escribe a', 'app_store_badge': 'Descargar en el App Store',
+        't_official': 'Sitio oficial:',
     },
 }
 PATHS = {
@@ -169,6 +172,8 @@ def social_card(path, app=None):
 def store_buttons(app):
     buttons = []
     for store, label, asset, alt in [('app_store', 'App Store', 'app-store.svg', 'Download on the App Store'), ('google_play', 'Google Play', 'google-play.svg', 'Get it on Google Play')]:
+        if store not in app['stores']:
+            continue  # Not sold there (Invoice Maker's Android build was never released; Android is off).
         data = app['stores'][store]
         if data['live']:
             assert data['url'] and data['url'].startswith('https://'), f'{store}: live requires a URL'
@@ -191,10 +196,19 @@ def localized(app, lang):
     return {**app, **app.get('locales', {}).get(lang, {})} if lang != 'en' else app
 
 
+def canonical_of(app, path):
+    """The page's canonical URL: an app's own `canonical_url` (a cross-domain canonical to its klmlabs.app facts page) on
+    its English home only, else this site's URL. Never a redirect: every path keeps serving 200."""
+    if app and app.get('canonical_url') and path == f'/{app["slug"]}/':
+        assert app['canonical_url'].startswith(OFFICIAL), f'{app["slug"]}: canonical_url must be on {OFFICIAL}'
+        return app['canonical_url']
+    return ORIGIN + path
+
+
 def render_page(path, content, title, description, app=None, schema=None, lang='en'):
     labels = UI[lang]['labels']
     footer = ''.join(f'<a href="{app_home(app, lang)}{key}/">{label}</a>' for key, label in labels.items()) if app else '<a href="/#apps">Our apps</a>'
-    values = dict(**ui_values(lang), title=esc(title), description=esc(description), canonical=esc(ORIGIN + path), favicon=app['favicon'] if app else '/assets/favicon.png', icon=app['icon'] if app else '/assets/studio-icon.png', social_image=ORIGIN + (app['social_image'] if app else '/assets/social.png'), social_alt=esc(f'{app["name"]} — {app["pitch"]}' if app else 'KLM Labs — Small apps. Real work.'), content=content, footer_links=footer, structured_data='<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>' if schema else '')
+    values = dict(**ui_values(lang), title=esc(title), description=esc(description), canonical=esc(canonical_of(app, path)), official_url=esc((app or {}).get('official_url', OFFICIAL)), favicon=app['favicon'] if app else '/assets/favicon.png', icon=app['icon'] if app else '/assets/studio-icon.png', social_image=ORIGIN + (app['social_image'] if app else '/assets/social.png'), social_alt=esc(f'{app["name"]} — {app["pitch"]}' if app else 'KLM Labs — Small apps. Real work.'), content=content, footer_links=footer, structured_data='<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c') + '</script>' if schema else '')
     for kind in ['css', 'js']:
         values[f'{kind}_version'] = hashlib.sha256((ROOT / f'assets/site.{kind}').read_bytes()).hexdigest()[:10]
     output = ROOT / path.lstrip('/') / 'index.html'
@@ -275,7 +289,7 @@ def main():
         assert app['screenshots'], 'At least one real screenshot is required'
         for store in app['stores'].values():
             assert type(store['live']) is bool
-        google = app['stores']['google_play']['url']
+        google = app['stores'].get('google_play', {}).get('url')
         apple = app['stores']['app_store']['url']
         assert google is None or google == f'https://play.google.com/store/apps/details?id={app["bundle_id"]}', 'Use the canonical Play URL'
         assert apple is None or re.fullmatch(r'https://apps.apple.com/app/id[0-9]+', apple), 'Use the numeric Apple ID'
@@ -286,9 +300,10 @@ def main():
             assert (ROOT / src.lstrip('/')).is_file(), f'Missing screenshot: {src}'
             shots.append(f'<figure class="screenshot-card" role="group" aria-roledescription="slide" aria-label="{i + 1} of {len(app["screenshots"])}"><figcaption><span class="shot-number">{i + 1:02d}</span><h3>{esc(shot["title"])}</h3><p>{esc(shot["caption"])}</p></figcaption><div class="screen-frame"><img src="{src}" alt="{esc(shot["alt"])}" width="{shot["width"]}" height="{shot["height"]}" loading="{ "eager" if i < 2 else "lazy" }" decoding="async"></div></figure>')
         values.update(arrows, **ui_values('en'), app_home=app_home(app), language_link='', store_buttons=store_buttons(app), screenshot_count=len(shots), screenshots=''.join(shots), facts=''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["value"])}</dd></div>' for x in app['facts']), about=''.join(f'<p>{esc(x)}</p>' for x in app['about']), features=''.join(f'<div class="feature">{icon(x["icon"])}<h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div>' for x in app['features']), version=esc(app['release']['version']), release_label=esc(app['release']['label']), release_text=esc(app['release']['text']), safety=''.join(f'<div class="safety-item">{icon(x["icon"])}<div><h3>{esc(x["title"])}</h3><p>{esc(x["text"])}</p></div></div>' for x in app['safety']), platforms='Android · iPhone' if app['platforms'] == ['Android', 'iOS'] else esc(' · '.join(app['platforms'])))
-        schema = {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': app['name'], 'description': app['description'], 'applicationCategory': app['schema_category'], 'operatingSystem': ', '.join(app['platforms']), 'softwareVersion': app['release']['version'], 'url': ORIGIN + f'/{slug}/', 'image': ORIGIN + app['icon'], 'author': {'@type': 'Organization', 'name': app['developer'], 'url': ORIGIN + '/'}}
+        schema = {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': app['name'], 'description': app['description'], 'applicationCategory': app['schema_category'], 'operatingSystem': ', '.join(app['platforms']), 'softwareVersion': app['release']['version'], 'url': canonical_of(app, f'/{slug}/'), 'image': ORIGIN + app['icon'], 'author': {'@type': 'Organization', 'name': app['developer'], 'url': ORIGIN + '/'}}
         render_page(f'/{slug}/', template('app', **values), f'{app["name"]} — {app["pitch"]} | KLM Labs', app['description'], app, schema)
-        urls.append(f'/{slug}/')
+        if canonical_of(app, f'/{slug}/') == ORIGIN + f'/{slug}/':
+            urls.append(f'/{slug}/')  # A page canonical to klmlabs.app stays live but leaves this sitemap.
         render_documents(app, 'en', values, urls)
         mini_shots = ''.join(f'<img src="/{slug}/screenshots/{shot["file"]}" alt="" width="{shot["width"]}" height="{shot["height"]}" loading="lazy">' for shot in app['screenshots'][:2])
         cards.append(f'<a class="studio-app-card" href="/{slug}/"><div class="studio-card-copy"><img class="card-app-icon" src="{app["icon"]}" alt="" width="80" height="80"><p class="eyebrow">{esc(app["category"])}</p><h3>{esc(app["name"])}</h3><p class="card-pitch">{esc(app["pitch"])}</p><p>{esc(app["description"])}</p><span class="card-cta">Explore the app {arrows["arrow_right"]}</span><small>{esc(app["availability"])}</small></div><div class="studio-card-screens" aria-hidden="true">{mini_shots}<span>Built for your working day.</span></div></a>')
