@@ -18,7 +18,7 @@
   "decks": {
     "privacy": "What is kept on your device, what is collected, and how to get in touch."
   },
-  "policy_date": "2026-10-21",
+  "policy_date": "2026-11-07",
   "icon_source": "docs/build/board/icons/icon-1.png at 7c24bab (Gate 2 decision D2, icon 1), resized",
   "source_review": {
     "date": "2026-10-06",
@@ -26,6 +26,6 @@
     "app_branch": "build/v1",
     "app_commit": "defadf7094c41105330d98562947fbc73dadcaf1",
     "asc_app_id": "6819014371",
-    "app_privacy": "App Privacy published in App Store Connect 2026-10-04 12:59Z at factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking), read back equal to pdf-scanner's. Written 2026-10-04 from docs/build/brief.md and GATE2-decisions.md; rechecked 2026-10-06 against the app code of TestFlight build 202610060022 (defadf7: events, Settings and Look labels, alarm screen), with iPad wording (iPad ships in 1.0), PostHog Discard client IP data on (GeoIP still estimates country and city), and the billing grace period off in production at launch"
+    "app_privacy": "App Privacy published in App Store Connect 2026-10-04 12:59Z at factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking), read back equal to pdf-scanner's. Written 2026-10-04 from docs/build/brief.md and GATE2-decisions.md; rechecked 2026-10-06 against the app code of TestFlight build 202610060022 (defadf7: events, Settings and Look labels, alarm screen), with iPad wording (iPad ships in 1.0), PostHog Discard client IP data on (GeoIP still estimates country and city), and the billing grace period off in production at launch. From 1.1.0 (CR-001; optional sign-in with Apple or Google, email-capture design F-2; crash capture on, analytics-standard §7): Contact Info adds Email Address and Name for App Functionality, and Crash Data for App Functionality, all Data Linked to You, no tracking; Other User Content (Analytics) stays from 1.0.1. Set in App Store Connect before 1.1.0 is submitted, not yet read back"
   }
 }
