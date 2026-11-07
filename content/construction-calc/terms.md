@@ -1,6 +1,6 @@
 # Fraction Feet Inch Calculator Terms of Use
 
-**Effective date:** 2026-10-30
+**Effective date:** 2026-11-07
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -20,10 +20,10 @@ You may not resell, rent or redistribute the app itself, or try to get around it
 
 Every feature of the app needs an active plan or free trial. There are two plans:
 
-- **Yearly:** an auto-renewing subscription that gives access to the calculator and every tool for one year at a time. In the United States it costs US$9.99 a year.
-- **Lifetime:** a one-time purchase that gives access to the calculator and every tool with nothing to renew. In the United States it costs US$19.99. Lifetime includes Family Sharing, so members of your Apple Family Sharing group can use it too. The Yearly plan does not include Family Sharing.
+- **Yearly:** an auto-renewing subscription that gives access to the calculator and every tool for one year at a time.
+- **Lifetime:** a one-time purchase that gives access to the calculator and every tool with nothing to renew. Lifetime includes Family Sharing, so members of your Apple Family Sharing group can use it too. The Yearly plan does not include Family Sharing.
 
-The price, billing period and any free trial are shown in the app before you confirm a purchase. Prices in other countries are set through the App Store in local currency, may include local taxes, and are the ones shown to you at purchase.
+The price, billing period and any free trial are shown in the app before you confirm a purchase. Prices are set through the App Store in your local currency, may include local taxes, and are the ones shown to you at purchase.
 
 **Free trial.** The Yearly plan includes a 7-day free trial for eligible new subscribers. Apple decides eligibility; generally, one trial per Apple Account for this app's subscription. When the trial ends, the Yearly subscription starts and you are charged unless you cancel **at least 24 hours before the trial ends**. If you allow notifications, the app can remind you 2 days before the trial ends.
 

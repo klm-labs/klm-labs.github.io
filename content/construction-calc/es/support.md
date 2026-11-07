@@ -12,7 +12,7 @@ No. Iniciar sesión con Apple o Google es opcional, y la app funciona igual sin 
 
 ### ¿Por qué la app ofrece iniciar sesión y cómo elimino mi cuenta?
 
-Iniciar sesión nos permite escribirte sobre la app: si algo falla o para saber qué opinas. Toca **Ahora no** para omitirlo; nada en la app lo requiere. Si iniciaste sesión, elimina tu cuenta cuando quieras en **Configuración → Cuenta → Eliminar mi cuenta**, o escríbenos y la eliminaremos. Eliminar tu cuenta no cancela una suscripción; eso se cancela en tu cuenta de Apple (consulta más abajo).
+Iniciar sesión nos permite escribirte sobre la app: si algo falla o para saber qué opinas. Toca **Omitir** para seguir sin iniciar sesión; nada en la app lo requiere. Si iniciaste sesión, elimina tu cuenta cuando quieras en **Configuración → Cuenta → Eliminar mi cuenta**, o escríbenos y la eliminaremos. Eliminar tu cuenta no cancela una suscripción; eso se cancela en tu cuenta de Apple (consulta más abajo).
 
 ### ¿Tengo que pagar?
 

@@ -12,7 +12,7 @@ No. Signing in with Apple or Google is optional, and the app works the same with
 
 ### Why does the app offer sign-in, and how do I delete my account?
 
-Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Not now** to skip it; nothing in the app needs it. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Skip** to go on without signing in; nothing in the app needs it. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 

@@ -1,6 +1,6 @@
 # Términos de uso de Calculadora de Pies y Pulgadas
 
-**Fecha de entrada en vigor:** 30 de octubre de 2026
+**Fecha de entrada en vigor:** 7 de noviembre de 2026
 
 **Contacto:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -20,10 +20,10 @@ No puedes revender, rentar ni redistribuir la app, ni intentar evadir sus verifi
 
 Todas las funciones de la app requieren un plan activo o una prueba gratis. Hay dos planes:
 
-- **Anual:** una suscripción de renovación automática que da acceso a la calculadora y a todas las herramientas por un año a la vez. En Estados Unidos cuesta US$9.99 al año.
-- **De por vida:** una compra única que da acceso a la calculadora y a todas las herramientas, sin renovaciones. En Estados Unidos cuesta US$19.99. De por vida incluye Compartir en familia, así que los miembros de tu grupo de Compartir en familia de Apple también pueden usarla. El plan Anual no incluye Compartir en familia.
+- **Anual:** una suscripción de renovación automática que da acceso a la calculadora y a todas las herramientas por un año a la vez.
+- **De por vida:** una compra única que da acceso a la calculadora y a todas las herramientas, sin renovaciones. De por vida incluye Compartir en familia, así que los miembros de tu grupo de Compartir en familia de Apple también pueden usarla. El plan Anual no incluye Compartir en familia.
 
-El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app antes de que confirmes una compra. Los precios en otros países los fija el App Store en moneda local, pueden incluir impuestos locales y son los que ves al comprar.
+El precio, el periodo de cobro y cualquier prueba gratis se muestran en la app antes de que confirmes una compra. Los precios los fija el App Store en tu moneda local, pueden incluir impuestos locales y son los que ves al comprar.
 
 **Prueba gratis.** El plan Anual incluye 7 días de prueba gratis para nuevos suscriptores que califiquen. Apple decide quién califica; en general, una prueba por cuenta de Apple para la suscripción de esta app. Cuando termina la prueba, empieza la suscripción Anual y se te cobra, a menos que canceles **al menos 24 horas antes de que termine la prueba**. Si permites las notificaciones, la app puede avisarte 2 días antes de que termine la prueba.
 
