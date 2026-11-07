@@ -8,11 +8,15 @@ PDF Scanner App: OCR & Search (PDF Scanner on your Home Screen) scans paper into
 
 ### Do I need an account or an internet connection?
 
-No account and no sign-up. Scanning, text recognition and search work offline. Buying a plan and restoring a purchase need an internet connection.
+You don't need an account: signing in with Apple or Google is optional, and the app works the same without one. Scanning, text recognition and search work offline; buying a plan and restoring a purchase need an internet connection.
+
+### Why does the app offer sign-in, and how do I delete my account?
+
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Skip** at the top right to go on without signing in; nothing in the app needs it. Signing in does not upload, back up or sync your scans or their text. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
-Yes. Every feature needs the free trial or a plan: **Yearly**, an auto-renewing subscription with a 7-day free trial for eligible new subscribers, or **Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
+Only to export more than 3 documents. Scanning, editing, searching and keeping documents in the app are free, with no limit, and your first 3 documents go out as free exports (exporting one of them again is free). After that, exporting another document needs the free trial or a plan: **Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Lifetime**, paid once. If the Weekly plan can't be loaded, the app shows **Yearly** instead: an auto-renewing subscription with a 7-day free trial for eligible new subscribers. No plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-scanner/terms/).
 
 ### How do I cancel my subscription?
 
@@ -29,7 +33,7 @@ Sign in with the Apple Account that bought it, open the app and tap **Restore** 
 
 ### My plan ended. Are my documents gone?
 
-No. They are still on your iPhone or iPad, untouched. The app shows the plans screen until you subscribe, buy Lifetime or restore an active plan, and then your documents open again.
+No. They are still on your iPhone or iPad, untouched, and you can keep scanning and opening them. Exporting a document that hasn't left the app yet uses any free exports you have left, then needs a plan again.
 
 ### How do I get a refund?
 
@@ -49,7 +53,7 @@ Delete a document in the library. Deleting a folder moves its documents out of t
 
 ### What does the app collect?
 
-Your scans, their text and your searches are not sent to us. The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. See the [privacy policy](/pdf-scanner/privacy/).
+Your scans, their text and your searches are not sent to us (a crash report's error message could still include part of a document's name). The app sends usage events with a random identifier and technical details and, from 1.1.0, masked screen recordings to PostHog, and your App Store purchase records to RevenueCat so it can unlock your plan. From version 1.1.0 it sends a crash report to PostHog when the app crashes, and if you sign in, your email address and, if you share it, your name are stored with Google Firebase so we can contact you about the app; they never go to PostHog or RevenueCat. See the [privacy policy](/pdf-scanner/privacy/).
 
 ## Report a problem
 

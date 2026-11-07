@@ -18,7 +18,7 @@
   "decks": {
     "privacy": "What is kept on your device, what is collected, and how to get in touch."
   },
-  "policy_date": "2026-10-06",
+  "policy_date": "2026-11-07",
   "icon_source": "docs/build/board/icons/icon-1.png at the reviewed commit (Gate 2 decision D2, icon 1), resized",
   "source_review": {
     "date": "2026-09-29",
@@ -26,6 +26,6 @@
     "app_branch": "build/v1",
     "app_commit": "b09dfca921d8409ad07b71cf07391faf1a6a047f",
     "asc_app_id": "6817175306",
-    "app_privacy": "App Store Connect record created 2026-09-29 (app id 6817175306); App Privacy not entered yet. Pages follow factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking); recheck against the code when build part P4 writes the analytics wrapper"
+    "app_privacy": "App Store Connect record created 2026-09-29 (app id 6817175306); App Privacy not entered yet. Pages follow factory rule v2 (User ID and Device ID for Analytics and App Functionality; Product Interaction, Other Usage Data and Coarse Location for Analytics; Purchase History for App Functionality and Analytics; all Data Linked to You, no tracking); recheck against the code when build part P4 writes the analytics wrapper. From 1.1.0 (optional sign-in with Apple or Google, email-capture design F-2; crash capture on, analytics-standard §7 and §8): Contact Info adds Email Address and Name for App Functionality, and Diagnostics adds Crash Data for App Functionality, nine types, all Data Linked to You, no tracking; the masked screen recordings add no User Content type (pdf-scanner docs/build/app-privacy.md). Set in App Store Connect before 1.1.0 is submitted, not yet read back"
   }
 }
