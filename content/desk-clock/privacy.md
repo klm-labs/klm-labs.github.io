@@ -1,6 +1,6 @@
 # Flip Clock: Big Digital Alarm Privacy Policy
 
-**Effective date:** 2026-11-02
+**Effective date:** 2026-11-07
 
 **Contact:** [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com)
 
@@ -30,7 +30,7 @@ Like other app data, it is included in your device's backups (iCloud Backup or a
 
 ## Signing in with Apple or Google
 
-From version 1.1.0 the app offers sign-in with Apple or Google: on a page before the plans screen or as a small card on the clock, at most twice in all, and any time in **Settings → Account**. Signing in is optional. Tap **Continue** under the two sign-in buttons to skip it, or **Close** on the card; every feature, purchase and free trial works the same without an account.
+From version 1.1.0 the app offers sign-in with Apple or Google: on a page after you buy Clock Pro, start a free trial or restore a purchase, or, while you have Clock Pro or a plan, as a small card on the clock, at most twice in all, and any time in **Settings → Account**. Signing in is optional. Tap **Skip** at the top right to go on without signing in, or **Close** on the card; every feature, purchase and free trial works the same without an account.
 
 **What we get.** If you sign in, Apple or Google gives the app your email address and, if you share it, your name. You never type them. If you sign in with Apple and choose **Hide My Email**, we get Apple's private relay address instead of your own.
 
@@ -50,7 +50,7 @@ We use product analytics to learn which features are used and where people get s
 
 ### What analytics collects
 
-**Events describing what you did, never what your alarms say.** Events record actions such as opening the app, finishing the first-run screens, seeing the trial reminder page and your answer to the notification request, saving an alarm, the app setting an alarm again after it went missing, changing the clock face (which face only), seeing the plans screen, and the result of a purchase or restore (which plan, and whether it completed, was cancelled, failed or restored). From version 1.1.0 it also sends events about signing in, never your email address or name: that the sign-in page, the sign-in card on the clock or the Account section in Settings was shown; that you signed in, skipped, cancelled, or that it failed (with the kind of failure, such as no connection); whether you chose Apple or Google; whether Apple gave a private relay address and whether an email address came back; and that you deleted your account, or that deleting it failed (and why). Every property the app itself adds to an event is a count, a choice from a fixed list, or a yes/no; the analytics software adds the identifiers and technical details described below. Its own automatic events (screen views, taps on buttons, repeated quick taps on one spot) are turned off. **No event ever contains an alarm time, a repeat day or an alarm label.**
+**Events describing what you did, never what your alarms say.** Events record actions such as opening the app, finishing the first-run screens, seeing the trial reminder page and your answer to the notification request, saving an alarm, the app setting an alarm again after it went missing, changing the clock face (which face only), seeing the plans screen, and the result of a purchase or restore (which plan, and whether it completed, was cancelled, failed or restored). From version 1.1.0 it also sends events about signing in, never your email address or name: that the sign-in page, the sign-in card on the clock or the Account section in Settings was shown; that you signed in, skipped, cancelled, or that it failed (with the kind of failure, such as no connection); whether you chose Apple or Google; whether Apple gave a private relay address and whether an email address came back; and that you deleted your account, or that deleting it failed (and why). From version 1.1.0 it also sends an event when the app asks for Apple's rating prompt (see "Ratings"). Every property the app itself adds to an event is a count, a choice from a fixed list, or a yes/no; the analytics software adds the identifiers and technical details described below. Its own automatic events (screen views, taps on buttons, repeated quick taps on one spot) are turned off. **No event ever contains an alarm time, a repeat day or an alarm label.**
 
 **Technical details** that the analytics software adds to each event: the app's name, version and build; the device maker, model and type; the iOS or iPadOS version; the screen size; your language, region and time zone settings; whether the device is on Wi-Fi or cellular data; whether the app came from TestFlight; the analytics software's name and version; the time of the event; and random event and session identifiers. They also include the app's bundle identifier, the operating system's name, the generic device name the system reports (such as "iPhone" or "iPad"), and whether the app is running in a simulator or was installed from outside the App Store.
 
@@ -58,7 +58,7 @@ We use product analytics to learn which features are used and where people get s
 
 **An approximate location.** Like any internet service, PostHog sees the IP address your device connects from. PostHog uses that IP address to estimate a country and city when the events arrive, and is set to discard it instead of storing it with the events. **The app does not ask for location permission and never reads your device's GPS.**
 
-**Purchase events.** Because the app gives RevenueCat the same random identifier, RevenueCat sends records of purchase events (for example a trial starting, a renewal, a cancellation or a Lifetime purchase, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. From version 1.1.0, if you sign in, these records also carry your random account ID. See "Purchases and subscriptions" below.
+**Purchase events.** Because the app gives RevenueCat the same random identifier, RevenueCat sends records of purchase events (for example a trial starting, a renewal, a cancellation, or a Clock Pro or Lifetime purchase, with the product, its price, RevenueCat's app user ID and Apple's transaction ID) to PostHog under it, and we can see how the plans are used. From version 1.1.0, if you sign in, these records also carry your random account ID. See "Purchases and subscriptions" below.
 
 **A recording of the app's screens, from version 1.0.1.** So we can see where people tap, what they struggle with and where they give up, the app records its screens while you use it: screenshots of the app's own screens, taken as they change, and where you tap. A recording can include any screen of the app. Recording stops after 5 minutes without a touch, such as when the clock is left on overnight, and starts again when you touch the screen or come back to the app. We checked what a recording shows on a test recording of version 1.0.1, made on a simulated iPhone: the first-run pages, the plans screen, the clock, Alarms (adding two alarms, one with a label), Look and Settings.
 
@@ -81,7 +81,7 @@ Analytics never collects your name, email address, phone number, contacts or pre
 
 ## Purchases and subscriptions (Apple and RevenueCat)
 
-The app needs a plan: a yearly subscription with a free trial for eligible new subscribers, or a one-time Lifetime purchase. Payments are made through Apple's App Store with your Apple Account. **Apple processes the payment; KLM Labs never receives or stores your card or bank details.**
+The clock is free. From version 1.1.0 the app sells Clock Pro, a one-time purchase that unlocks its extras. Version 1.0 sold a yearly subscription with a free trial for eligible new subscribers, or a one-time Lifetime purchase; both keep working. Payments are made through Apple's App Store with your Apple Account. **Apple processes the payment; KLM Labs never receives or stores your card or bank details.**
 
 [RevenueCat, Inc.](https://www.revenuecat.com/privacy) processes purchase records for KLM Labs so the app can check whether you have access, unlock it and restore it on another iPhone or iPad. RevenueCat receives your App Store purchase and subscription records (the product, Apple's transaction IDs, dates, trial and renewal status), a random app user ID that RevenueCat creates (signing in does not change it), which set of plans the app showed you, technical details such as the app version, iOS or iPadOS version and App Store country, and the random PostHog identifier. From version 1.1.0, if you sign in, it also receives your random account ID and whether the app came from the App Store or TestFlight, never your email address or name. RevenueCat also receives your IP address when the app connects to it, and your device's vendor ID (IDFV) when the system provides one. iOS and iPadOS give each app developer one vendor ID per device, the same in all of that developer's apps; it is not the advertising identifier.
 
@@ -89,11 +89,11 @@ We use purchase records only to provide and restore your plan, to understand how
 
 ## Reminders and notifications
 
-The first time you open the app, before the plans screen, it shows a page about the free trial if the plan it suggests has one, you are eligible, and you haven't refused notifications. If you haven't answered before, its **Continue** button asks for permission to send notifications. If you allow them and your trial is set to renew, the app schedules a reminder on your device for 2 days before the trial ends, and removes it if you cancel, buy or restore another plan, or the trial ends. The reminder is not sent from a server, and no push token is sent to us. The app uses notifications only for this reminder; your alarms ring through Apple's alarm system, not through notifications. You can say no, or turn notifications off later in Settings; the app works the same either way.
+The first time you open the app, before the plans screen, it shows a page about the free trial if the plan it suggests has one, you are eligible, and you haven't refused notifications. Clock Pro has no free trial, so from version 1.1.0 the page does not show with it. If you haven't answered before, its **Continue** button asks for permission to send notifications. If you allow them and your trial is set to renew, the app schedules a reminder on your device for 2 days before the trial ends, and removes it if you cancel, buy or restore another plan, or the trial ends. The reminder is not sent from a server, and no push token is sent to us. The app uses notifications only for this reminder; your alarms ring through Apple's alarm system, not through notifications. You can say no, or turn notifications off later in Settings; the app works the same either way.
 
 ## Ratings
 
-The app may ask you to rate it using Apple's standard rating prompt. Apple handles the prompt and your rating; the app does not learn whether or how you rated it.
+The app may ask you to rate it using Apple's standard rating prompt. Apple handles the prompt and your rating; the app does not learn whether or how you rated it. From version 1.1.0, when the app asks for the prompt it sends PostHog an event saying what led to it and the app's version.
 
 ## When you email us
 
@@ -128,4 +128,4 @@ Depending on where you live, you may have further rights over personal data, suc
 
 ## Changes to this policy
 
-If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: screen recordings, from version 1.0.1 (see "Product analytics"). 2026-11-02: optional sign-in with Apple or Google, and crash reports, from version 1.1.0 (see "Signing in with Apple or Google" and "Product analytics"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
+If the app's data practices change, we will update this policy and the App Store privacy details before that version is released. The effective date at the top shows the latest change. 2026-10-21: screen recordings, from version 1.0.1 (see "Product analytics"). 2026-11-02: optional sign-in with Apple or Google, and crash reports, from version 1.1.0 (see "Signing in with Apple or Google" and "Product analytics"). 2026-11-07: from version 1.1.0 the clock is free and Clock Pro is a one-time purchase, the sign-in page comes after a purchase or a restore, and an event when the app asks for Apple's rating prompt (see "Purchases and subscriptions" and "Ratings"). Questions: [klm.labs.inc@gmail.com](mailto:klm.labs.inc@gmail.com).
