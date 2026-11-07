@@ -12,11 +12,11 @@ You don't need an account: signing in with Apple or Google is optional, and the 
 
 ### Why does the app offer sign-in, and how do I delete my account?
 
-Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Continue** under the two sign-in buttons to skip it; nothing in the app needs it. Signing in does not upload, back up or sync your documents or signatures. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
+Signing in lets us contact you about the app: if something breaks, or to hear what you think. Tap **Skip** at the top right to go on without signing in; nothing in the app needs it. Signing in does not upload, back up or sync your documents or signatures. If you signed in, delete your account any time in **Settings → Account → Delete my account**, or email us and we will delete it. Deleting your account does not cancel a subscription; cancel that in your Apple Account (see below).
 
 ### Do I need to pay?
 
-Yes. To start using the app, you need Signer Pro or its free trial: **Pro Yearly**, an auto-renewing subscription with a 7-day free trial for eligible new subscribers, or **Pro Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-esign/terms/).
+Not for your first 3 signed documents: a document counts the first time its signed copy is shared or saved, and sharing or saving it again is free. After that, you need Signer Pro or its free trial: **Pro Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Pro Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-esign/terms/).
 
 ### How do I cancel my subscription?
 
@@ -33,7 +33,7 @@ Sign in with the Apple Account that bought it, open the app and tap **Restore** 
 
 ### My trial ended. Can I still open my documents?
 
-Yes. Your documents stay on your device, and you can still open them and place signatures. You can share or save again a document you already shared or saved. Finishing, sharing or saving any other document needs Signer Pro.
+Yes. Your documents stay on your device, and you can still open them and place signatures. You can share or save again a document you already shared or saved. Finishing, sharing or saving any other document uses any of your 3 free documents you have left, then needs Signer Pro.
 
 ### How do I get a refund?
 

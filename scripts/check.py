@@ -91,7 +91,7 @@ NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'p
                 ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html', 'desk-clock/index.html']
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 NATIVE_DISCLOSURES = {
-    'en': {'terms': ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore',
+    'en': {'terms': ['renews automatically', 'at least 24 hours before', 'Restore',
                      'Deleting the app does not cancel a subscription.', 'reportaproblem.apple.com', 'Standard EULA'],
            'privacy': ['PostHog', 'RevenueCat', 'KLM Labs never receives or stores your card or bank details',
                        'IP address', 'never reads your device\'s GPS'],
@@ -114,6 +114,10 @@ def check_native(docs):
         text = ' '.join(' '.join(doc.words).split())
         for phrase in NATIVE_DISCLOSURES[lang][key]:
             assert phrase in text, f'{route}: lost disclosure: {phrase}'
+        # Paywall v2 (2026-11-06): each app's trial has its own length (Calc and Clock 1.0's Yearly 7 days, Scanner's and
+        # Signer's Weekly 3), so English terms must name one, whatever its length.
+        if key == 'terms' and lang == 'en':
+            assert re.search(r'\b\d+-day free trial\b', text), f'{route}: lost the free trial length'
         if key == 'terms':
             assert EULA in doc.refs, f'{route}: lost the Standard EULA link'
         assert 'mailto:klm.labs.inc@gmail.com' in doc.refs, f'{route}: lost the support address'
