@@ -16,7 +16,7 @@ Signing in lets us contact you about the app: if something breaks, or to hear wh
 
 ### Do I need to pay?
 
-Not for your first 3 signed documents: a document counts the first time its signed copy is shared or saved, and sharing or saving it again is free. After that, you need Signer Pro or its free trial: **Pro Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Pro Lifetime**, paid once. Neither plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-esign/terms/).
+Not for your first 3 signed documents: a document counts the first time its signed copy is shared or saved, and sharing or saving it again is free. After that, you need Signer Pro or its free trial: **Pro Weekly**, an auto-renewing subscription with a 3-day free trial for eligible new subscribers, or **Pro Lifetime**, paid once. If Pro Weekly can't be loaded, the app shows **Pro Yearly** instead: an auto-renewing subscription with a 7-day free trial for eligible new subscribers. If you already have Pro Yearly, it keeps working. No plan includes Family Sharing. The price and any trial are shown in the app before you confirm. The full terms are in the [terms of use](/pdf-esign/terms/).
 
 ### How do I cancel my subscription?
 

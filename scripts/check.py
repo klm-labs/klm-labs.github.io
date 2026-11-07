@@ -91,7 +91,7 @@ NATIVE_ROUTES = [f'{slug}/{key}/index.html' for slug in ('construction-calc', 'p
                 ['construction-calc/index.html', 'construction-calc/es/index.html', 'pdf-esign/index.html', 'pdf-scanner/index.html', 'desk-clock/index.html']
 EULA = 'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/'
 NATIVE_DISCLOSURES = {
-    'en': {'terms': ['renews automatically', 'at least 24 hours before', 'Restore',
+    'en': {'terms': ['renews automatically', '7-day free trial', 'at least 24 hours before', 'Restore',
                      'Deleting the app does not cancel a subscription.', 'reportaproblem.apple.com', 'Standard EULA'],
            'privacy': ['PostHog', 'RevenueCat', 'KLM Labs never receives or stores your card or bank details',
                        'IP address', 'never reads your device\'s GPS'],
@@ -114,10 +114,6 @@ def check_native(docs):
         text = ' '.join(' '.join(doc.words).split())
         for phrase in NATIVE_DISCLOSURES[lang][key]:
             assert phrase in text, f'{route}: lost disclosure: {phrase}'
-        # Paywall v2 (2026-11-06): each app's trial has its own length (Calc and Clock 1.0's Yearly 7 days, Scanner's and
-        # Signer's Weekly 3), so English terms must name one, whatever its length.
-        if key == 'terms' and lang == 'en':
-            assert re.search(r'\b\d+-day free trial\b', text), f'{route}: lost the free trial length'
         if key == 'terms':
             assert EULA in doc.refs, f'{route}: lost the Standard EULA link'
         assert 'mailto:klm.labs.inc@gmail.com' in doc.refs, f'{route}: lost the support address'
@@ -130,10 +126,18 @@ def check_native(docs):
               for key in ('privacy', 'terms', 'support')}
     for phrase in ['Signing in with Apple or Google', 'Firebase Authentication', 'Delete my account',
                    'never sent to PostHog or RevenueCat', 'Crash reports, from version 1.2.0',
-                   'could still include part of it', 'No usage event ever contains', 'when the app can tell']:
+                   'could still include part of it', 'No usage event ever contains', 'when the app can tell',
+                   'nine types of data', 'Email Address and Name', 'Crash Data']:
         assert phrase in signer['privacy'], f'pdf-esign/privacy: lost sign-in or crash disclosure: {phrase}'
     assert 'Signing in with Apple or Google is optional' in signer['terms'], 'pdf-esign/terms: lost the optional sign-in line'
     assert 'signing in with Apple or Google is optional' in signer['support'], 'pdf-esign/support: lost the optional sign-in answer'
+    # Paywall v2 (2026-11-06): 3 free documents, then Pro Weekly (3-day trial) or Pro Lifetime, with Pro Yearly (7-day
+    # trial) only when Pro Weekly can't load, and for people who already have it.
+    for key in ('terms', 'support'):
+        for phrase in ['first 3 signed documents', '3-day free trial', '7-day free trial', 'Pro Yearly',
+                       "instead of Pro Weekly only if Pro Weekly can't be loaded" if key == 'terms'
+                       else "If Pro Weekly can't be loaded, the app shows Pro Yearly instead"]:
+            assert phrase in signer[key], f'pdf-esign/{key}: lost the plan wording: {phrase}'
     for key, text in signer.items():
         assert not re.search(r'no account and no sign-up|there is no login|no account of its own|do not collect crash reports'
                              r'|never asks for your name|we do not collect your name|no event ever contains', text, re.I), f'pdf-esign/{key}: 1.1.0 no-account or no-crash wording regressed'
